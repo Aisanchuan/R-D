@@ -23,7 +23,7 @@
 
 ### 三、代码演示
 
-了解了组件生命周期各个过程后，我们放一波代码，真正的看一看一个组件从生到死到底经历了什么。
+了解了组件生命周期各个过程后，我们放一波代码，真正的看一看一个组件从生到死到底经历了什么[demo02.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/05-Vue%E5%85%A5%E9%97%A8/%E7%AC%AC05%E7%AB%A0%EF%BC%9A%E8%B4%AD%E7%89%A9%E8%BD%A6%E7%BB%84%E4%BB%B6%E5%8C%96/demo02.html)。
 
 ``` html
 <body>
