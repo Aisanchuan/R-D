@@ -2,8 +2,8 @@
 
 ### 安装MySQL
 ####一、下载MySQL安装包
-
-
+[安装包](https://dev.mysql.com/downloads/windows/installer/8.0.html)
+* 下载393.4M的
 ####三、登录MySQL
 ```s
 登录本级：mysql -u root -p
