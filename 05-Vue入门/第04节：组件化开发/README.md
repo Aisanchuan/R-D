@@ -13,7 +13,7 @@
 * tagName:组件的名称（或者可以成为标签的名称）
 * options:组件的设置选项
 
-我们通过下面的例子来注册一个名字为hello的组件（demo01.html）
+我们通过下面的例子来注册一个名字为hello的组件：
 
 ``` html
 <body>
@@ -37,7 +37,7 @@
 
 组件的设置选项中，我们设置了template属性，可以指定组件的模板，简单的说就是template的内容是什么，组件就会显示什么样的内容。
 
-组件可以重复使用，我们可以编写html代码（demo02.html）：
+组件可以重复使用，我们可以编写html代码：
 ``` html
 <div id="app">
     <hello></hello>
@@ -50,7 +50,7 @@
 
 #### 设置组件选项
 
-在注册组件的时候可以通过Vue.component()方法的第二个参数设置组件的选项，设置的方法与之前学过的设置vue实例的方法很像，我们先来为组件绑定一个点击事件（demo03.html）
+在注册组件的时候可以通过Vue.component()方法的第二个参数设置组件的选项，设置的方法与之前学过的设置vue实例的方法很像，我们先来为组件绑定一个点击事件：
 ``` js
 Vue.component("hello",{
     template:"<button v-on:click='showMessage'>按钮</button>",
@@ -62,7 +62,7 @@ Vue.component("hello",{
 })
 ```
 
-我们将组件中的template设置为一个button，然后为他绑定了点击事件，点击的时候在弹出框输出"hello component"，可以看出在组件中绑定事件和在实例中绑定事件的方法是一样的，下面我们再来为组件绑定数据（demo04.html）
+我们将组件中的template设置为一个button，然后为他绑定了点击事件，点击的时候在弹出框输出"hello component"，可以看出在组件中绑定事件和在实例中绑定事件的方法是一样的，下面我们再来为组件绑定数据：
 
 ``` js
 Vue.component("hello",{
@@ -84,7 +84,7 @@ Vue.component("hello",{
 * tit(标题组件)
 * list(内容列表)
 
-我们嵌套使用者三个组件（demo05.html）：
+我们嵌套使用者三个组件：
 
 ``` html
 <div id="app">
