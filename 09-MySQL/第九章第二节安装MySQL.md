@@ -4,21 +4,9 @@
 ####一、下载MySQL安装包
 [安装包](https://dev.mysql.com/downloads/windows/installer/8.0.html)
 * 下载393.4M的
-####三、登录MySQL
-```s
-登录本级：mysql -u root -p
-登录远程mysql：mysql -h 127.0.0.1 -u root -p
-```
-####四、重置密码
-```s
-1.停止服务
-2.管理员权限命令：mysqld -skip-grant-tables，不要关闭这个命令行，应该是一个等待的状态
-3.新打开命令：mysql -u root -p，进入mysql
-4.输入：use mysql;
-5.输入：update user set password=password("password") where User = 'root';
-6.关闭命令符，启动mysql服务器
-```
-####五、数据库数据的备份与恢复
+[安装教程](https://www.cnblogs.com/ZengJiaLin/p/11332561.html)
+
+####二、数据库数据的备份与恢复
 ```s
 1.备份数据库的内容：
 数据库名叫dddd
