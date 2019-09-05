@@ -4,7 +4,7 @@
 
 **数据绑定**
 
-上一章我们已经了解了如何将数据绑定到文本节点和属性节点。本节我们要实现数据的双向绑定，让data中的数据与文本框中的数据同步（demo01.html）。
+上一章我们已经了解了如何将数据绑定到文本节点和属性节点。本节我们要实现数据的双向绑定，让data中的数据与文本框中的数据同步。
 ``` html
 <body>
     <div id="app">
@@ -27,9 +27,7 @@
 
 **添加元素**
 
-我们可以利用v-model来实现添加列表元素的功能[demo02.html](
-    demo02.html
-):
+我们可以利用v-model来实现添加列表元素的功能:
 ``` html
 <body>
     <div id="app">
@@ -57,7 +55,7 @@
 </body>
 ```
 
-下面做一个练习，结合上一章的内容，将添加元素和删除元素功能添加到一个文件中（demo03.html）
+下面做一个练习，结合上一章的内容，将添加元素和删除元素功能添加到一个文件中
 
 ``` html
 <body>
@@ -92,7 +90,7 @@
 ```
 
 ### 二、提交表单
-在上个例子中，我们通过一个文本框和一个按钮实现了在列表中添加元素的功能，但是正常的开发工作中，我们不应该用这种方式提交数据，而是应该用提交表单的方式提交数据，下面我们在body中添加一个表单，并使用vue获取表单中的数据（demo04.html）。
+在上个例子中，我们通过一个文本框和一个按钮实现了在列表中添加元素的功能，但是正常的开发工作中，我们不应该用这种方式提交数据，而是应该用提交表单的方式提交数据，下面我们在body中添加一个表单，并使用vue获取表单中的数据。
 ``` html
 <!-- 变更的代码如下 -->
 <form v-on:submit="insert">
@@ -101,7 +99,7 @@
 </form>
 ```
 
-如上面的代码所示，我们不在使用按钮click事件来添加元素，而是使用表单的submit事件，其他的代码完全一样。运行程序后，发现新增的元素闪了一下就消失了，这是因为提交表单会重新加载页面，而我们的数据当页面刷新后就会消失，所以如果不阻止提交表单后页面重新加载，那么就需要阻止表单提交的默认行为。可以使用事件修饰符来实现这个功能（demo05.html）。
+如上面的代码所示，我们不在使用按钮click事件来添加元素，而是使用表单的submit事件，其他的代码完全一样。运行程序后，发现新增的元素闪了一下就消失了，这是因为提交表单会重新加载页面，而我们的数据当页面刷新后就会消失，所以如果不阻止提交表单后页面重新加载，那么就需要阻止表单提交的默认行为。可以使用事件修饰符来实现这个功能。
 
 ``` html
 <form v-on:submit.prevent="insert">
@@ -121,7 +119,7 @@
 
 上一节我们已经讲解了如何使用.prevent事件修饰符，本节我们通过两个例子讲解.stop和.once。
 
-在JavaScript基础课程中，我们讲解了事件流的概念，事件有捕获和冒泡两个阶段，在默认情况下，事件在冒泡阶段被触发，如果希望阻止事件冒泡可以使用stopPropagation()，如果在vue中希望实现阻止事件冒泡的功能，可以使用事件修饰符.stop（demo06.html）
+在JavaScript基础课程中，我们讲解了事件流的概念，事件有捕获和冒泡两个阶段，在默认情况下，事件在冒泡阶段被触发，如果希望阻止事件冒泡可以使用stopPropagation()，如果在vue中希望实现阻止事件冒泡的功能，可以使用事件修饰符.
 
 ``` css
 .big{
@@ -162,7 +160,7 @@
 </body>
 ```
 
-在学习jQuery的时候，我们可以通过one来绑定事件，当事件触发一次后将不再触发，在vue中我们可以使用事件修饰符.once实现相同的功能（demo07.html）
+在学习jQuery的时候，我们可以通过one来绑定事件，当事件触发一次后将不再触发，在vue中我们可以使用事件修饰符.once实现相同的功能
 
 ``` html
 <body>
@@ -186,7 +184,7 @@
 
 
 ### 四、在表格中添加和删除数据
-下面我们来做一个练习，功能如下（demo08.html）：
+下面我们来做一个练习，功能如下[demo08.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/05-Vue%E5%85%A5%E9%97%A8/%E7%AC%AC03%E7%AB%A0%EF%BC%9A%E8%B4%AD%E7%89%A9%E8%BD%A6/demo08.html)：
 
 * 页面分成两部分，左侧是一个表单，右侧是一个表格
 * 当提交表单的时候可以将数据添加到表格中
@@ -240,7 +238,7 @@
 
 
 ### 三、功能实现
-数据格式与功能确定之后，需要编写商品列表的页面（为了界面美观，此案例使用bootstrap样式，demo01.html）。
+数据格式与功能确定之后，需要编写商品列表的页面（为了界面美观，此案例使用bootstrap样式，[demo01.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/05-Vue%E5%85%A5%E9%97%A8/%E7%AC%AC03%E7%AB%A0%EF%BC%9A%E8%B4%AD%E7%89%A9%E8%BD%A6/demo01.html)）。
 ``` html
 <table class="table table-bordered">
     <thead>
@@ -266,7 +264,7 @@
 </table>
 ```
 
-商品数量是一个计数器功能，点击【-】数量减1，但是不能小于零，点击【+】数量加1。我们需要为这两个按钮绑定事件，并编写对应的功能（demo02.html）
+商品数量是一个计数器功能，点击【-】数量减1，但是不能小于零，点击【+】数量加1。我们需要为这两个按钮绑定事件，并编写对应的功能[demo02.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/05-Vue%E5%85%A5%E9%97%A8/%E7%AC%AC03%E7%AB%A0%EF%BC%9A%E8%B4%AD%E7%89%A9%E8%BD%A6/demo02.html)
 ``` html
 <td>
     <button v-on:click="sub(index)">-</button>
@@ -288,7 +286,7 @@ methods:{
 }
 ```
 
-当用户点击【添加购物车】按钮可以将该行的数据添加到右侧的购物车表格当中（demo03）。
+当用户点击【添加购物车】按钮可以将该行的数据添加到右侧的购物车表格当中[demo03](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/05-Vue%E5%85%A5%E9%97%A8/%E7%AC%AC03%E7%AB%A0%EF%BC%9A%E8%B4%AD%E7%89%A9%E8%BD%A6/demo03.html)。
 
 ``` html
 <!-- 商品列表 -->
@@ -342,7 +340,7 @@ insert:function(i){
 * 变更数量的时候，商品列表和购物车的商品会同时变。
 * 点击【添加至购物车】按钮，不应该重复添加同一个商品，而是应该添加数量。
 
-第一个问题是因为，我们添加的对象是引用类型，购物车数组里的对象与商品列表中的对象指向的是一个对象，所以一个数量变化，另一个也会变化（在“JavaScript进阶”课程中有详细的讲解），所以我们需要克隆一个商品对象，再加入到购物车中（demo04.html）。
+第一个问题是因为，我们添加的对象是引用类型，购物车数组里的对象与商品列表中的对象指向的是一个对象，所以一个数量变化，另一个也会变化（在“JavaScript进阶”课程中有详细的讲解），所以我们需要克隆一个商品对象，再加入到购物车中[demo04.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/05-Vue%E5%85%A5%E9%97%A8/%E7%AC%AC03%E7%AB%A0%EF%BC%9A%E8%B4%AD%E7%89%A9%E8%BD%A6/demo04.html)。
 
 ``` js
 clone:function(obj){
@@ -360,7 +358,7 @@ insert:function(i){
 
 这里我们编写了一个clone方法实现了对象的浅克隆。并将克隆的对象添加到购物车，这样购物车中的数量变更就不会影响商品列表中的数量了。
 
-然后我们再来处理商品重复的问题，我们需要判断购物车是否由再次添加的商品，如果没有，那么将商品添加至购物车，如果购物车已经有这个商品了，那么应该增加指定商品的数量（demo05.html）。
+然后我们再来处理商品重复的问题，我们需要判断购物车是否由再次添加的商品，如果没有，那么将商品添加至购物车，如果购物车已经有这个商品了，那么应该增加指定商品的数量[demo05.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/05-Vue%E5%85%A5%E9%97%A8/%E7%AC%AC03%E7%AB%A0%EF%BC%9A%E8%B4%AD%E7%89%A9%E8%BD%A6/demo05.html)。
 
 ``` js
 insert:function(index){
@@ -385,7 +383,7 @@ insert:function(index){
 * 然后，当添加购物车时，若购物车已经有了这个商品，那么值增加数量，不增加种类。
 * 最后，若购物车没有这个商品，那么在购物车中正常添加商品。
 
-现在，将商品添加到购物车的功能我们已经完成了，接下来要做的是在购物车中删除商品。这个和之前我们做的任务列表的例子很像（demo06.html）。
+现在，将商品添加到购物车的功能我们已经完成了，接下来要做的是在购物车中删除商品。这个和之前我们做的任务列表的例子很像[demo06.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/05-Vue%E5%85%A5%E9%97%A8/%E7%AC%AC03%E7%AB%A0%EF%BC%9A%E8%B4%AD%E7%89%A9%E8%BD%A6/demo06.html)。
 
 ``` html
 <td>
@@ -399,7 +397,7 @@ del:function(i){
 }
 ```
 
-最后我们要实现点击【结算】按钮，计算出总价（demo07.html）。
+最后我们要实现点击【结算】按钮，计算出总价[demo07.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/05-Vue%E5%85%A5%E9%97%A8/%E7%AC%AC03%E7%AB%A0%EF%BC%9A%E8%B4%AD%E7%89%A9%E8%BD%A6/demo07.html)。
 
 ``` html
 <button v-on:click="count" class="btn btn-success">结账</button>
