@@ -7,20 +7,6 @@
 * DCL:数据控制语言，用来设置访问权限和安全级别
 * DQL:数据查询语言，用来查询数据库中的数据
 
-### 登录mysql
-
-* 登录本级：mysql -u root -p
-* 登录远程mysql：mysql -h 127.0.0.1 -u root -p
-
-### 重置密码
-
-1. 停止服务
-2. 管理员权限命令：mysqld -skip-grant-tables，不要关闭这个命令行，应该是一个等待的状态
-3. 新打开命令：mysql -u root -p，进入mysql
-4. 输入：use mysql;
-5. 输入：update user set password=password("password") where User = 'root';
-6. 关闭命令符，启动mysql服务器
-
 ### 一、安装
 
 * 下载zip文件
@@ -44,14 +30,7 @@
 7. 删除数据库：drop database db_name;
 8. 删除表：drop table table_name;
 9. 查看表结构：desc table_name;
-
-### 三、数据备份与恢复
-
-1. 导出数据库：mysqldump -u root -p army > d:/database_dump.txt
-2. 导入数据库：mysql -u root -p armytest < d:/database_dump.txt
-
 ### 数据类型
-
 * int:
 * double:
 * char:固定长度
