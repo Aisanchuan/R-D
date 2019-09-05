@@ -12,7 +12,7 @@
 
 ### 二、第一个JavaScript程序
 学习所有编程语言编写第一个程序的时候，都习惯性地编写“hello world”程序，学习JavaScript也是一样。作为我们编写的第一个JavaScript程序，我们将代码写在html这个文档中，body标签里写想要的效果代码,JavaScript放在<script></script>这个标签里
-代码如下所示：[demo01.hmtl](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC01%E8%8A%82%EF%BC%9AJavaScript%E6%A6%82%E8%BF%B0/demo01.html)
+代码如下所示：
 ``` javascript
 <!DOCTYPE html>
 <html lang="en">
