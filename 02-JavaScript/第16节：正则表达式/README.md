@@ -21,7 +21,7 @@ var reg = /123/;     //创建正则表达式
 
 ### 二、正则表达式语法
 
-正则表达式可以用来匹配字符串，我们可以把正则表达式看做是一种规则，如果字符串中的内容符合这种规则，就会匹配，如果不符合这个规则，就不会匹配 [demo01.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC16%E8%8A%82%EF%BC%9A%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/demo01.html)
+正则表达式可以用来匹配字符串，我们可以把正则表达式看做是一种规则，如果字符串中的内容符合这种规则，就会匹配，如果不符合这个规则，就不会匹配 
 
 ``` js
 var reg = /123/;  //创建了一个正则表达式，这个正则表达式可以匹配字符串"123"
@@ -29,8 +29,8 @@ var str = "123";  //创建字符串"123"
 console.log(reg.test(str));  //test方法可以测试字符串是否成功匹配，匹配返回true，不匹配返回false
 ```
 
-我们可以看到程序在控制台输出了true，因为reg定义的时候就是为了匹配字符串123的。我们再来看下面的例子
-[demo02.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC16%E8%8A%82%EF%BC%9A%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/demo02.html)
+我们可以看到程序在控制台输出了true，因为reg定义的时候就是为了匹配字符串123的，我们再来看下面的例子
+
 
 ``` js
 var reg = /123/;
@@ -38,7 +38,7 @@ var str = "012345";
 console.log(reg.test(str));  //仍然返回true
 ```
 
-我们将字符串改成了"12345"，返回结果仍然返回true，这是因为我们定义的正则表达式可以匹配任何包含"123"的字符串，为了证实这个说法，我们可以使用exec方法来输出匹配的内容[demo03.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC16%E8%8A%82%EF%BC%9A%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/demo03.html)
+我们将字符串改成了"12345"，返回结果仍然返回true，这是因为我们定义的正则表达式可以匹配任何包含"123"的字符串，为了证实这个说法，我们可以使用exec方法来输出匹配的内容
 
 ``` js
 var reg = /123/;
@@ -48,7 +48,7 @@ console.log(reg.exec(str)); //exec方法返回一个数组，数组中包含匹�
 
 这段代码在控制台输出了一个数组，数组的第一个元素是匹配的内容，大家可以看到匹配的内容是"123"，数组还带有两个属性，index表示从字符串中第几个字母开始匹配，input表示匹配的字符串的值。
 
-有的时候，我们希望我们写的正则表达式只能匹配"123"，如果是字符串包含"123"页不匹配，如果希望这样的话，我们需要改进我们的正则表达式[demo04.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC16%E8%8A%82%EF%BC%9A%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/demo04.html)
+有的时候，我们希望我们写的正则表达式只能匹配"123"，如果是字符串包含"123"页不匹配，如果希望这样的话，我们需要改进我们的正则表达式
 
 ``` js
 var reg = /^123$/;  //^表示开头，$表示结尾，两个符号之间是匹配的内容
@@ -61,7 +61,7 @@ console.log(reg.exec(str));
 #### 设定匹配范围
 
 正则表达式可以通过[]设定匹配的范围,代码如下
-[demo05.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC16%E8%8A%82%EF%BC%9A%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/demo05.html)
+
 
 ``` js
 var reg = /[123]/;  //匹配123中的任意一个字符
@@ -73,7 +73,7 @@ console.log(reg.exec(str));
 
 #### 匹配数字
 
-正则表达式可以在匹配范围中定义[0-9]来设定匹配数字[demo06.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC16%E8%8A%82%EF%BC%9A%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/demo06.html)
+正则表达式可以在匹配范围中定义[0-9]来设定匹配数字
 ``` js
 var reg = /[0-9]/;  //匹配一位数字
 var str = "02468";  
@@ -83,7 +83,7 @@ console.log(reg.exec(str));
 
 #### 匹配字母
 
-正则表达式可以在匹配范围中定义[a-z]来设定匹配字母[demo07.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC16%E8%8A%82%EF%BC%9A%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/demo07.html)
+正则表达式可以在匹配范围中定义[a-z]来设定匹配字母
 
 ``` js
 var reg = /[a-z]/;  //匹配一位字母
@@ -95,7 +95,7 @@ console.log(reg.exec(str));
 
 #### 匹配多位
 
-上面的匹配内容匹配的都是一位数字或字母，我们可以通过+来指定匹配多位[demo08.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC16%E8%8A%82%EF%BC%9A%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/demo08.html)
+上面的匹配内容匹配的都是一位数字或字母，我们可以通过+来指定匹配多位
 
 ``` js
 var reg = /[a-z]+/;  //匹配多位字母
@@ -107,7 +107,7 @@ console.log(reg.exec(str));
 
 #### 匹配指定位数
 
-有的时候我们需要匹配指定位数的字符，可以通过{}指定匹配的位数[demo09.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC16%E8%8A%82%EF%BC%9A%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/demo09.html)
+有的时候我们需要匹配指定位数的字符，可以通过{}指定匹配的位数
 
 ``` js
 var reg = /[a-z]{3}/;  //匹配3位字母
@@ -115,7 +115,7 @@ var str = "012345abcde";
 console.log(reg.exec(str));
 ```
 
-下面我们来定义一个正则表达式来匹配一个邮箱格式的字符串[demo10.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC16%E8%8A%82%EF%BC%9A%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/demo10.html)，我们先来确定一下邮箱的格式：
+下面我们来定义一个正则表达式来匹配一个邮箱格式的字符串[demo01.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC16%E8%8A%82%EF%BC%9A%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/demo01.html)，我们先来确定一下邮箱的格式：
 
 * 5~12位的数字字母下划线开头
 * 后面接@
@@ -133,7 +133,7 @@ console.log(reg.exec(str));
 
 ### 三、表单验证
 
-通过上面的学习，我们已经对正则表达式有了初步的了解，下面我们来实现一个表单验证邮箱的功能，验证通过或者不通过，都要在文本框后面输出结果[demo11.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC16%E8%8A%82%EF%BC%9A%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/demo11.html)
+通过上面的学习，我们已经对正则表达式有了初步的了解，下面我们来实现一个表单验证邮箱的功能，验证通过或者不通过，都要在文本框后面输出结果[demo02.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC16%E8%8A%82%EF%BC%9A%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/demo02.html)
 
 ``` html
 <input type="text">

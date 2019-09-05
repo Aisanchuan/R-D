@@ -2,7 +2,7 @@
 
 #### 一、数组的基本概念
 数组是一个特殊的对象，对象的概念是属性的集合，而数组是元素的有序集合。我们可以通过一个中括号来定义一个数组
-示例代码如下:[demo01.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC08%E8%8A%82%EF%BC%9A%E6%95%B0%E7%BB%84/demo01.html)
+示例代码如下:
 
 ``` js
 var numlist = [1,3,5,7,9];
@@ -26,7 +26,7 @@ console.log(numlist.length) // 输出5
 ```
 
 数组中的元素可以是任意类型的，但是我们一般将数组中的元素设置成相同数据类型，下面是一个字符串类型的数组,我们通过下标分别输出数组的所有元素。
-示例代码如下:[demo02.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC08%E8%8A%82%EF%BC%9A%E6%95%B0%E7%BB%84/demo02.html)
+示例代码如下:
 
 ``` js
 var friends = ["小明","小亮","小红"];
@@ -39,7 +39,7 @@ console.log(friends.length);  //长度为3
 
 #### 二、遍历数组
 数组中的元素可能很多，元素的个数也可能发生变化，所以需要输出数组所有元素的时候，手动用下标输出每一个值，我们需要一种更自动的方法来查询数组中的每一个元素，这就是遍历数组，我们可以使用for循环来遍历数组
-示例代码如下:[demo03.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC08%E8%8A%82%EF%BC%9A%E6%95%B0%E7%BB%84/demo03.html)
+示例代码如下:
 
 ``` js
 var friends = ["小明","小亮","小红","张三","李四","王五"];
@@ -49,7 +49,7 @@ for(var i = 0;i<friends.length;i++){
 ```
 
 使用for...in语句同样可以遍历数组
-示例代码如下:[demo04.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC08%E8%8A%82%EF%BC%9A%E6%95%B0%E7%BB%84/demo04.html)
+示例代码如下:
 
 ``` js
 var friends = ["小明","小亮","小红","张三","李四","王五"];
@@ -61,7 +61,7 @@ for(var i in friends){
 #### 三、数组的常用方法
 
 * 添加元素push：我们可以使用push方法想数组中追加元素
-示例代码如下:[demo05.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC08%E8%8A%82%EF%BC%9A%E6%95%B0%E7%BB%84/demo05.html)
+示例代码如下:
 
 ``` js
 var friends = ["小明","小亮"];
@@ -70,7 +70,7 @@ console.log(friends);   //输出["小明","小亮","小红"];
 ```
 
 我们可以使用for语句,循环数组,在当前数组中插入内容插入内容：
-示例代码如下:[demo06.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC08%E8%8A%82%EF%BC%9A%E6%95%B0%E7%BB%84/demo06.html)
+示例代码如下:
 
 ``` js
 var arr = [];
@@ -81,7 +81,7 @@ console.log(arr);   //输出[0,1,2,3,4,5,6,7,8,9]
 ```
 
 * 数组连接成字符串join：通过join方法可以将数组链接成一个字符串
-示例代码如下:[demo07.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC08%E8%8A%82%EF%BC%9A%E6%95%B0%E7%BB%84/demo07.html)
+示例代码如下:
 
 ``` js
 var friends = ["小明","小亮","小红","张三","李四","王五"];

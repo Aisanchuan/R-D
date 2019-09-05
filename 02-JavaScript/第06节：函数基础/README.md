@@ -11,13 +11,12 @@ function fun(){   //定义函数,函数名为fun
 fun();            //调用函数
 ```
 我们先来编写第一个最简单的函数，当这个函数执行的时候会在控制台输出"hello function"
-示例代码如下：[demo01.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC06%E8%8A%82%EF%BC%9A%E5%87%BD%E6%95%B0%E5%9F%BA%E7%A1%80/demo01.html)
+示例代码如下：
 
 ``` js
 function fun(){
     console.log("hello function")
 }
-fun(); 
 fun(); 
 ```
 在上面的代码中我们定义了一个函数，并调用了两次，这样就会在控制台输出两次“hello function”。我们在编程的过程中，很多代码是需要多次使用的，我们可以把它们写在一个函数中，这样我们每次希望执行这些代码的时候，只需要调用这个函数，而不是复制-粘贴多次代码。
@@ -25,7 +24,7 @@ fun();
 
 #### 二、传递参数
 下面编写一个函数sum,输出10和20两个数之和
-示例代码如下：[demo02.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC06%E8%8A%82%EF%BC%9A%E5%87%BD%E6%95%B0%E5%9F%BA%E7%A1%80/demo02.html)
+示例代码如下：
 
 ``` js
 function sum(){
@@ -40,7 +39,7 @@ sum();
 在上面例子中我们调用sum函数，可以成功在控制台输出计算结果，但是函数内部的代码是固定的，虽然可以多次使用，但是每次使用输出的都是10和20的加和，为了让函数更加灵活，我们希望实现一个函数可以计算任意两个数的加和，那么我们就需要了解函数是如何传递参数的。
 
 下面一个简单的例子演示函数如何传递参数
-示例代码如下：[demo03.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC06%E8%8A%82%EF%BC%9A%E5%87%BD%E6%95%B0%E5%9F%BA%E7%A1%80/demo03.html)
+示例代码如下：
 
 ``` js
 function fun(str){
@@ -51,7 +50,7 @@ fun("world");
 在定义函数的括号中，我们添加了一个参数str,这个参数叫做形参。它在函数内部像一个变量一样。但是在函数调用之前他是没有值的。当调用函数的时候，调用函数的括号中我们也添加了一个参数"world"，这个参数叫做实参，他可以是任意数据类型的值。函数被调用后，形参str被赋予了实参"world"的值，然后执行console.log便会在控制台输出"helloworld"
 
 上面的函数有一个形参和一个实参，函数可以传递多个参数，用逗号间隔
-示例代码如下：[demo04.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC06%E8%8A%82%EF%BC%9A%E5%87%BD%E6%95%B0%E5%9F%BA%E7%A1%80/demo04.html)
+示例代码如下：
 
 ``` js
 function sum(num1,num2){
@@ -62,7 +61,7 @@ sum(10,20);
 当我们调用函数的时候，实参和形参是一一对应的，10对应的是num1,20对应的是num2,函数执行后会在控制台输出10和20的加和。
 
 下面我们来编写一个函数，它有一个正整数参数n，当我们调用函数时，函数会输出包括n在内，1~n所有正整数的加和
-示例代码如下：[demo05](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC06%E8%8A%82%EF%BC%9A%E5%87%BD%E6%95%B0%E5%9F%BA%E7%A1%80/demo05.html)
+示例代码如下：
 
 ``` js
 function sum(n){
@@ -81,7 +80,7 @@ sum(567);
 在上面的例子中，我们输入了一个参数，函数就可以在控制台输出我们希望得到的结果，但是在实际开发中，很多情况我们要的不是在控制台输出得到的结果，而单纯的只是为了获取这个值，那么我们就需要用到函数的返回值。
 
 在函数中，我们可以通过return关键字指定一个返回值，函数有了return，当函数被调用的时候就可以把调用的结果赋值给另一个变量了
-示例代码如下：[demo06.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC06%E8%8A%82%EF%BC%9A%E5%87%BD%E6%95%B0%E5%9F%BA%E7%A1%80/demo06.html)
+示例代码如下：
 
 ``` js
 function fun1(){
@@ -101,7 +100,7 @@ console.log(str2);  //输出"hello fun"
 在上面的例子中，函数fun1没有返回值，所有将fun1调用的结果赋值给str1,str1的值为undefined，函数fun2有返回值，返回值是"hello fun"，所以当fun2被调用后，将函数运行的结果赋值给str2,str2的值就是"hello fun"
 
 下面我们来编写一个函数，让函数来计算四则运算的结果
-示例代码如下：[demo07.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC06%E8%8A%82%EF%BC%9A%E5%87%BD%E6%95%B0%E5%9F%BA%E7%A1%80/demo07.html)
+示例代码如下：[demo01.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC06%E8%8A%82%EF%BC%9A%E5%87%BD%E6%95%B0%E5%9F%BA%E7%A1%80/demo01.html)
 
 ``` js
 function count(num1,sign,num2){

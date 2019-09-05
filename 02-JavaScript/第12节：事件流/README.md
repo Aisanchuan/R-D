@@ -62,25 +62,6 @@ btn2.addEventListener("click",function(){
 </div>
 ```
 
-``` css
-.box1{
-    width:300px;
-    height:300px;
-    background-color: yellow;
-}
-.box2{
-    width:200px;
-    height:200px;
-    background-color: blue;
-}
-
-.box3{
-    width:100px;
-    height:100px;
-    background-color: red;
-}
-```
-
 ``` js
 var box1 = document.querySelector(".box1");
 var box2 = document.querySelector(".box2");
@@ -113,7 +94,7 @@ box3.addEventListener("click",function(){
 只要在添加事件方法中添加第三个参数为true,事件就会在捕获阶段被触发，这样输出的顺序就变成了box1-box2-box3。但是在日常开发中，我们几乎不用做此修改，让事件在冒泡阶段触发就可以了。
 
 ### 三、事件委托
-利用事件流的原理，我们可以实现事件委托，事件委托可以简单第理解为将子级的事件委托给父级来处理，我们先来看一个简单的例子[demo05.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC12%E8%8A%82%EF%BC%9A%E4%BA%8B%E4%BB%B6%E6%B5%81/demo05.html)
+利用事件流的原理，我们可以实现事件委托，事件委托可以简单第理解为将子级的事件委托给父级来处理，我们先来看一个简单的例子
 ``` html
 <div class="btnBox">
     <button class="btn1">按钮1</button>
@@ -142,7 +123,7 @@ for(var i = 0;i<btnArray.length;i++){
     })
 }
 ```
-通过遍历我们优化了代码，但是仍然存在问题，首先，如果按钮的数量特别多，每一个按钮都绑定依次事件会非常影响程序的性能，其次，就算不考虑性能，通过这种方法绑定事件，如果使用js新增了一个按钮，这个按钮因为初始化的时候没有绑定事件，所以无法点击。为了解决上述问题，我们可以使用事件委托的方式来实现上面的功能[demo06.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC12%E8%8A%82%EF%BC%9A%E4%BA%8B%E4%BB%B6%E6%B5%81/demo06.html)
+通过遍历我们优化了代码，但是仍然存在问题，首先，如果按钮的数量特别多，每一个按钮都绑定依次事件会非常影响程序的性能，其次，就算不考虑性能，通过这种方法绑定事件，如果使用js新增了一个按钮，这个按钮因为初始化的时候没有绑定事件，所以无法点击。为了解决上述问题，我们可以使用事件委托的方式来实现上面的功能
 ``` js
 var btnBox = document.querySelector(".btnBox");
 btnBox.addEventListener("click",function(event){

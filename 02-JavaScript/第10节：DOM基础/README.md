@@ -9,7 +9,7 @@
 
 #### 二、样式操作
 我们可以通过DOM提供的querySelector方法来获取元素，然后进一步操作它的样式
-示例代码如下:[demo01.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC10%E8%8A%82%EF%BC%9ADOM%E5%9F%BA%E7%A1%80/demo01.html)
+示例代码如下:
 
 ``` html
 <h1>DOM样式测试</h1>
@@ -22,7 +22,7 @@
 ```
 
 若需要通过js设置多个元素的样式，可以使用querySelectorAll方法，
-示例代码如下:[demo02.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC10%E8%8A%82%EF%BC%9ADOM%E5%9F%BA%E7%A1%80/demo02.html)
+示例代码如下:
 
 ``` html
 <ul>
@@ -41,7 +41,7 @@
 
 #### 三、绑定事件
 事件就是文档或者浏览器窗口发生的一些特定的交互瞬间，例如：用户点击网页会触发点击事件（onclick），用户在元素上移动会触发鼠标移动事件（onmouseover）,鼠标移出(onmouseout)又恢复原本模样等。下面我们来定义一个点击事件，当我们点击一个按钮的时候，弹出"hello world"
-示例代码如下:[demo03.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC10%E8%8A%82%EF%BC%9ADOM%E5%9F%BA%E7%A1%80/demo03.html)
+示例代码如下:
 
 ``` html
 <button>按钮</button>
@@ -58,7 +58,7 @@
 我们可以通过JavaScript获取和设置元素属性，例如input的value属性值，或者img的src属性。
 
 首先我们来实现一个效果，在文本框中输入字符串，然后点击按钮用在控制台输出我们输入的字符串
-示例代码如下:[demo04.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC10%E8%8A%82%EF%BC%9ADOM%E5%9F%BA%E7%A1%80/demo04.html)
+示例代码如下:
 
 ``` html
 <input type="text">
@@ -73,7 +73,7 @@
 </script>
 ```
 我们还可以通过赋值的方式为一个元素设置属性,可以切换所示图片
-示例代码如下：[demo05.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC10%E8%8A%82%EF%BC%9ADOM%E5%9F%BA%E7%A1%80/demo05.html)
+示例代码如下：[demo01.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC10%E8%8A%82%EF%BC%9ADOM%E5%9F%BA%E7%A1%80/demo01.html)
 
 ``` html
 <img src="images/0210_logo.jpg" alt="">
@@ -90,7 +90,7 @@
 
 #### 五、数学计算案例
 下面我们来实现一个能完成数学计算的程序，页面有四个文本框和一个按钮，我们在第一个文本框输入一个数字，在第二个文本框输入一个操作符，第三个文本框再输入一个数字，然后当我们点击计算按钮的时候，会在第四个文本框计算出结果,这个例子和我们学习switch语句的时候写的例子很像，但是那时候我们没有可操作的页面，现在我们把计算功能写在一个函数中。
-示例代码如下:[demo06.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC10%E8%8A%82%EF%BC%9ADOM%E5%9F%BA%E7%A1%80/demo06.html)
+示例代码如下:[demo02.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC10%E8%8A%82%EF%BC%9ADOM%E5%9F%BA%E7%A1%80/demo02.html)
 ``` html
     <input type="text" id="num1">
     <input type="text" id="sign">

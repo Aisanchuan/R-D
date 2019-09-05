@@ -14,7 +14,7 @@ var obj = {};
 ```
 
 在花括号中，我们可以为对象定义属性，下面我们来写一个猫的对象
-示例代码如下：[demo01.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC07%E8%8A%82%EF%BC%9A%E5%AF%B9%E8%B1%A1/demo01.html)
+示例代码如下：
 
 ``` js
 var cat = {               //定义一个对象cat,它有两个属性，name和age
@@ -29,7 +29,7 @@ console.log(cat["name"]);
 
 #### 三、方法
 通过上面的例子我们可以知道name的属性值是字符串类型，age的属性值是数值类型。其实对象的属性值可以是任何数据类型，甚至可以是函数，如果对象的属性值是函数，那么我们叫这个属性为这个对象的方法
-示例代码如下：[demo02.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC07%E8%8A%82%EF%BC%9A%E5%AF%B9%E8%B1%A1/demo02.html)
+示例代码如下：
 
 ``` js
 var cat = {
@@ -47,7 +47,7 @@ cat.sayName();
 
 #### 四、this关键字
 在上面的例子中，我们可以给cat的那么属性重新赋值，代码如下
-示例代码如下：[demo03.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC07%E8%8A%82%EF%BC%9A%E5%AF%B9%E8%B1%A1/demo03.html)
+示例代码如下：
 
 ``` js
 var cat = {
@@ -66,7 +66,7 @@ cat.sayName();            //输出"我是喵喵"
 因为猫的名字已经改变，但是sayName方法里面的名字并没有一同变化，我们可以通过this关键字实现修改了名字，方法里面的名字也会改变。
 
 在对象的方法中使用this，可以指向这个对象本身，
-代码如下：[demo04.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC07%E8%8A%82%EF%BC%9A%E5%AF%B9%E8%B1%A1/demo04.html)
+示例代码如下：
 
 ``` js
 var cat = {
@@ -84,7 +84,7 @@ cat.sayName();            //输出“我是小白”
 
 #### 五、方法传参
 给对象的方法传递参数和给函数传递参数是一样的，下面我们来定义一个会算数的猫
-示例代码如下：[demo05.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC07%E8%8A%82%EF%BC%9A%E5%AF%B9%E8%B1%A1/demo05.html)
+示例代码如下：
 
 ``` js
 var cat = {

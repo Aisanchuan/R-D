@@ -11,7 +11,7 @@ for(初始值;布尔值;计数器){
 }
 ```
 在for语句中，如果布尔值是true,就会一直执行语句块中的内容，为了防止死循环，需要有一个计数器，当数值达到指定值，布尔值就会变成false，循环便停止了，下面的示例代码使用for循环输出0~9九个数字
-示例代码如下：[demo01.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC05%E8%8A%82%EF%BC%9A%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5/demo01.html)
+示例代码如下：
 
 ``` js
 for(var i = 0;i<10;i++){  
@@ -22,7 +22,7 @@ for(var i = 0;i<10;i++){
 }
 ```
 通过上面的例子我们进一步理解了for语句的用法，下面我们来做一个联系，利用for循环语句输出100以内所有正整数的加和
-示例代码如下：[demo02.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC05%E8%8A%82%EF%BC%9A%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5/demo02.html)
+示例代码如下：
 
 ``` js
 var sum = 0;                 //sum用来存储循环过程中正整数的加和
@@ -42,7 +42,8 @@ while(bool){
 }
 ```
 当bool为true的时候，花括号中的内容会循环执行。为了防止死循环，需要在循环的过程实现类似for计数器的功能，让循环在有限的次数内定制，下面我们使用while语句输出0~9是个数字
-示例代码如下：[demo03.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC05%E8%8A%82%EF%BC%9A%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5/demo03.html)
+示例代码如下：
+
 ``` js
 var n = 0;
 while(n<10){
@@ -51,7 +52,7 @@ while(n<10){
 }
 ```
 在每次循环的过程中都会让n的值加1，这样当n的值等于10，循环便停止，下面我来使用while语句输出100以内所有正整数的加和
-示例代码如下：[demo04.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC05%E8%8A%82%EF%BC%9A%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5/demo04.html)
+示例代码如下：
 
 ``` js
 var n = 0;
@@ -66,7 +67,7 @@ console.log(sum);
 
 #### 四、continue
 continue可以结束本次循环，直接进入到下一次循环，例如我们用for循环语句来实现输出0~5,7~9九个数字（跳过6）
-示例代码如下：[demo05.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC05%E8%8A%82%EF%BC%9A%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5/demo05.html)
+示例代码如下：
 
 ``` js
 for(var i = 0;i<10;i++){
@@ -77,7 +78,7 @@ for(var i = 0;i<10;i++){
 }
 ```
 上面的代码通过判断，实现当i的值为6的时候，跳过本次循环，直接接入下一次循环。下面我们使用continue来实现计算100以内所有不能被7整除的正整数加和
-示例代码如下：[demo06.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC05%E8%8A%82%EF%BC%9A%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5/demo06.html)
+示例代码如下：
 
 ``` js
 var sum = 0;
@@ -92,8 +93,7 @@ console.log(sum);
 
 #### 五、break
 在学switch语句中，我们已经接触到了break，它可以让分支语句在结束一个case之后，跳出switch语句，break同样可以用在循环语句当中，当代码执行到break时，直接结束循环
-示例代码如下：[demo07.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC05%E8%8A%82%EF%BC%9A%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5/demo07.html)
-
+示例代码如下：
 ``` js
 for(var i = 0;i<10;i++){
     if(i===6){

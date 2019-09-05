@@ -6,13 +6,13 @@ javascript为我们提供了很多内置对象，这些内置对象为我们提�
 需要说明的是document对象是DOM提供的对象，不属于JavaScript内置对象，window对象是BOM中的对象，同样不属于JavaScript内置对象。
 
 ### 二、Math
-Math对象不像数组那样需要我们手动去创建，我们在JavaScript程序中直接写Math代表的就是Math对象。我们可以通过Math对象直接获取圆周率[demo01.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC14%E8%8A%82%EF%BC%9A%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/demo01.html)
+Math对象不像数组那样需要我们手动去创建，我们在JavaScript程序中直接写Math代表的就是Math对象。我们可以通过Math对象直接获取圆周率
 
 ``` js
 var pi = Math.PI;
 console.log(pi);
 ```
-Math对象提供了很多方法来简化我们的数学运算，下面简单列举几个方法[demo02.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC14%E8%8A%82%EF%BC%9A%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/demo02.html)
+Math对象提供了很多方法来简化我们的数学运算，下面简单列举几个方法
 
 ``` js
 var pi = Math.PI;   
@@ -27,14 +27,14 @@ console.log(num3);
 console.log(num4);
 console.log(num5);
 ```
-在Math对象的方法中，floor和random两个方法比较常用，我们可以通过这两个方法获取我们想要的随机数范围。例如我们想要1~10的十个随机数，代码如下[demo03.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC14%E8%8A%82%EF%BC%9A%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/demo03.html)
+在Math对象的方法中，floor和random两个方法比较常用，我们可以通过这两个方法获取我们想要的随机数范围。例如我们想要1~10的十个随机数，代码如下
 ``` js
 var number = Math.floor(Math.random()*10 + 1);
 console.log(number);
 ```
 
 下面我们来实现一个猜数字的游戏，JavaScript随机生成一个1~100之间的数字，我们通过文本输入框输入我们所猜的数字，猜的数字不管是大于结果，还是小于结果，还是等于结果，都会有相应的提示
-代码如下[demo04.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC14%E8%8A%82%EF%BC%9A%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/demo04.html)
+代码如下[demo01.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC14%E8%8A%82%EF%BC%9A%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/demo01.html)
 ``` html
 <input type="text" id="number">
 <button id="guess">猜数字</button>
@@ -56,7 +56,7 @@ console.log(number);
 ```
 
 ### 三、Date
-Date对象是JavaScript用于处理日期和时间的对象，我们可以通过Date对象获取当前的时间，需要说明的是Date对象获取的时间是本机的时间[demo05.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC14%E8%8A%82%EF%BC%9A%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/demo05.html)
+Date对象是JavaScript用于处理日期和时间的对象，我们可以通过Date对象获取当前的时间，需要说明的是Date对象获取的时间是本机的时间
 ``` js
 var dateNow = new Date();
 var year = dateNow.getFullYear();    //获取年，不能用getYear()方法，此方法已经被废弃
@@ -74,7 +74,7 @@ console.log(minutes);
 console.log(seconds);
 console.log(day);
 ```
-我们可以通过JavaScript将当前的时间显示在网页上[demo06.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC14%E8%8A%82%EF%BC%9A%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/demo06.html)
+我们可以通过JavaScript将当前的时间显示在网页上
 ``` js
 var h1 = document.querySelector("h1");
 var dateNow = new Date();
@@ -84,7 +84,7 @@ var seconds = dateNow.getSeconds();
 var strTimeNow = hours + ":" + minutes + ":" + seconds;
 h1.innerHTML = strTimeNow;
 ```
-上面的例子我们成功将当前的日期显示在h1标签中，但是我们显示的时间是获取的那个时间点，显示的时间是静止不动的，我们可以通过计时器方法让我们显示的时间与实际时间同步[demo07.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC14%E8%8A%82%EF%BC%9A%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/demo07.html)
+上面的例子我们成功将当前的日期显示在h1标签中，但是我们显示的时间是获取的那个时间点，显示的时间是静止不动的，我们可以通过计时器方法让我们显示的时间与实际时间同步[demo02.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC14%E8%8A%82%EF%BC%9A%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/demo02.html)
 ``` js
 var h1 = document.querySelector("h1");
 function getTime(){     
@@ -100,7 +100,7 @@ setInterval(getTime,1000);
 ```
 我们将过去时间的代码放到了一个函数中，然后通过计时器方法每秒执行一次这个函数，这样我们显示出来的日期就想电子钟一样每秒与真实事件同步一次。
 
-我们还可以通过参数创建一个指定时间的日期对象，我们修改一下demo05的代码[demo08.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC14%E8%8A%82%EF%BC%9A%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/demo08.html)
+我们还可以通过参数创建一个指定时间的日期对象，我们修改一下demo05的代码[demo03.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC14%E8%8A%82%EF%BC%9A%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/demo03.html)
 ``` js
 var dateNow = new Date("2017-5-1 17:30:20");  //创建指定日期和时间的对象
 var year = dateNow.getFullYear();   
@@ -113,7 +113,7 @@ var day = dateNow.getDay();
 ```
 
 我们在编写程序的时候，有的时候会希望获取一个唯一的时间点，我们可以使用getTime方法或得。
-示例代码如下:[demo09.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC14%E8%8A%82%EF%BC%9A%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/demo09.html)
+示例代码如下:[demo04.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC14%E8%8A%82%EF%BC%9A%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/demo04.html)
 
 ``` js
 var dateTarget = new Date("2017-5-1 17:30:20");
