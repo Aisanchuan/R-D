@@ -8,7 +8,7 @@
 
 #### 首先给出官方文档上的组件生命周期过程图示：
 
-![avatar](images/vue官方组件生命周期函数图解.png) 
+![avatar](../../images/vue官方组件生命周期函数图解.png) 
 
 这是官方文档给出的一个组件从被创建出来到最后被销毁所要经历的一系列过程，所以这个过程也叫做一个组件的生命周期图。从图中我们可以看到，一个组件从被创建到最后被销毁，总共要经历以下8个过程：
 
@@ -106,7 +106,7 @@
 </body>
 ```
 运行上面代码，我们在控制台中可以看到：
-![avatar](images/后台图片.png) 
+![avatar](../../images/后台图片.png) 
 
 ### 四、各个过程详解
 
@@ -118,7 +118,7 @@
 
 在组件创建完毕后created:组件的数据data已经被创建好，但是el还处于未被创建状态。
 
-![avatar](images/组件创建状态.png)
+![avatar](../../images/组件创建状态.png)
 
 #### beforeMount和mounted
 
@@ -127,7 +127,7 @@
 在组件挂载之前beforeMount:组件的el就会被创建，<label style="color:red">但是值得注意的是：虽然数据data里的message早已经被创建好，但是它还未被应用到真是的DOM元素中。</label>
 
 在组件挂载完毕mounted:组件的el,data都已经全部被创建好，并且data里的message也已经被正确的应用到DOM元素中。
-![avatar](images/组件挂载状态.png)
+![avatar](../../images/组件挂载状态.png)
 
 #### beforeUpdate和updated
 
@@ -137,7 +137,7 @@
 
 接着，页面和控制台会变成如下样子：
 
-![avatar](images/组件更新状态.png)
+![avatar](../../images/组件更新状态.png)
 
 从图中我们可以看到，当我们将data里的message值改变之后，会触发组件的beforeUpdate和update钩子函数。
 
@@ -149,12 +149,12 @@
 
 输入之后并回车，控制台发生了如下变化：
 
-![avatar](images/组件销毁状态.png)
+![avatar](../../images/组件销毁状态.png)
 
 到此之后，整个组件便走完了自己的一生，从创建到被销毁，销毁之后，此时该组件将不再受vue管理，组件上的所有事件监听都会被移除，所以指令都会被解绑。
 
 如若不信，我们再执行以下一行代码，试试再改变一下message的值，看看页面还会不会有什么变化：
-![avatar](images/组件被销毁测试.png)
+![avatar](../../images/组件被销毁测试.png)
 
 从图中我们可以看到，当组件被销毁之后，再怎么对组件进行操作已经全然无用了。
 
