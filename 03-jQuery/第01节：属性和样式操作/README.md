@@ -22,7 +22,7 @@ jQuery的流行还有一个原因就是因为它简单、易上手。很多人�
 
 要使用jQuery，首先我们需要下载和引入jQuery，我们可以到[jquery官网](http://jquery.com)下载jQuery文件，然后在html页面中添加script标签引入jQuery。
 
-我们将jQuery放在一个名为script的目录中，然后用下面的代码引入jQuery。代码如下所示[demo01.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/03-jQuery/%E7%AC%AC01%E8%8A%82%EF%BC%9A%E5%B1%9E%E6%80%A7%E5%92%8C%E6%A0%B7%E5%BC%8F%E6%93%8D%E4%BD%9C/demo01.html)
+我们将jQuery放在一个名为script的目录中，然后用下面的代码引入jQuery。
 
 ``` html
 <body>
@@ -44,8 +44,7 @@ jQuery的流行还有一个原因就是因为它简单、易上手。很多人�
 
 **改变元素样式**
 
-jQuery选择器和css选择器很类似（其实可以理解为jQuery选择器扩展了css选择器，在$()中添加css选择器就能找到我们想要的元素），下面我们使用jQuery选择器和css方法来找到并且改变一个元素的样式,代码如下所示。[demo02.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/03-jQuery/%E7%AC%AC01%E8%8A%82%EF%BC%9A%E5%B1%9E%E6%80%A7%E5%92%8C%E6%A0%B7%E5%BC%8F%E6%93%8D%E4%BD%9C/demo02.html)
-
+jQuery选择器和css选择器很类似（其实可以理解为jQuery选择器扩展了css选择器，在$()中添加css选择器就能找到我们想要的元素），下面我们使用jQuery选择器和css方法来找到并且改变一个元素的样式。
 ``` html
 <body>
 	<h1>hello jquery</h1>
@@ -63,7 +62,7 @@ jQuery选择器和css选择器很类似（其实可以理解为jQuery选择器�
 
 **获取元素文本**
 
-上个例子中我们使用了一个jQuery的元素选择器和css方法实现了改变元素样式，接下来我们使用类选择器和text方法获取元素文本。代码如下所示。[demo03.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/03-jQuery/%E7%AC%AC01%E8%8A%82%EF%BC%9A%E5%B1%9E%E6%80%A7%E5%92%8C%E6%A0%B7%E5%BC%8F%E6%93%8D%E4%BD%9C/demo03.html)
+上个例子中我们使用了一个jQuery的元素选择器和css方法实现了改变元素样式，接下来我们使用类选择器和text方法获取元素文本。
 
 ``` html
 <body>
@@ -83,7 +82,7 @@ jQuery选择器和css选择器很类似（其实可以理解为jQuery选择器�
 
 **设置元素属性**
 
-我们还可以通过jQuery的attr方法来设置元素的属性，下面的例子我们使用attr方法将img标签的src属性指定成一张图片的路径,代码如下所示。[demo04.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/03-jQuery/%E7%AC%AC01%E8%8A%82%EF%BC%9A%E5%B1%9E%E6%80%A7%E5%92%8C%E6%A0%B7%E5%BC%8F%E6%93%8D%E4%BD%9C/demo04.html)
+我们还可以通过jQuery的attr方法来设置元素的属性，下面的例子我们使用attr方法将img标签的src属性指定成一张图片的路径。
 
 ``` html
 <body>
@@ -100,7 +99,7 @@ jQuery选择器和css选择器很类似（其实可以理解为jQuery选择器�
 
 **添加和删除class**
 
-在说添加和删除class之前，我们先来看一个略复杂的选择器,代码如下所示。[demo05.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/03-jQuery/%E7%AC%AC01%E8%8A%82%EF%BC%9A%E5%B1%9E%E6%80%A7%E5%92%8C%E6%A0%B7%E5%BC%8F%E6%93%8D%E4%BD%9C/demo05.html)
+在说添加和删除class之前，我们先来看一个略复杂的选择器,代码如下所示。
 
 ``` html
 <body>
@@ -124,33 +123,8 @@ jQuery选择器和css选择器很类似（其实可以理解为jQuery选择器�
 
 在上面的代码中，我们将第二个li元素背景设置成了红色。
 
-我们经常会使用jQuery操作元素的样式，上面我们已经学习了css方法，但是在实际开发中，css方法并不常用，我们更多的是使用addClass和removeClass方法来操作元素的样式，示例代码如下所示。[demo06.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/03-jQuery/%E7%AC%AC01%E8%8A%82%EF%BC%9A%E5%B1%9E%E6%80%A7%E5%92%8C%E6%A0%B7%E5%BC%8F%E6%93%8D%E4%BD%9C/demo06.html)
+我们经常会使用jQuery操作元素的样式，上面我们已经学习了css方法，但是在实际开发中，css方法并不常用，我们更多的是使用addClass和removeClass方法来操作元素的样式，示例代码如下所示。[demo01.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/03-jQuery/%E7%AC%AC01%E8%8A%82%EF%BC%9A%E5%B1%9E%E6%80%A7%E5%92%8C%E6%A0%B7%E5%BC%8F%E6%93%8D%E4%BD%9C/demo01.html)
 
-``` html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-    <title>Document</title>
-    <style>
-        .active{
-            background-color: red;
-        }
-    </style>
-</head>
-<body>
-	<ul class="nav">
-		<li>香蕉</li>
-		<li>苹果</li>
-		<li>鸭梨</li>
-	</ul>
-	<script src="script/jquery.js"></script>
-	<script>
-		$(".nav li:eq(1)").addClass("active");
-	</script>
-</body>
-</html>
-```
 
 * 通过addClass方法，我们可以给元素添加一个class名active，这样style标签中定义的样式就会作用于这个元素。
 * 同理，removeClass方法可以删除元素的class名，我们会在后续的课程中讲解。
