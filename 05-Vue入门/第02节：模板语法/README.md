@@ -38,6 +38,7 @@
     <script>
         new Vue({
             el:"#app",
+            // methods里面写函数方法
             methods:{
                 myEvent:function(){
                     alert("hello world")

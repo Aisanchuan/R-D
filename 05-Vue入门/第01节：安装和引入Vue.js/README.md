@@ -16,6 +16,7 @@
 ``` html
 <body>
     <div id="app">
+    <!-- 双花括号用于绑定data里面的属性值 -->
         <h1>{{message}}</h1>
     </div>
     <script src="../../script/vue.js"></script>
