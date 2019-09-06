@@ -71,7 +71,7 @@ show create table user; --查看user表当前使用的存储引擎。
 - 读已提交：read committed
 - 可重复读：repeatable read
 - 串行化：serializable
-
+![隔离级别](../images/0903-隔离级别.png)
 ### 五、索引
 
 提升数据库查询效率，表中每一个字段都可以添加索引，主键会自动添加索引，所以按照主键查询效率更高。
