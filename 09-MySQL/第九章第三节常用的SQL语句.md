@@ -32,7 +32,9 @@
 - 显示数据库所有表:show tables;
 - 删除表：drop table table_name;
 - 查看表结构：desc table_name;
- 
+
+[示例代码](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/09-MySQL/%E7%A4%BA%E4%BE%8B%E5%91%BD%E4%BB%A4.md)
+
 ### 三、存储引擎
 
 ```sql
