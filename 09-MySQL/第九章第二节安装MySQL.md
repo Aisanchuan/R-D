@@ -7,7 +7,7 @@
 [安装教程](https://www.cnblogs.com/ZengJiaLin/p/11332561.html)
 
 ####二、数据库数据的备份与恢复
-```s
+```sql
 1.备份数据库的内容：
 数据库名叫dddd
 mysqldump -u root -p `dddd` > dddd.sql

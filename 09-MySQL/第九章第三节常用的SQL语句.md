@@ -1,4 +1,4 @@
-# 第 03 节：常用的 SQL 语句
+# 第九章第三节常用的 SQL 语句
 
 ### SQL 分类
 
@@ -33,7 +33,7 @@
 - 删除表：drop table table_name;
 - 查看表结构：desc table_name;
  
-### 存储引擎
+### 三、存储引擎
 
 ```sql
 show engines; --显示所有存储引擎
@@ -46,7 +46,7 @@ show create table user; --查看user表当前使用的存储引擎。
 - InnoDB:支持事务，修改较多。
 - MEMORY:数据存储在内存中，可以存储非永久保存的数据
 
-### 事务 transaction
+### 四、事务 transaction
 
 - 事务可以保证多个任务的原子性，例如三个任务如果有一个没有完成，那么三个都不执行。
 - 可以保证多个操作要么全部成功，要么全部失败。
@@ -72,7 +72,7 @@ show create table user; --查看user表当前使用的存储引擎。
 - 可重复读：repeatable read
 - 串行化：serializable
 
-### 索引
+### 五、索引
 
 提升数据库查询效率，表中每一个字段都可以添加索引，主键会自动添加索引，所以按照主键查询效率更高。
 
@@ -92,7 +92,7 @@ show index from user;
 drop index name_index on user;
 ```
 
-### 视图
+### 六、视图
 
 视图就是一个查询结果，可以隐藏表中的细节。
 
