@@ -34,7 +34,7 @@ console.log(number);
 ```
 
 下面我们来实现一个猜数字的游戏，JavaScript随机生成一个1~100之间的数字，我们通过文本输入框输入我们所猜的数字，猜的数字不管是大于结果，还是小于结果，还是等于结果，都会有相应的提示
-代码如下[demo01.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC14%E8%8A%82%EF%BC%9A%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/demo01.html)
+代码如下[示例连接](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC14%E8%8A%82%EF%BC%9A%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/demo01.html)
 ``` html
 <input type="text" id="number">
 <button id="guess">猜数字</button>
@@ -84,7 +84,7 @@ var seconds = dateNow.getSeconds();
 var strTimeNow = hours + ":" + minutes + ":" + seconds;
 h1.innerHTML = strTimeNow;
 ```
-上面的例子我们成功将当前的日期显示在h1标签中，但是我们显示的时间是获取的那个时间点，显示的时间是静止不动的，我们可以通过计时器方法让我们显示的时间与实际时间同步[demo02.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC14%E8%8A%82%EF%BC%9A%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/demo02.html)
+上面的例子我们成功将当前的日期显示在h1标签中，但是我们显示的时间是获取的那个时间点，显示的时间是静止不动的，我们可以通过计时器方法让我们显示的时间与实际时间同步[示例连接](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC14%E8%8A%82%EF%BC%9A%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/demo02.html)
 ``` js
 var h1 = document.querySelector("h1");
 function getTime(){     
@@ -100,7 +100,7 @@ setInterval(getTime,1000);
 ```
 我们将过去时间的代码放到了一个函数中，然后通过计时器方法每秒执行一次这个函数，这样我们显示出来的日期就想电子钟一样每秒与真实事件同步一次。
 
-我们还可以通过参数创建一个指定时间的日期对象，我们修改一下demo05的代码[demo03.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC14%E8%8A%82%EF%BC%9A%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/demo03.html)
+我们还可以通过参数创建一个指定时间的日期对象，我们修改一下demo05的代码[示例连接](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC14%E8%8A%82%EF%BC%9A%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/demo03.html)
 ``` js
 var dateNow = new Date("2017-5-1 17:30:20");  //创建指定日期和时间的对象
 var year = dateNow.getFullYear();   
@@ -113,7 +113,7 @@ var day = dateNow.getDay();
 ```
 
 我们在编写程序的时候，有的时候会希望获取一个唯一的时间点，我们可以使用getTime方法或得。
-示例代码如下:[demo04.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC14%E8%8A%82%EF%BC%9A%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/demo04.html)
+示例代码如下:[示例连接](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC14%E8%8A%82%EF%BC%9A%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1/demo04.html)
 
 ``` js
 var dateTarget = new Date("2017-5-1 17:30:20");

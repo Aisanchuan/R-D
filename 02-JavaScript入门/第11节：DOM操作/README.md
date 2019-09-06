@@ -8,7 +8,7 @@
 
 #### 二、文本节点
 在html中我们有一个h1标签和一个按钮，h1标签内已经有了一段文本。当我们点击按钮的时候，在h1标签中插入“hello world”
-示例代码如下:[demo01.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC11%E8%8A%82%EF%BC%9ADOM%E6%93%8D%E4%BD%9C/demo01.html)
+示例代码如下:[示例连接](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC11%E8%8A%82%EF%BC%9ADOM%E6%93%8D%E4%BD%9C/demo01.html)
 ``` html
 <h1>内容：</h1>
 <button>添加文本节点</button>
@@ -26,7 +26,7 @@
 ```
 
 在DOM种还有另一个属性可以更方便地获取和设置文本节点，这个属性是innerHTML,我们写一个简单的例子来测试innerHTML属性
-示例代码如下：[demo02.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC11%E8%8A%82%EF%BC%9ADOM%E6%93%8D%E4%BD%9C/demo02.html)
+示例代码如下：[示例连接](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC11%E8%8A%82%EF%BC%9ADOM%E6%93%8D%E4%BD%9C/demo02.html)
 
 ``` html
 <h1>内容：</h1>
@@ -41,7 +41,7 @@
 </script>
 ```
 
-对比着两种方法，第一种方法需要创建文本节点，然后通过appendChild方法将节点追加到之前文本内容的后面，第二种方法则是直接用innerHTML覆盖之前文本节点的内容。如果要实现demo01的功能，需要改写一下事件内的代码[demo03.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC11%E8%8A%82%EF%BC%9ADOM%E6%93%8D%E4%BD%9C/demo03.html)
+对比着两种方法，第一种方法需要创建文本节点，然后通过appendChild方法将节点追加到之前文本内容的后面，第二种方法则是直接用innerHTML覆盖之前文本节点的内容。如果要实现demo01的功能，需要改写一下事件内的代码[示例连接](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC11%E8%8A%82%EF%BC%9ADOM%E6%93%8D%E4%BD%9C/demo03.html)
 ``` js
 var str = h1.innerHTML;//获取文本内容
 h1.innerHTML =str + "hello world"; //原文本内容与新文本内容连接
@@ -58,7 +58,7 @@ h1.innerHTML =str + "hello world"; //原文本内容与新文本内容连接
 </ul>
 ```
 我们要是先一个功能，当点击按钮的时候，在列表中添加一个li元素
-代码如下[demo04.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC11%E8%8A%82%EF%BC%9ADOM%E6%93%8D%E4%BD%9C/demo04.html)
+代码如下[示例连接](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC11%E8%8A%82%EF%BC%9ADOM%E6%93%8D%E4%BD%9C/demo04.html)
 
 ``` js
 var btn = document.querySelector("button");
@@ -69,7 +69,7 @@ btn.onclick = function(){
 }
 ```
 在这个案例中，我们已经成功地在ul标签中添加了li元素，但是li元素并没有文本节点，我们进一步改进点击事件中的内容
-[demo05.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC11%E8%8A%82%EF%BC%9ADOM%E6%93%8D%E4%BD%9C/demo05.html)
+[示例连接](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC11%E8%8A%82%EF%BC%9ADOM%E6%93%8D%E4%BD%9C/demo05.html)
 
 
 ``` js
@@ -77,7 +77,7 @@ var li = document.createElement("li");
 li.innerHTML = "鸭梨";
 ul.appendChild(li); 
 ```
-通过上面的代码，我们已经可以在ul中添加带有文本节点的li元素了，但是文本节点是固定的“鸭梨”，我们还可以进一步通过一个文本框，让用户自己填写要插入的内容[demo06.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC11%E8%8A%82%EF%BC%9ADOM%E6%93%8D%E4%BD%9C/demo06.html)
+通过上面的代码，我们已经可以在ul中添加带有文本节点的li元素了，但是文本节点是固定的“鸭梨”，我们还可以进一步通过一个文本框，让用户自己填写要插入的内容[示例连接](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC11%E8%8A%82%EF%BC%9ADOM%E6%93%8D%E4%BD%9C/demo06.html)
 
 ``` html
     <script>
@@ -94,7 +94,7 @@ ul.appendChild(li);
 
 #### 四、删除元素节点
 我们可以通过removeChild方法删除元素,下面的例子我们来实现点击按钮，删除h1标签的效果
-示例代码如下:[demo07.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC11%E8%8A%82%EF%BC%9ADOM%E6%93%8D%E4%BD%9C/demo07.html)
+示例代码如下:[示例连接](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC11%E8%8A%82%EF%BC%9ADOM%E6%93%8D%E4%BD%9C/demo07.html)
 
 ``` html
 <button>删除</button>
@@ -110,7 +110,8 @@ ul.appendChild(li);
     }
 </script>
 ```
-通过上面的代码可以知道，删除一个元素需要知道他的父级元素，然后通过父级元素的removeChild方法删除子集元素，那么如果不确定删除的元素的父级是哪有个元素，我们该如何获取元素的父级元素呢，可以使用parentNode方法，我们之前爱来改写上面的代码[demo08.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC11%E8%8A%82%EF%BC%9ADOM%E6%93%8D%E4%BD%9C/demo08.html)
+通过上面的代码可以知道，删除一个元素需要知道他的父级元素，然后通过父级元素的removeChild方法删除子集元素，那么如果不确定删除的元素的父级是哪有个元素，我们该如何获取元素的父级元素呢，可以使用parentNode方法，我们之前爱来改写上面的代码
+[示例连接](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC11%E8%8A%82%EF%BC%9ADOM%E6%93%8D%E4%BD%9C/demo08.html)
 
 ``` html
 <button>删除</button>
@@ -130,7 +131,7 @@ ul.appendChild(li);
 
 
 下面我们来实现一个删除水果列表中水果的功能，html代码如下
-示例代码如下:[demo09.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC11%E8%8A%82%EF%BC%9ADOM%E6%93%8D%E4%BD%9C/demo09.html)
+示例代码如下:[示例连接](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC11%E8%8A%82%EF%BC%9ADOM%E6%93%8D%E4%BD%9C/demo09.html)
 
 ``` html
 <ul>

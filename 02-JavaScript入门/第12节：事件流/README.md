@@ -10,7 +10,7 @@ btn.onclick = function(){}   //绑定鼠标单击事件
 ``` js
 btn.addEventListener("click",function(){});
 ```
-下面我们用两种方法为按钮绑定事件[demo01.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC12%E8%8A%82%EF%BC%9A%E4%BA%8B%E4%BB%B6%E6%B5%81/demo01.html)
+下面我们用两种方法为按钮绑定事件[示例连接](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC12%E8%8A%82%EF%BC%9A%E4%BA%8B%E4%BB%B6%E6%B5%81/demo01.html)
 
 ``` html
 <button id="btn1">按钮1</button>
@@ -28,7 +28,7 @@ btn.addEventListener("click",function(){});
     })
 </script>
 ```
-两种方法都能实现相同的效果，能成功的为按钮绑定了点击事件，但区别是使用addEventLitener可以无限制的为元素绑定事件，而内联事件后面的会覆盖前面的[demo02.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC12%E8%8A%82%EF%BC%9A%E4%BA%8B%E4%BB%B6%E6%B5%81/demo02.html)
+两种方法都能实现相同的效果，能成功的为按钮绑定了点击事件，但区别是使用addEventLitener可以无限制的为元素绑定事件，而内联事件后面的会覆盖前面的[示例连接](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC12%E8%8A%82%EF%BC%9A%E4%BA%8B%E4%BB%B6%E6%B5%81/demo02.html)
 
 ``` js
 var btn1 = document.querySelector("#btn1");
@@ -53,7 +53,8 @@ btn2.addEventListener("click",function(){
 第一个按钮第二次绑定的事件覆盖了第一次绑定的事件，第二个按钮两次绑定的事件都能被触发。
 
 ### 二、事件冒泡与事件捕获
-接下来我们用事件监听器为三个div元素绑定点击事件，最外层的div宽高是300px，中间的div宽高都是200px，最内层的div宽高都是100px，那么思考一下，点击最内层的div，事件会如何触发，是只触发最内层的div，还是从内到外依次触发，还是从外到内依次触发[demo03.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC12%E8%8A%82%EF%BC%9A%E4%BA%8B%E4%BB%B6%E6%B5%81/demo03.html)
+接下来我们用事件监听器为三个div元素绑定点击事件，最外层的div宽高是300px，中间的div宽高都是200px，最内层的div宽高都是100px，那么思考一下，点击最内层的div，事件会如何触发，是只触发最内层的div，还是从内到外依次触发，还是从外到内依次触发
+[示例连接](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC12%E8%8A%82%EF%BC%9A%E4%BA%8B%E4%BB%B6%E6%B5%81/demo03.html)
 ``` html
 <div class="box1">
     <div class="box2">
@@ -79,7 +80,7 @@ box3.addEventListener("click",function(){
 ```
 通过上面的例子我们可以看到，事件是从最内层开始触发，然后依次向外，输出的顺序是box3-box2-box1。导致这种顺序的原因是因为：事件流有事件捕获阶段和事件冒泡阶段，事件捕获阶段是从最外层元素开始一层一层进入到事件目标（也就是我们点击的那个元素），到达事件目标后，进入事件冒泡阶段，事件从最内层流向最外层，事件默认情况下在冒泡阶段触发，所以我们看到的是先输出box3,最后输出box1。
 
-我们也可以将事件设置为捕获阶段触发，代码如下[deo04.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC12%E8%8A%82%EF%BC%9A%E4%BA%8B%E4%BB%B6%E6%B5%81/demo04.html)
+我们也可以将事件设置为捕获阶段触发，代码如下[示例连接](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC12%E8%8A%82%EF%BC%9A%E4%BA%8B%E4%BB%B6%E6%B5%81/demo04.html)
 ``` js
 box1.addEventListener("click",function(){
     console.log("我是box1")

@@ -68,7 +68,7 @@ if(num1<num2){
 我们可以通过修改num1和num2的值来判断输出哪一行语句。
 
 **通过控制运算符来实现数学运算**
-示例代码如下：[demo01.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC04%E8%8A%82%EF%BC%9A%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5/demo01.html)
+示例代码如下：[示例连接](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC04%E8%8A%82%EF%BC%9A%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5/demo01.html)
 
 ``` js
 var num1 = 10;
@@ -95,7 +95,7 @@ if(sign === "+"){
 ### 二、switch语句
 
 if语句在程序执行的过程中创建一条分支，并且可以使用if...else if...语句来处理多条分支，然而当所有的分支都依赖于同一个表达式的值时，重复计算多条if语句中的条件是非常浪费时间的做法，switch语句正合适处理这种情况
-示例代码如下：[demo02.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC04%E8%8A%82%EF%BC%9A%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5/demo02.html)
+示例代码如下：[示例连接](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC04%E8%8A%82%EF%BC%9A%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5/demo02.html)
 
 ```js
 var num = 0;   //通过修改num的值控制执行哪行语句
@@ -119,7 +119,7 @@ switch(num){
 ```
 
 我们了解switch语句的语法，下面我们使用switch语句改写demo06,实现通过控制运算符来实现数学运算
-示例代码如下：[demo03.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC04%E8%8A%82%EF%BC%9A%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5/demo03.html)
+示例代码如下：[示例连接](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC04%E8%8A%82%EF%BC%9A%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5/demo03.html)
 
 ``` js
 var num = 0;   //通过修改num的值控制执行哪行语句
