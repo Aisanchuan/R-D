@@ -2,8 +2,7 @@
 
 ### 安装MySQL
 ####一、下载MySQL安装包
-[安装包](https://dev.mysql.com/downloads/windows/installer/8.0.html)
-* 下载393.4M的
+* 下载254.2M的
 [安装教程](https://www.cnblogs.com/ZengJiaLin/p/11332561.html)
 
 ####二、数据库数据的备份与恢复
@@ -42,11 +41,13 @@ mysql -u root -p armytest < d:/database_dump.txt
 这是把不同目录下的文件database_dump.txt里面的内容导入到SQL数据库里
 
 3.
+* 数据库基本信息
+```s 
 数据库：db_name 
 数据表：table_name 
 用户名：root 
 密码：dbpasswd
-
+```
 * 导出数据库表结构：
 ```sql
 mysqldump -uroot -pdbpasswd -d db_name >db.sql;

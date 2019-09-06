@@ -31,18 +31,18 @@ show databases;
 ```sql
 show create database db_name;
 ```
-- 创建数据库：
 
+- 创建数据库：
 ```
 CREsqlATE DATABASE `db_name` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci; //用反引号
 ```
-- 将数据库修改为 UTF8：
 
+- 将数据库修改为 UTF8：
 ```sql
 alter database db_name character set utf8;
 ```
-- 切换数据库：
 
+- 切换数据库：
 ```sql
 use database_name;
 ```
