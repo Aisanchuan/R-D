@@ -3,6 +3,20 @@
 ### 一、Ajax原理
 
 上一节我们使用jQuery实现了异步交互数据，本节我们不依赖任何库和框架来实现异步数据交互。
+``` html
+<script>
+        $("button").click(function(){//点击执行函数
+            //输出data.txt中的数据，hello ajax
+            $.ajax({
+                type:"get",//请求方法
+                url:"/data.txt"//请求路径
+            }).done(function(res){
+                alert(res)
+            })
+
+        })
+</script>
+```
 
 ### 二、封装一个Ajax方法
 
