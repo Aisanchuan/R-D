@@ -17,7 +17,8 @@ jQuery为我们提供了很多动画方法，这些动画效果虽然没有CSS3�
 **hide和show**
 
 hide方法可以将元素隐藏，如果不设置参数，隐藏的元素会直接消失，如果设置参数，可以定义元素隐藏用的毫秒数，元素会至右下方到左上方逐渐消失。
-show方法与hide方法相反，元素会从隐藏的状态转换到显示状态，如果不设置参数，元素会瞬间出现，如果设置参数，元素会在指定的毫秒内从左上到右下逐渐显示出来。代码如下所示。[demo01.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/03-jQuery/%E7%AC%AC03%E8%8A%82%EF%BC%9A%E5%8A%A8%E7%94%BB%E6%95%88%E6%9E%9C/demo01.html)
+show方法与hide方法相反，元素会从隐藏的状态转换到显示状态，如果不设置参数，元素会瞬间出现，如果设置参数，元素会在指定的毫秒内从左上到右下逐渐显示出来。
+代码如下所示[demo01.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/03-jQuery/%E7%AC%AC03%E8%8A%82%EF%BC%9A%E5%8A%A8%E7%94%BB%E6%95%88%E6%9E%9C/demo01.html)
 
 ``` css
 .box{
@@ -37,7 +38,7 @@ show方法与hide方法相反，元素会从隐藏的状态转换到显示状态
 			$(".box").hide(500);  // 500毫秒后隐藏
 		});
 		$(".show").click(function(){
-			$(".box").show(500);  // 500毫秒后显示
+			$(".box").show(500)；  // 500毫秒后显示
 		})
 	</script>
 </body>
@@ -48,38 +49,43 @@ show方法与hide方法相反，元素会从隐藏的状态转换到显示状态
 
 ### 三、上卷和下拉
 
-**slideUp和slideDown**
+**slideUp**
 
-slideUp方法同样可以让元素隐藏，但是隐藏的方式是从下到上逐渐消失。
-
-slideDown与slideUp相反，元素会从上到下逐渐显示出来。代码如下所示。[demo02.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/03-jQuery/%E7%AC%AC03%E8%8A%82%EF%BC%9A%E5%8A%A8%E7%94%BB%E6%95%88%E6%9E%9C/demo02.html)
+slideUp方法同样可以让元素隐藏，但是隐藏的方式是从下到上逐渐消失，代码如下所示[demo02.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/03-jQuery/%E7%AC%AC03%E8%8A%82%EF%BC%9A%E5%8A%A8%E7%94%BB%E6%95%88%E6%9E%9C/demo02.html)
 
 ``` js
-//上卷
-$("slideUp").click(function(){
+$("button").click(function(){
     $(".box").slideUp(500);  // 500毫秒后隐藏
+});
+```
 
-//下拉
-$("slideDown").click(function(){
+**slideDwon**
+
+slideDown与slideUp相反，元素会从上到下逐渐显示出来，代码如下所示[demo03.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/03-jQuery/%E7%AC%AC03%E8%8A%82%EF%BC%9A%E5%8A%A8%E7%94%BB%E6%95%88%E6%9E%9C/demo03.html)
+
+``` js
+$("button").click(function(){
     $(".box").slideDown(500);  // 500毫秒后显示
 });
 ```
 
 ### 四、渐出和渐入
 
-**fadeOut和fadeIn**
+**fadeOut**
 
-fadeOut也可以让元素隐藏，元素在隐藏的过程中，会逐渐改变透明度，直到完全不可见，代码如下所示。
+fadeOut也可以让元素隐藏，元素在隐藏的过程中，会逐渐改变透明度，直到完全不可见，代码如下所示[demo04.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/03-jQuery/%E7%AC%AC03%E8%8A%82%EF%BC%9A%E5%8A%A8%E7%94%BB%E6%95%88%E6%9E%9C/demo04.html)
 
-fadeIn与fadeOut相反，元素会以改变透明度的方式逐渐显示出来,代码如下所示。
 ``` js
-
-//渐入
 $("button").click(function(){
     $(".box").fadeOut(500);  // 500毫秒后隐藏
 });
+```
 
-//渐出
+**fadeIn**
+
+fadeIn与fadeOut想法，元素会以改变透明度的方式逐渐显示出来,代码如下所示[demo05.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/03-jQuery/%E7%AC%AC03%E8%8A%82%EF%BC%9A%E5%8A%A8%E7%94%BB%E6%95%88%E6%9E%9C/demo05.html)
+
+``` js
 $("button").click(function(){
     $(".box").fadeIn(500);  // 500毫秒后显示
 });
@@ -89,7 +95,8 @@ $("button").click(function(){
 
 **animate**
 
-animate方法是自定义动画方法，我们可以通过设置样式来实现元素的动画效果，可以再animate的第一个参数设置一个样式，第二个参数设置毫秒数，元素会在指定的毫秒数，由当前的样式以动画的形式变为目标的样式，代码如下所示。
+animate方法是自定义动画方法，我们可以通过设置样式来实现元素的动画效果，可以再animate的第一个参数设置一个样式，第二个参数设置毫秒数，元素会在指定的毫秒数，由当前的样式以动画的形式变为目标的样式，代码如下所示[demo06.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/03-jQuery/%E7%AC%AC03%E8%8A%82%EF%BC%9A%E5%8A%A8%E7%94%BB%E6%95%88%E6%9E%9C/demo06.html)
+
 ``` js
 $("button").click(function(){
     $(".box").animate({marginLeft:"300px",marginTop:"100px"},500);  
@@ -102,10 +109,10 @@ $("button").click(function(){
 
 **混动菜单效果**
 
-* 混动菜单效果需要实现的案例如所示，首先我们需要完成html布局和css样式。
-* 当鼠标移动到指定菜单的时候，我们让当前菜单的子菜单实现一个混动的效果，代码如下所示[demo05.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/03-jQuery/%E7%AC%AC03%E8%8A%82%EF%BC%9A%E5%8A%A8%E7%94%BB%E6%95%88%E6%9E%9C/demo05.html)。
+* 混动菜单效果需要实现的案例如[demo07.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/03-jQuery/%E7%AC%AC03%E8%8A%82%EF%BC%9A%E5%8A%A8%E7%94%BB%E6%95%88%E6%9E%9C/demo07.html)所示，首先我们需要完成html布局和css样式。
+* 当鼠标移动到指定菜单的时候，我们让当前菜单的子菜单实现一个混动的效果，代码如下所示[demo07.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/03-jQuery/%E7%AC%AC03%E8%8A%82%EF%BC%9A%E5%8A%A8%E7%94%BB%E6%95%88%E6%9E%9C/demo07.html)。
 **下拉菜单效果**
 
-* 下拉菜单效果需要实现的案例如[demo06.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/03-jQuery/%E7%AC%AC03%E8%8A%82%EF%BC%9A%E5%8A%A8%E7%94%BB%E6%95%88%E6%9E%9C/demo06.html)
+* 下拉菜单效果需要实现的案例如[demo08.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/03-jQuery/%E7%AC%AC03%E8%8A%82%EF%BC%9A%E5%8A%A8%E7%94%BB%E6%95%88%E6%9E%9C/demo08.html)
 所示，首先我们完成html布局和css样式
 * 当鼠标移动到指定菜单的时候，当前菜单的子菜单会以slideDown动画的形式出现，当鼠标离开菜单的时候，子菜单会以slideUp动画的形式隐藏。
