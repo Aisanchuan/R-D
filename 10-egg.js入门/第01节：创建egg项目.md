@@ -2,10 +2,8 @@
 
 ### Egg.js 是什么?
 
-``` 
 Egg.js 为企业级框架和应用而生，我们希望由 Egg.js 孕育出更多上层框架，帮助开发团队和
 开发人员降低开发和维护成本。
-```
 
 ### 一、使用egg的目的
 
@@ -21,19 +19,24 @@ Egg.js 为企业级框架和应用而生，我们希望由 Egg.js 孕育出更�
 对于刚接触的同学来说,可能会感觉很难，但创建一个项目是非常简单的，跟下面一步一步做吧！
 
 1.创建egg的环境 
-``npm i egg-init -g``(只需要安装一次)
+```js
+npm i egg-init -g
+```
 2.创建项目  
-如：``egg-init eggdemo01 --type=simple``
-  方法 ：``egg-init 项目名称 --type=simple  ``
+```js
+egg-init 项目名称 --type=simple
+```
 3.进入到这个文件夹
- ``cd+文件夹名``
+ ```js
+ cd+文件夹名
+ ```
 4.安装依赖
- ``npm install``
+ ```
+ npm install
+ ```
 5.启动项目
-```
-安装成功后直接执行npm run dev，默认端口是7001，然后在浏览器中打开localhost:7001如果出现如下图所示就说明初始化目成功了，如果安装依
-赖失败那么可以强制npm清理一下缓存npm cache clean --force然后再安装，如果还是报错可以翻墙到面再试下。
-```
+
+安装成功后直接执行``npm run dev``，默认端口是``7001``，然后在浏览器中打开``localhost:7001``如果出现如下图所示就说明初始化目成功了，如果安装依赖失败那么可以强制npm清理一下缓存``npm cache clean --force``然后再安装，如果还是报错可以翻墙到面再试下。 
 
 ### 三、项目目录结构讲解
 **创建好项目的同学可以发现多了好多文件夹，具体用来干什么的呢，请看下面**
@@ -94,4 +97,4 @@ test/ 用于单元测试
 ``app/view/`` 用于放置模板文件，可选，由模板插件约定，
 ``app/model/`` 用于放置领域模型，可选，由领域类相关插件约定，如 ``egg-sequelize``。
 
-详情可见 ：[Egg官网](https://eggjs.org/zh-cn/intro/quickstart.html)
+详情可见 ：[Egg.js官网](https://eggjs.org/zh-cn/intro/quickstart.html)

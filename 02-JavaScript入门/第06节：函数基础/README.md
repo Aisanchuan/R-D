@@ -100,7 +100,7 @@ console.log(str2);  //输出"hello fun"
 在上面的例子中，函数fun1没有返回值，所有将fun1调用的结果赋值给str1,str1的值为undefined，函数fun2有返回值，返回值是"hello fun"，所以当fun2被调用后，将函数运行的结果赋值给str2,str2的值就是"hello fun"
 
 下面我们来编写一个函数，让函数来计算四则运算的结果
-示例代码如下：[demo01.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC06%E8%8A%82%EF%BC%9A%E5%87%BD%E6%95%B0%E5%9F%BA%E7%A1%80/demo01.html)
+示例代码如下：[示例连接](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC06%E8%8A%82%EF%BC%9A%E5%87%BD%E6%95%B0%E5%9F%BA%E7%A1%80/demo01.html)
 
 ``` js
 function count(num1,sign,num2){

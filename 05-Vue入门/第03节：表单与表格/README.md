@@ -4,7 +4,7 @@
 
 **数据绑定**
 
-上一章我们已经了解了如何将数据绑定到文本节点和属性节点。本节我们要实现数据的双向绑定，让data中的数据与文本框中的数据同步。
+上一章我们已经了解了如何将数据绑定到文本节点和属性节点。本节我们要实现数据的双向绑定，让data中的数据与文本框中的数据同步[demo01](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/05-Vue入门/第02章%EF%BC%9Avue的基本概念%EF%BC%88二%EF%BC%89/demo01.html)。
 ``` html
 <body>
     <div id="app">
@@ -27,7 +27,7 @@
 
 **添加元素**
 
-我们可以利用v-model来实现添加列表元素的功能:
+我们可以利用v-model来实现添加列表元素的功能[demo02](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/05-Vue入门/第02章%EF%BC%9Avue的基本概念%EF%BC%88二%EF%BC%89/demo02.html):
 ``` html
 <body>
     <div id="app">
@@ -55,7 +55,7 @@
 </body>
 ```
 
-下面做一个练习，结合上一章的内容，将添加元素和删除元素功能添加到一个文件中
+下面做一个练习，结合上一章的内容，将添加元素和删除元素功能添加到一个文件中[demo03](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/05-Vue入门/第02章%EF%BC%9Avue的基本概念%EF%BC%88二%EF%BC%89/demo03.html)
 
 ``` html
 <body>
@@ -90,7 +90,7 @@
 ```
 
 ### 二、提交表单
-在上个例子中，我们通过一个文本框和一个按钮实现了在列表中添加元素的功能，但是正常的开发工作中，我们不应该用这种方式提交数据，而是应该用提交表单的方式提交数据，下面我们在body中添加一个表单，并使用vue获取表单中的数据。
+在上个例子中，我们通过一个文本框和一个按钮实现了在列表中添加元素的功能，但是正常的开发工作中，我们不应该用这种方式提交数据，而是应该用提交表单的方式提交数据，下面我们在body中添加一个表单，并使用vue获取表单中的数据[demo04](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/05-Vue入门/第02章%EF%BC%9Avue的基本概念%EF%BC%88二%EF%BC%89/demo04.html)。
 ``` html
 <!-- 变更的代码如下 -->
 <form v-on:submit="insert">
@@ -99,7 +99,7 @@
 </form>
 ```
 
-如上面的代码所示，我们不在使用按钮click事件来添加元素，而是使用表单的submit事件，其他的代码完全一样。运行程序后，发现新增的元素闪了一下就消失了，这是因为提交表单会重新加载页面，而我们的数据当页面刷新后就会消失，所以如果不阻止提交表单后页面重新加载，那么就需要阻止表单提交的默认行为。可以使用事件修饰符来实现这个功能。
+如上面的代码所示，我们不在使用按钮click事件来添加元素，而是使用表单的submit事件，其他的代码完全一样。运行程序后，发现新增的元素闪了一下就消失了，这是因为提交表单会重新加载页面，而我们的数据当页面刷新后就会消失，果所以如不阻止提交表单后页面重新加载，那么就需要阻止表单提交的默认行为。可以使用事件修饰符来实现这个功能[demo05](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/05-Vue入门/第02章%EF%BC%9Avue的基本概念%EF%BC%88二%EF%BC%89/demo05.html)。
 
 ``` html
 <form v-on:submit.prevent="insert">
@@ -119,7 +119,7 @@
 
 上一节我们已经讲解了如何使用.prevent事件修饰符，本节我们通过两个例子讲解.stop和.once。
 
-在JavaScript基础课程中，我们讲解了事件流的概念，事件有捕获和冒泡两个阶段，在默认情况下，事件在冒泡阶段被触发，如果希望阻止事件冒泡可以使用stopPropagation()，如果在vue中希望实现阻止事件冒泡的功能，可以使用事件修饰符.
+在JavaScript基础课程中，我们讲解了事件流的概念，事件有捕获和冒泡两个阶段，在默认情况下，事件在冒泡阶段被触发，如果希望阻止事件冒泡可以使用stopPropagation()，如果在vue中希望实现阻止事件冒泡的功能，可以使用事件修饰符[demo06](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/05-Vue入门/第02章%EF%BC%9Avue的基本概念%EF%BC%88二%EF%BC%89/demo06.html).
 
 ``` css
 .big{
@@ -160,7 +160,7 @@
 </body>
 ```
 
-在学习jQuery的时候，我们可以通过one来绑定事件，当事件触发一次后将不再触发，在vue中我们可以使用事件修饰符.once实现相同的功能
+在学习jQuery的时候，我们可以通过one来绑定事件，当事件触发一次后将不再触发，在vue中我们可以使用事件修饰符.once实现相同的功能[demo07](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/05-Vue入门/第02章%EF%BC%9Avue的基本概念%EF%BC%88二%EF%BC%89/demo07.html)
 
 ``` html
 <body>
@@ -190,7 +190,7 @@
 * 当提交表单的时候可以将数据添加到表格中
 * 表格的最后一列是删除按钮，点击可以删除当前行。
 
-![avatar](../../images/表单.png) 
+![avatar](../../images/0503_form.png) 
 
 ### 一、功能展示
 * 页面左侧为商品列表

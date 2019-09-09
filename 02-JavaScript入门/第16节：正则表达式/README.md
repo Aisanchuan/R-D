@@ -115,7 +115,7 @@ var str = "012345abcde";
 console.log(reg.exec(str));
 ```
 
-下面我们来定义一个正则表达式来匹配一个邮箱格式的字符串[demo01.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC16%E8%8A%82%EF%BC%9A%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/demo01.html)，我们先来确定一下邮箱的格式：
+下面我们来定义一个正则表达式来匹配一个邮箱格式的字符串[示例连接](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC16%E8%8A%82%EF%BC%9A%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/demo01.html)，我们先来确定一下邮箱的格式：
 
 * 5~12位的数字字母下划线开头
 * 后面接@
@@ -133,7 +133,7 @@ console.log(reg.exec(str));
 
 ### 三、表单验证
 
-通过上面的学习，我们已经对正则表达式有了初步的了解，下面我们来实现一个表单验证邮箱的功能，验证通过或者不通过，都要在文本框后面输出结果[demo02.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC16%E8%8A%82%EF%BC%9A%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/demo02.html)
+通过上面的学习，我们已经对正则表达式有了初步的了解，下面我们来实现一个表单验证邮箱的功能，验证通过或者不通过，都要在文本框后面输出结果[示例连接](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC16%E8%8A%82%EF%BC%9A%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/demo02.html)
 
 ``` html
 <input type="text">

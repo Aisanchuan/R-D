@@ -11,11 +11,13 @@
 
 [下载地址](https://github.com/xiaozhoulee/xiaozhou-examples/tree/master/script)
 
-我们可以像引入jQuery一样引入vue.js文件。
+我们可以像引入jQuery一样引入vue.js文件。[demo02](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/05-Vue入门/第01章%EF%BC%9Avue的基本概念%EF%BC%88一%EF%BC%89/demo02.html
+)
 
 ``` html
 <body>
     <div id="app">
+    <!-- 双花括号用于绑定data里面的属性值 -->
         <h1>{{message}}</h1>
     </div>
     <script src="../../script/vue.js"></script>

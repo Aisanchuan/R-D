@@ -11,7 +11,7 @@
 2015年，ECMAScript2015正式发布，使得 JavaScript 语言可以用来编写复杂的大型应用程序，成为企业级开发语言。
 
 ### 二、第一个JavaScript程序
-学习所有编程语言编写第一个程序的时候，都习惯性地编写“hello world”程序，学习JavaScript也是一样。作为我们编写的第一个JavaScript程序，我们将代码写在html这个文档中，body标签里写想要的效果代码,JavaScript放在<script></script>这个标签里
+学习所有编程语言编写第一个程序的时候，都习惯性地编写“hello world”程序，学习JavaScript也是一样。作为我们编写的第一个JavaScript程序，我们将代码写在html这个文档中，body标签里写想要的效果代码,JavaScript放在``<script></script>``这个标签里
 代码如下所示：
 ``` javascript
 <!DOCTYPE html>

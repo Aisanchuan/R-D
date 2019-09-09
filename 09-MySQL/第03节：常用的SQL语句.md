@@ -1,4 +1,4 @@
-# 第九章第三节常用的 SQL 语句
+# 第03节:常用的SQL语句
 
 ### SQL 分类
 
@@ -22,17 +22,58 @@
 
 ### 二、常用操作
 
-- 显示所有数据库：show databases;
-- 查看数据库详细信息：show create database db_name;
-- 创建数据库：CREATE DATABASE `db_name` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci; //用反引号
-- 将数据库修改为 UTF8：alter database db_name character set utf8;
-- 切换数据库：use database_name;
-- 删除数据库：drop database db_name;
-- 创建表：create table 表名(字段名称 字段类型,字段名称 字段类型......);
-- 显示数据库所有表:show tables;
-- 删除表：drop table table_name;
-- 查看表结构：desc table_name;
- 
+- 显示所有数据库：
+```sql
+show databases;
+```
+
+- 查看数据库详细信息：
+```sql
+show create database db_name;
+```
+
+- 创建数据库：
+```
+CREsqlATE DATABASE `db_name` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci; //用反引号
+```
+
+- 将数据库修改为 UTF8：
+```sql
+alter database db_name character set utf8;
+```
+
+- 切换数据库：
+```sql
+use database_name;
+```
+- 删除数据库：
+
+```sql
+drop database db_name;
+```
+- 创建表：
+
+```sql
+create table 表名(字段名称 字段类型,字段名称 字段类型......);
+```
+- 显示数据库所有表:
+
+```sql
+show tables;
+```
+- 删除表：
+
+```sql
+drop table table_name;
+```
+- 查看表结构：
+
+```sql
+desc table_name;
+```
+以下是一些常用的SQL语句和函数的示例代码：
+[示例代码](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/09-MySQL/%E7%A4%BA%E4%BE%8B%E5%91%BD%E4%BB%A4.md)
+
 ### 三、存储引擎
 
 ```sql

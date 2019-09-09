@@ -8,11 +8,13 @@
 
 ### 二、cookie在项目中的应用
 
-
-
 #### 通过cookie记录访问次数
 
+``let count = ctx.cookies.get('count');``
 
+设置 Cookie 其实是通过在 HTTP 响应中设置 set-cookie 头完成的，每一个 set-cookie 都会让浏览器在 Cookie 中存一个键值对。在设置 Cookie 值的同时，协议还支持许多参数来配置这个 Cookie 的传输、存储和权限。
+
+具体看：[案例]()
 
 #### 基于cookie实现记录用户登录状态
 
@@ -32,3 +34,6 @@
 #### 基于session实现记录用户登录状态
 
 
+
+
+[更多详情请看](https://eggjs.org/zh-cn/core/cookie-and-session.html)
