@@ -2,7 +2,11 @@
 
 ### 一、Promise对象概述
 
-#### Promise对象其实就
+promise是异步编程的一种解决方法，比回调函数和事件更强大更合理。
+
+所谓promise简单说就是一个容器，里面保存着未来才会结束的事件（通常是一个异步操作的结果），从语法上说promise是一个对象，从它可以获取异步操作的消息。
+
+创建一个promise对象
 ``` html
 <script>
     var p = new Promise(); 
@@ -21,6 +25,38 @@ Promise对象是ES2015添加的新特性
 
  
 #### Promise的优劣
+
+
 有了Promise对象，就可以将异步操作以同步操作的流程表达出来，避免了层层嵌套的回调函数。此外，Promise对象提供统一的接口，使得控制异步操作更加容易。 
+
 Promise也有一些缺点。首先，无法取消Promise，一旦新建它就会立即执行，无法中途取消。其次，如果不设置回调函数，Promise内部抛出的错误，不会反应到外部。第三，当处于Pending状态时，无法得知目前进展到哪一个阶段（刚刚开始还是即将完成）。
+
+
+
 ### 二、使用Pormise对象封装一个Ajax方法
+ 
+``` html
+<script>
+        function myajax(method,url,next) {
+//封装
+            return new Promise(function(resolve){
+                var xhr = new XMLHttpRequest();
+                xhr.open(method, url);
+                xhr.send();//可以向后台传输数据
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === 4 && xhr.status === 200) {
+                        resolve(xhr.responseText);
+                    }
+                }
+            })
+
+        }
+//使用封装的Pormise
+        document.querySelector("button").onclick = function() {
+            var p = myajax("get","hello.txt");
+            p.then(function(data){
+                alert(data);
+            })
+        }
+</script>
+```

@@ -6,21 +6,7 @@ Ajax 的全称是Asynchronous JavaScript and XML（异步的JavaScript 和 XML�
 
 上一节我们使用jQuery实现了异步交互数据，本节我们不依赖任何库和框架来实现异步数据交互。
 
-#### 使用Ajax获取数据
-``` html
-<script>
-        $("button").click(function(){//点击执行函数
-            //输出data.txt中的数据，hello ajax
-            $.ajax({
-                type:"get",//请求方法
-                url:"/data.txt"//请求路径
-            }).done(function(res){
-                alert(res)
-            })
 
-        })
-</script>
-```
 
 
  #### 使用xhr（也就是XMLhttpRequest）实现数据请求
@@ -29,7 +15,7 @@ Ajax 的全称是Asynchronous JavaScript and XML（异步的JavaScript 和 XML�
     //xhr实现数据请求
         document.querySelector("button").onclick = function(){
             var xhr = new XMLHttpRequest();
-            xhr.open("get","/data.txt");
+            xhr.open("get","/hello.txt");
             xhr.send()
             xhr.onreadystatechange = function(){
                 if(xhr.readyState === 4 && xhr.status === 200){
@@ -62,9 +48,9 @@ Ajax 的全称是Asynchronous JavaScript and XML（异步的JavaScript 和 XML�
 
     document.querySelector("button").onclick = function() {//调用封装的Ajax
         //不能使用return获取异步数据
-        // var result = myajax("get","/data.txt");
+        // var result = myajax("get","/hello.txt");
         // alert(result);
-        myajax("get","/data.txt",function(data){
+        myajax("get","/hello.txt",function(data){
             alert(data);
         });
     }
