@@ -1,11 +1,12 @@
 # 第02节:安装MySQL
 
 ### 安装MySQL
-####一、下载MySQL安装包
+#### 一、下载MySQL安装包
 * 下载254.2M的
-[安装教程](https://www.cnblogs.com/ZengJiaLin/p/11332561.html)
+* 注意：在配置my.ini文件时，要修改里面的  mysql的安装目录和mysql数据库的数据的存放目录  需要改成自己所安装的目录
+→[安装包以及教程都在这里](https://www.jb51.net/article/167796.htm)
 
-####二、数据库数据的备份与恢复
+#### 二、数据库数据的备份与恢复
 1.备份数据库的内容：
 数据库名叫dddd
 ```sql

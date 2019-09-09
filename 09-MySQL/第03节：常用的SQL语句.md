@@ -46,31 +46,32 @@ alter database db_name character set utf8;
 ```sql
 use database_name;
 ```
-- 删除数据库：
 
+- 删除数据库：
 ```sql
 drop database db_name;
 ```
-- 创建表：
 
+- 创建表：
 ```sql
 create table 表名(字段名称 字段类型,字段名称 字段类型......);
 ```
-- 显示数据库所有表:
 
+- 显示数据库所有表:
 ```sql
 show tables;
 ```
-- 删除表：
 
+- 删除表：
 ```sql
 drop table table_name;
 ```
-- 查看表结构：
 
+- 查看表结构：
 ```sql
 desc table_name;
 ```
+
 以下是一些常用的SQL语句和函数的示例代码：
 [示例代码](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/09-MySQL/%E7%A4%BA%E4%BE%8B%E5%91%BD%E4%BB%A4.md)
 
