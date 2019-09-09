@@ -74,7 +74,8 @@ export default {
 
 我们再来完成一个组件嵌套的例子，定义一个Fruits的组件，内部放入一个FruitList的子组件。代码如下所示：
 
-组件创建之后，我们首先要在根组件中使用import命令引入该组件，然后在components属性中局部注册组件，最后在<template></template>中调用组件即可。比如我们要在根组件中嵌套feng.vue这个组件，代码如下
+组件创建之后，我们首先要在根组件中使用import命令引入该组件，然后在components属性中局部注册组件，最后在<template></template>中调用组件即可。比如我们要在根组件中嵌套feng.vue这个组件，代码如下[案例链接](https://github.com/xiaozhoulee/xiaozhou-examples/tree/master/07-基于Vue的web项目开发/第02节%EF%BC%9A单文件组件/组件嵌套案例
+)
 ``` html
 <!-- Fruits组件 -->
 <template>
