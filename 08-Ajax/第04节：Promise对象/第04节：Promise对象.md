@@ -21,7 +21,7 @@ Promise对象是ES2015添加的新特性
 
 简单来说就是一个对象,用来传递异步操作的消息,是解决异步编程的一种方 案,promise原理说起来并不难,他的内部有三个状态,分别是pending , fulfilled 和 rejected . pending是对象创建后的初始状态，当对象fulfill（成功）时变为fulfilled， 当对象reject（失败）时变为rejected。且只能从pengding变为fulfilled或rejected ， 而不能逆向或从fulfilled变为rejected 、从rejected变为fulfilled,
 
-![教务管理系统示意图](../../images/08_04promise.jpg)
+![教务管理系统示意图](../../images/0804_promise.jpg)
 
  
 #### Promise的优劣
