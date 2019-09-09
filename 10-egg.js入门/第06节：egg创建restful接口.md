@@ -6,15 +6,15 @@
 
 **1. 这俩张图是最基本的前后台交互的接口,router都是对应home.js中的每个方法。**
 
-![10-06-01a](../images/10-06-01a.png)
-![10-06-01b](../images/10-06-01b.png)
+![10-06-01a](https://github.com/ding139725/R-D/blob/master/images/10-06-01a.png)
+![10-06-01b](https://github.com/ding139725/R-D/blob/master/images/10-06-01b.png)
 
 **2. 使用restful接口**
     如图所示,通过 ``app.resources`` 方法，我们将 home 这个资源的增删改查接口直接映射到了 ``app/controller/home.js`` 文件中的方法。
     优点就是  简化代码、不再像图一图二那样一次性写四个数据接口。
 
-![10-06-01c](../images/10-06-01c.png)
+![10-06-01c](https://github.com/ding139725/R-D/blob/master/images/10-06-01c.png)
 
 **3. 这是每中请求对应的每种方法 如get对应index，切记不可自定义方法名称，否则无效**
 
-![10-06-01d](../images/10-06-01d.png)
+![10-06-01d](https://github.com/ding139725/R-D/blob/master/images/10-06-01d.png)
