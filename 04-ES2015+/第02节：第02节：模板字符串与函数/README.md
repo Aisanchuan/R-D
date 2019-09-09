@@ -1,16 +1,23 @@
 ## 第02节：模板字符串与函数
 
 ### 一、模板字符串
-传统的 JavaScript 语言，输出模板通常是这样写的（下面使用了 jQuery 的方法）。
+之前我们也可以使用JavaScript输出模版字符串，通常是下面这样的：
 ``` js
-$('#result').append(`
-  There are <b>${basket.count}</b> items
-   in your basket, <em>${basket.onSale}</em>
-  are on sale!
-`);
+    $("#result").append(
+    "He is <b>"+person.name+"</b>"+"and we wish to know his"+person.age+".That is all" 
+    );
 ```
+　　但是我们可以看到：这样的传统做法需要使用大量的“”（双引号）和 + 来拼接才能得到我们需要的模版。但是这样是十分不方便的。
 
-模板字符串（template string）是增强版的字符串，用反引号（`）标识。它可以当作普通字符串使用，也可以用来定义多行字符串，或者在字符串中嵌入变量。
+　于是ES6中提供了模版字符串，用`（反引号）标识，用${}将变量括起来。上面的例子可以用模版字符串写成下面这样：
+``` js
+        $("#result").append(
+        `He is <b>${person.name}</b>and we wish to know his${person.age}.that is all`
+        );
+```
+　　这样的做法就简洁了很多，我们不需要再使用大量的""和+来拼接字符串和变量。
+
+模板字符串是增强版的字符串，用反引号（`）标识。它可以当作普通字符串使用，也可以用来定义多行字符串，或者在字符串中嵌入变量。
 
 **多行字符串**
 
