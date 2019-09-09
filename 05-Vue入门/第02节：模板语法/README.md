@@ -185,6 +185,7 @@ var fruits = ["香蕉","苹果","鸭梨"];
             },
             methods:{
                 del:function(index){
+                    //根据索引值（index）删除这一条内容
                     this.fruits.splice(index,1);
                 }   
             }

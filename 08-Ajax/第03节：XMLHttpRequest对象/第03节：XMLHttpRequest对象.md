@@ -2,10 +2,6 @@
 
 ### 一、Ajax原理
 
-Ajax 的全称是Asynchronous JavaScript and XML（异步的JavaScript 和 XML），其中，Asynchronous 是 异步 的意思，它有别于传统web开发中采用的同步的方式。
-
-上一节我们使用jQuery实现了异步交互数据，本节我们不依赖任何库和框架来实现异步数据交互。
-
 #### 使用Ajax获取数据
 ``` html
 <script>
@@ -21,6 +17,7 @@ Ajax 的全称是Asynchronous JavaScript and XML（异步的JavaScript 和 XML�
         })
 </script>
 ```
+#### 上一节我们使用jQuery实现了异步交互数据，本节我们不依赖任何库和框架来实现异步数据交互。
 
 
  #### 使用xhr（也就是XMLhttpRequest）实现数据请求
@@ -44,18 +41,18 @@ Ajax 的全称是Asynchronous JavaScript and XML（异步的JavaScript 和 XML�
 
 ### 二、封装一个Ajax方法
 
-上一节我们说了异步不能通过return来返回想要的值现在我们用回调（解决异步返回数据的一种方法）来封装一个Ajax方法
+#### 上一节我们说了异步不能通过return来返回想要的值现在我们用回调（解决异步返回数据的一种方法）来封装一个Ajax方法
 
 ``` html
 <script>
     //使用回調函數封装ajax方法
-        function myajax(method,url,next) {//next及回调的值
+        function myajax(method,url,next) {
             var xhr = new XMLHttpRequest();
             xhr.open(method, url);
             xhr.send()
             xhr.onreadystatechange = function () {
                 if (xhr.readyState === 4 && xhr.status === 200) {//这里的4是readystate的一种状态
-                    next(xhr.responseText);//回调xhr.responseText是后台处理过的字符串
+                    next(xhr.responseText);//回调
                 }
             }
         }
