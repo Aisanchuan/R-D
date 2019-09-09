@@ -2,6 +2,15 @@
 
 ### 一、Promise对象概述
 
+#### Promise对象其实就
+``` html
+<script>
+    var p = new Promise(); 
+        p.then()
+</script>
+```
+
+
 #### 说明
 
 Promise对象是ES2015添加的新特性
