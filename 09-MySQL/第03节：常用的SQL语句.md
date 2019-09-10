@@ -84,8 +84,8 @@ desc table_name;
 ```
 
 以上是一些常用的 SQL 语句和函数的示例代码：
-具体的 MySQL 语句与函数在下方示例代码内
-⬇
+具体的 MySQL 语句与函数在右方示例代码内
+→
 [示例代码](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/09-MySQL/%E7%A4%BA%E4%BE%8B%E5%91%BD%E4%BB%A4.md)
 
 ### 三、存储引擎
