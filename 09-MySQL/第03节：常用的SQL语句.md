@@ -31,58 +31,105 @@ show databases;
 - 查看数据库详细信息：
 
 ```sql
+show create database 数据库库名;
 show create database db_name;
 ```
 
 - 创建数据库：
 
-```
+```sql
+ create database 数据库库名
  create database a
- CREATE DATABASE IF NOT EXISTS b default charset utf8 COLLATE utf8_general_ci;; //用反引号
+ ///
+ create database if not exists 数据库库名 default charset utf8 collate utf8_general_ci
+ create database if not exists b default charset utf8 collate utf8_general_ci;//用反引号
 ```
 
 - 将数据库修改为 UTF8：
 
 ```sql
+alter database 数据库库名 character set utf8;
 alter database db_name character set utf8;
 ```
 
 - 切换数据库：
 
 ```sql
+use 数据库库名；
 use database_name;
 ```
 
 - 删除数据库：
 
 ```sql
+drop database 数据库库名；
 drop database db_name;
 ```
 
 - 创建表：
 
 ```sql
-create table 表名(字段名称 字段类型,字段名称 字段类型......);
+create table 表名(字段名称 int(6),字段名称 varchar(20)......);
+create table student(id int(6),name varchar(20));
 ```
 
 - 显示数据库所有表:
-
 ```sql
 show tables;
 ```
 
-- 删除表：
-
+- 增加字段:
 ```sql
+alter table 表名 add 字段名 字段类型
+alter table book add count int;
+```
+
+- 修改字段:
+```sql
+alter table 表明名 modify 字段名称 字符类型
+alter table book modifu price int;
+```
+
+- 删除字段:
+```sql
+alter table 表名 drop 字段名
+alter table book drop count;
+```
+
+- 向表中插入数据
+```sql
+insert into 表名(想插入的字段名称,...) values(想插入的字段的值)
+insert into 表明 values(表中所有字段的值)
+```
+
+* 删除指定的某一行
+```sql
+delete from 表名 where 条件表达式;
+delete from student where id=1;
+```
+
+* 修改表中记录
+```sql
+update 表名 set 字段名=新的字段值 where 条件表达式
+update student set name=小李 where id=1;
+```
+
+- 删除表：
+```sql
+drop table 表名;
 drop table table_name;
 ```
 
 - 查看表结构：
-
 ```sql
+desc 表名
 desc table_name;
 ```
-
+* 清空表
+```sql
+delete from 表名;
+delete from student;
+```
 以上是一些常用的 SQL 语句和函数的示例代码：
 具体的 MySQL 语句与函数在右方示例代码内
 →
