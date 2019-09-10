@@ -17,7 +17,7 @@ npm install vue
 
 效果如下图所示：
 
-![本地安装示意图](/images/local.png)
+![本地安装示意图](../images/0602_local.png)
 
 安装完成之后，NPM会在D:/test目录下创建一个node_modules的目录，然后将所有NPM包下载到这个目录之下。上面的例子我们下载的是vue，所以打开node_modules会看到一个vue的目录，这就是vue的npm包。
 
