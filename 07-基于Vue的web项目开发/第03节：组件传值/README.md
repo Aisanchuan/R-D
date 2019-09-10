@@ -6,9 +6,9 @@ vue的组件传值分为三种方式：父传子、子传父、非父子组件�
 引用官网的一句话：父子组件的关系可以总结为 prop 向下传递，事件向上传递
 父组件通过 prop 给子组件下发数据，子组件通过事件给父组件发送消息，如下图所示：
 ![组件传值示例图](../../images/0704_pass.png)
+[案例链接](https://github.com/xiaozhoulee/xiaozhou-examples/tree/master/07-基于Vue的web项目开发/第03节%EF%BC%9A组件传值/组件传值)
 
 ### 一、父级向子级传值 
-[案例链接](https://github.com/xiaozhoulee/xiaozhou-examples/tree/master/07-基于Vue的web项目开发/第03节%EF%BC%9A组件传值/组件传值)
 1.创建子组件，在src/components/文件夹下新建一个Child.vue  
 2.Child.vue的中创建props，然后创建一个名为message的属性
 ``` html
