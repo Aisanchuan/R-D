@@ -78,6 +78,12 @@ create table student(id int(6),name varchar(20));
 show tables;
 ```
 
+* 查看表数据
+```sql
+select * from 表名;
+select * from student;
+```
+
 - 增加字段:
 ```sql
 alter table 表名 add 字段名 字段类型
