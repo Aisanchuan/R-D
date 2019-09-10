@@ -6,7 +6,7 @@ Vue (读音 /vjuː/，类似于 view) 是一套用于构建用户界面的渐进
 Element-UI 一套为开发者、设计师和产品经理准备的基于 Vue 2.0 的桌面端组件库  
 官方文档地址： [http://element-cn.eleme.io/#/zh-CN/component/installation)
 
-## 二、安装 elementUI
+### 二、安装 elementUI
 
 推荐使用 npm 的方式安装，它能更好地和 webpack 打包工具配合使用。  
 在项目的根目录打开命令行输入：
