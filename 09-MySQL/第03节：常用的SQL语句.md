@@ -1,4 +1,4 @@
-# 第03节:常用的SQL语句
+# 第 03 节:常用的 SQL 语句
 
 ### SQL 分类
 
@@ -20,59 +20,72 @@
 - titmestamp:时间戳
 - datatime:日期和时间的组合
 
-### 二、常用操作
+### 二、常用操作命令
 
 - 显示所有数据库：
+
 ```sql
 show databases;
 ```
 
 - 查看数据库详细信息：
+
 ```sql
 show create database db_name;
 ```
 
 - 创建数据库：
+
 ```
-CREsqlATE DATABASE `db_name` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci; //用反引号
+ create database a
+ CREATE DATABASE IF NOT EXISTS b default charset utf8 COLLATE utf8_general_ci;; //用反引号
 ```
 
 - 将数据库修改为 UTF8：
+
 ```sql
 alter database db_name character set utf8;
 ```
 
 - 切换数据库：
+
 ```sql
 use database_name;
 ```
 
 - 删除数据库：
+
 ```sql
 drop database db_name;
 ```
 
 - 创建表：
+
 ```sql
 create table 表名(字段名称 字段类型,字段名称 字段类型......);
 ```
 
 - 显示数据库所有表:
+
 ```sql
 show tables;
 ```
 
 - 删除表：
+
 ```sql
 drop table table_name;
 ```
 
 - 查看表结构：
+
 ```sql
 desc table_name;
 ```
 
-以下是一些常用的SQL语句和函数的示例代码：
+以上是一些常用的 SQL 语句和函数的示例代码：
+具体的 MySQL 语句与函数在下方示例代码内
+⬇
 [示例代码](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/09-MySQL/%E7%A4%BA%E4%BE%8B%E5%91%BD%E4%BB%A4.md)
 
 ### 三、存储引擎
@@ -113,7 +126,8 @@ show create table user; --查看user表当前使用的存储引擎。
 - 读已提交：read committed
 - 可重复读：repeatable read
 - 串行化：serializable
-![隔离级别](../images/0903-隔离级别.png)
+  ![隔离级别](../images/0903-隔离级别.png)
+
 ### 五、索引
 
 提升数据库查询效率，表中每一个字段都可以添加索引，主键会自动添加索引，所以按照主键查询效率更高。
