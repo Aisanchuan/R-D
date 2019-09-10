@@ -33,7 +33,7 @@ $("selector").click(function(){
 
 **输出文字**
 
-我们现在实现一个功能，当我们点击一个按钮的时候，在控制台输出"hello world",代码如下所示。[demo01.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/03-jQuery/%E7%AC%AC02%E8%8A%82%EF%BC%9A%E4%BA%8B%E4%BB%B6%E7%BB%91%E5%AE%9A/demo01.html)
+我们现在实现一个功能，当我们点击一个按钮的时候，在控制台输出"hello world",代码如下所示。
 
 ``` html
 <body>
@@ -49,7 +49,7 @@ $("selector").click(function(){
 
 **切换图片**
 
-结合我们上一章的内容，来实现一个功能，当我们点击按钮的时候，将一张图片切换成另一张图片,代码如下所示。[demo02.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/03-jQuery/%E7%AC%AC02%E8%8A%82%EF%BC%9A%E4%BA%8B%E4%BB%B6%E7%BB%91%E5%AE%9A/demo02.html)
+结合我们上一章的内容，来实现一个功能，当我们点击按钮的时候，将一张图片切换成另一张图片。
 
 ``` html
 <body>
@@ -95,7 +95,7 @@ $("selector").click(function(){
 
 **切换图片**
 
-找到了列表的索引，我们下一步就要实现图片切换的功能了，首先我们需要了解数组的概念，数组是一个集合，我们将3章图片的路径放到了数组中，这样我们就可以通过数组的下标来获取到数组的元素了。
+找到了路缘石的索引，我们下一步就要实现图片切换的功能了，首先我们需要了解数组的概念，数组是一个集合，我们将3章图片的路径放到了数组中，这样我们就可以通过数组的下标来获取到数组的元素了。
 
 ``` js
 var arr = ["images/0302_img0.jpg","images/0302_img1.jpg","images/0302_img2.jpg"];
@@ -106,7 +106,7 @@ arr[2]  //images/0302_img2.jpg
 
 上面的代码可以了解到，我们可以通过数组的下标来获取数组中的元素。
 
-接下来，我们结合之前学过的方法来实现一个图片切换的效果,代码如下所示。[demo03.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/03-jQuery/%E7%AC%AC02%E8%8A%82%EF%BC%9A%E4%BA%8B%E4%BB%B6%E7%BB%91%E5%AE%9A/demo03.html)
+接下来，我们结合之前学过的方法来实现一个图片切换的效果。
 
 ``` html
 <body>
@@ -137,32 +137,12 @@ arr[2]  //images/0302_img2.jpg
 
 **鼠标移入移出改变样式**
 
-鼠标的移入和一出事件分别是mouseenter和mouseleave。我们来实现一个功能，当我们的鼠标移入一个div的时候，让其变为红色，移出的时候，让其变为绿色，代码如下：[demo04.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/03-jQuery/%E7%AC%AC02%E8%8A%82%EF%BC%9A%E4%BA%8B%E4%BB%B6%E7%BB%91%E5%AE%9A/demo04.html)
-```css
-    .box{
-            width:100px;
-            height:100px;
-            background-color:red;
-        }
-        .bg{
-            background-color: green
-        }
-```
-```html
-    <div class="box"></div>
-    <script src="script/jquery.js"></script>
-    <script>
-        $(".box").mouseenter(function(){
-            $(this).addClass("bg");
-        }).mouseleave(function(){
-            $(this).removeClass("bg");
-        })
-    </script>  
-```
+鼠标的移入和一出事件分别是mouseenter和mouseleave。我们来实现一个功能，当我们的鼠标移入一个div的时候，让其变为红色，移出的时候，让其变为绿色，代码如下：[demo01.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/03-jQuery/%E7%AC%AC02%E8%8A%82%EF%BC%9A%E4%BA%8B%E4%BB%B6%E7%BB%91%E5%AE%9A/demo01.html)
+
 
 这里我们使用了链式操作，用一个选择器，绑定两个属性。
 
-鼠标移入和移出事件可以简写成一个hover事件，上面的代码可以简写如下所示：[demo05.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/03-jQuery/%E7%AC%AC02%E8%8A%82%EF%BC%9A%E4%BA%8B%E4%BB%B6%E7%BB%91%E5%AE%9A/demo05.html)
+鼠标移入和移出事件可以简写成一个hover事件，上面的代码可以简写如下所示：[demo02.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/03-jQuery/%E7%AC%AC02%E8%8A%82%EF%BC%9A%E4%BA%8B%E4%BB%B6%E7%BB%91%E5%AE%9A/demo02.html)
 
 
 
@@ -171,7 +151,7 @@ hover有方法有两个参数，都是函数，分别对应着mouseenter和mouse
 
 **鼠标移动获取坐标**
 
-鼠标在元素上移动的时候也会触发事件，下面我们来实现一个功能，当鼠标移动到一个div的时候，获取鼠标在网页页面上的坐标,代码如下所示：[demo06.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/03-jQuery/%E7%AC%AC02%E8%8A%82%EF%BC%9A%E4%BA%8B%E4%BB%B6%E7%BB%91%E5%AE%9A/demo06.html)
+鼠标在元素上移动的时候也会触发事件，下面我们来实现一个功能，当鼠标移动到一个div的时候，获取鼠标在网页页面上的坐标,代码如下所示：[demo03.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/03-jQuery/%E7%AC%AC02%E8%8A%82%EF%BC%9A%E4%BA%8B%E4%BB%B6%E7%BB%91%E5%AE%9A/demo03.html)
 
 * 在上面的代码中e是事件对象，我们可以通过它获取到x轴和y轴的坐标。
 * 然后通过console.log()方法在控制台输出x坐标和y坐标。

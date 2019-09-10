@@ -14,7 +14,7 @@
 
 设置 Cookie 其实是通过在 HTTP 响应中设置 set-cookie 头完成的，每一个 set-cookie 都会让浏览器在 Cookie 中存一个键值对。在设置 Cookie 值的同时，协议还支持许多参数来配置这个 Cookie 的传输、存储和权限。
 
-具体看：[案例]()
+具体看：[案例](https://github.com/ding139725/R-D/tree/master/10-egg.js%E5%85%A5%E9%97%A8/egg-cookie)
 
 #### 基于cookie实现记录用户登录状态
 

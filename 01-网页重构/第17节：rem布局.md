@@ -139,7 +139,7 @@ doc.addEventListener('DOMContentLoaded', recalc, false);
 
 ### 四、设计稿量尺
 
-我们再重web开发流程的角度来看，为什么rem布局比百分比布局更加简便，使用rem布局的流程如下所示：
+我们再从web开发流程的角度来看，为什么rem布局比百分比布局更加简便，使用rem布局的流程如下所示：
 
 1. 首先，我们拿到设计师的设计稿，通常设计稿的宽度为640px、720px、1080px。
 2. 然后再来看看我们的fontsizeset.js文件中的一段代码，第二个数字720就是设计稿的宽度，如果设计稿是1080px，我们需要将fontsizeset.js中的720改成1080。
@@ -154,7 +154,7 @@ docEl.style.fontSize = 100 * (clientWidth / 720) + 'px';
 
 通过上述的方法，就可以很容易制作出按百分比排列的页面布局了，这就是rem布局的优势。
 
-
+[示例代码](https://github.com/xiaozhoulee/xiaozhou-examples/tree/master/01-网页重构/第17节：rem布局)
 
  
 

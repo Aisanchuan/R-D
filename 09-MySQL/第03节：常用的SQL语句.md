@@ -1,13 +1,13 @@
-# 第03节:常用的SQL语句
+# 第 03 节:常用的 SQL 语句
 
-### SQL 分类
+### 一、SQL 分类
 
 - DDL:数据定义语言，可以用来曹组数据库对象：库，表，列等
 - DML:数据操作语言，增删改数据
 - DCL:数据控制语言，用来设置访问权限和安全级别
 - DQL:数据查询语言，用来查询数据库中的数据
 
-### 数据类型
+### 二、数据类型
 
 - int:最大值
 - double:内部浮点计算的类型
@@ -20,61 +20,75 @@
 - titmestamp:时间戳
 - datatime:日期和时间的组合
 
-### 二、常用操作
+### 三、常用操作命令
 
 - 显示所有数据库：
+
 ```sql
 show databases;
 ```
 
 - 查看数据库详细信息：
+
 ```sql
 show create database db_name;
 ```
 
 - 创建数据库：
+
 ```
-CREsqlATE DATABASE `db_name` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci; //用反引号
+ create database a
+ CREATE DATABASE IF NOT EXISTS b default charset utf8 COLLATE utf8_general_ci;; //用反引号
 ```
 
 - 将数据库修改为 UTF8：
+
 ```sql
 alter database db_name character set utf8;
 ```
 
 - 切换数据库：
+
 ```sql
 use database_name;
 ```
+
 - 删除数据库：
 
 ```sql
 drop database db_name;
 ```
+
 - 创建表：
 
 ```sql
 create table 表名(字段名称 字段类型,字段名称 字段类型......);
 ```
+
 - 显示数据库所有表:
 
 ```sql
 show tables;
 ```
+
 - 删除表：
 
 ```sql
 drop table table_name;
 ```
+
 - 查看表结构：
 
 ```sql
 desc table_name;
 ```
-以下是一些常用的SQL语句和函数的示例代码：
+
+以上是一些常用的 SQL 语句和函数的示例代码：
+具体的 MySQL 语句与函数在右方示例代码内
+→
 [示例代码](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/09-MySQL/%E7%A4%BA%E4%BE%8B%E5%91%BD%E4%BB%A4.md)
 
-### 三、存储引擎
+### 四、存储引擎
 
 ```sql
 show engines; --显示所有存储引擎
@@ -87,7 +101,7 @@ show create table user; --查看user表当前使用的存储引擎。
 - InnoDB:支持事务，修改较多。
 - MEMORY:数据存储在内存中，可以存储非永久保存的数据
 
-### 四、事务 transaction
+### 五、事务 transaction
 
 - 事务可以保证多个任务的原子性，例如三个任务如果有一个没有完成，那么三个都不执行。
 - 可以保证多个操作要么全部成功，要么全部失败。
@@ -112,8 +126,9 @@ show create table user; --查看user表当前使用的存储引擎。
 - 读已提交：read committed
 - 可重复读：repeatable read
 - 串行化：serializable
-![隔离级别](../images/0903-隔离级别.png)
-### 五、索引
+  ![隔离级别](../images/0903-隔离级别.png)
+
+### 六、索引
 
 提升数据库查询效率，表中每一个字段都可以添加索引，主键会自动添加索引，所以按照主键查询效率更高。
 
@@ -133,7 +148,7 @@ show index from user;
 drop index name_index on user;
 ```
 
-### 六、视图
+### 七、视图
 
 视图就是一个查询结果，可以隐藏表中的细节。
 
