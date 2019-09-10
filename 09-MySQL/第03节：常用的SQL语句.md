@@ -139,7 +139,7 @@ delete from student;
 以上是一些常用的 SQL 语句和函数的示例代码：
 更多的SQL语句在右方示例代码内
 →
-[示例代码](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/09-MySQL/%E7%A4%BA%E4%BE%8B%E5%91%BD%E4%BB%A4.md)
+[示例代码](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/09-MySQL/%E7%AC%AC%E4%B9%9D%E7%AB%A0%E7%AC%AC3%E8%8A%82MySQL%E5%85%B7%E4%BD%93%E8%AF%AD%E5%8F%A5.md)
 
 ### 四、存储引擎
 
