@@ -2,7 +2,7 @@
 
 ### 一、SQL 分类
 
-- DDL:数据定义语言，可以用来曹组数据库对象：库，表，列等
+- DDL:数据定义语言，可以用来操作数据库对象：库，表，列等
 - DML:数据操作语言，增删改数据
 - DCL:数据控制语言，用来设置访问权限和安全级别
 - DQL:数据查询语言，用来查询数据库中的数据
@@ -137,7 +137,7 @@ delete from 表名;
 delete from student;
 ```
 以上是一些常用的 SQL 语句和函数的示例代码：
-具体的 MySQL 语句与函数在右方示例代码内
+更多的SQL语句在右方示例代码内
 →
 [示例代码](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/09-MySQL/%E7%A4%BA%E4%BE%8B%E5%91%BD%E4%BB%A4.md)
 
