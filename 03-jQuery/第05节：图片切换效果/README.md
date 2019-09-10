@@ -1,8 +1,8 @@
-## 第06节：图片切换效果
+## 第05节：图片切换效果
 
 ### 一、复习简单的图片切换
 
-在之前的课程中，我们实现了点击数字列表切换图片的案例，具体代码如下所示.[demo01.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/03-jQuery/第05节：图片切换效果/demo01.html)：
+在之前的课程中，我们实现了点击数字列表切换图片的案例，具体代码如下所示。
 
 ``` html
 <body>
@@ -13,10 +13,10 @@
         <li>4</li>
         <li>5</li>
     </ul> 
-    <img src="images/0306_img0.jpg">
+    <img src="images/0305_img0.jpg">
     <script src="script/jquery.js"></script>
     <script>
-        var arr = ["images/0306_img0.jpg","images/0306_img1.jpg","images/0306_img2.jpg","images/0306_img3.jpg","images/0306_img4.jpg"];
+        var arr = ["images/0305_img0.jpg","images/0305_img1.jpg","images/0305_img2.jpg","images/0305_img3.jpg","images/0305_img4.jpg"];
         $("li").click(function(){
             var i = $(this).index();
             var url = arr[i];  //获取图片的地址
@@ -32,7 +32,7 @@
 
 **显示列表**
 
-首先我们需要设置数字列表的样式，代码如下所示[demo02.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/03-jQuery/第05节：图片切换效果/demo02.html)：
+首先我们需要设置数字列表的样式，让数字列表变的更美观，并且将数字列表横向排列，代码如下所示。
 
 ``` css
 *{
@@ -50,11 +50,9 @@
 }
 ```
 
-将数字列表横向排列
-
 **点击变色**
 
-样式调整好之后，我们需要让列表在点击之后变色，我们先定义一个.active的样式,代码如下所示。[demo03.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/03-jQuery/第05节：图片切换效果/demo03.html)：
+样式调整好之后，我们需要让列表在点击之后变色，我们先定义一个.active的样式,代码如下所示。
 
 ``` css
 .active{
@@ -63,7 +61,7 @@
 }
 ```
 
-然后当点击数字列表的时候，使用addClass方法为当前数字添加样式，代码如下所示：
+然后当点击数字列表的时候，使用addClass方法为当前数字添加样式，使其变色，并且切换成对应的图片。代码如下所示：
 
 ``` js
 $("li").click(function(){
@@ -80,42 +78,15 @@ $("li").click(function(){
 
 **获取同级其他元素**
 
-到目前为止，我们的效果已经有了一个雏形，但是数字列表仍然存在问题，我们希望点击数字的时候，当前数字变色，其他数字恢复到默认样式，要完成这样的功能，我们需要学习一个新的方法，siblings，代码如下所示。[demo04.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/03-jQuery/%E7%AC%AC05%E8%8A%82%EF%BC%9A%E5%9B%BE%E7%89%87%E5%88%87%E6%8D%A2%E6%95%88%E6%9E%9C/demo04.html)：
+到目前为止，我们的效果已经有了一个雏形，但是数字列表仍然存在问题，我们希望点击数字的时候，当前数字变色，其他数字恢复到默认样式，要完成这样的功能，我们需要学习一个新的方法，siblings方法，代码如下所示。[demo01.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/03-jQuery/%E7%AC%AC05%E8%8A%82%EF%BC%9A%E5%9B%BE%E7%89%87%E5%88%87%E6%8D%A2%E6%95%88%E6%9E%9C/demo01.html)：
 
-``` html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-	<style>
-		.active{
-			background-color: red;
-		}
-	</style>
-</head>
-<body>
-	<ul>
-		<li>香蕉</li>
-		<li>苹果</li>
-		<li>鸭梨</li>
-	</ul>
-	<script src="script/jquery.js"></script>
-	<script>
-		$("li").click(function(){
-			$(this).addClass("active").siblings().removeClass("active");
-		})
-	</script>
-</body>
-</html>
-```
 
 siblings方法可以获取同级的其他元素，这样我们就可以继续完善我们图片切换的效果了。
 
 
 **控制列表其他元素样式**
 
-使用siblings方法可以获取同级的其他元素，这样我们就可以改变我们没点击的数字列表的样式了，代码如下所示。[demo05.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/03-jQuery/第05节：图片切换效果/demo05.html)。
+使用siblings方法可以获取同级的其他元素，这样我们就可以改变我们没点击的数字列表的样式了，代码如下所示。
 
 ``` js
 $("li").click(function(){

@@ -14,22 +14,19 @@
 
 设置 Cookie 其实是通过在 HTTP 响应中设置 set-cookie 头完成的，每一个 set-cookie 都会让浏览器在 Cookie 中存一个键值对。在设置 Cookie 值的同时，协议还支持许多参数来配置这个 Cookie 的传输、存储和权限。
 
-具体看：[案例](https://github.com/ding139725/R-D/tree/master/10-egg.js%E5%85%A5%E9%97%A8/egg-cookie)
+具体看：
+[图解](https://github.com/ding139725/R-D/blob/master/10-egg.js%E5%85%A5%E9%97%A8/10-07%E6%A1%88%E4%BE%8B.md)
+[案例](https://github.com/ding139725/R-D/tree/master/10-egg.js%E5%85%A5%E9%97%A8/egg-cookie)
 
 #### 基于cookie实现记录用户登录状态
 
 
 
 ### 三、session的基本概念
-
+  
 * session 是另一种记录客户状态的机制，session基于cookie，
 不同的是 Cookie 保存在客户端浏览器中，而session 保存在服
 务器上，相对于cookie，session更安全。
-
-
-#### 通过session记录访问次数
-
-
 
 #### 基于session实现记录用户登录状态
 
