@@ -33,7 +33,7 @@ new Vue({
 });
 ```
 
-必须引入以后才能实现想要的效果
+必须配置以后才能实现想要的效果
 
  [Element 组件链接链](https://element.eleme.cn/#/zh-CN/component/icon)
 
