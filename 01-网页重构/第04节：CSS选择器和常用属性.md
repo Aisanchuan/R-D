@@ -33,7 +33,7 @@ CSS(层叠样式表)控制着网页的样式，例如我们之前编写的HTML�
 
 在第一个CSS案例中，h1是一个选择器，可以找到HTML文件中所有的h1标签，花括号中的color是属性名称，它决定我们可以修改元素的哪个样式，red就是属性值，它决定我们设置的样式到底是什么。
 
-了解了基本语法之后，我们来编写一个有样式的html文件，将h1标签中的文字设置成红色，完整代码如下所示[示例代码](https://github.com/xiaozhoulee/xiaozhou-examples/tree/master/01-网页重构/第04节：CSS选择器和常用属性/demo01.html)
+了解了基本语法之后，我们来编写一个有样式的html文件，将h1标签中的文字设置成红色，完整代码如下所示。[示例代码](https://github.com/xiaozhoulee/xiaozhou-examples/tree/master/01-网页重构/第04节：CSS选择器和常用属性/demo01.html)
 
 ``` html
 <!DOCTYPE html>
@@ -115,7 +115,7 @@ id选择器是通过html元素的id属性找到元素。选择器的语法是在
 
 CSS定义了大量的属性，学习的过程中，我们不必去记住每一个CSS属性。这里列举出学习初期常用的CSS属性，后续我们还会不断学习网页重构中常用的CSS属性。
 
-> px是CSS中的单位，用来表示像素长度，1px就是一像素。CSS中的其他单位将在后续章节介绍。[示例代码](https://github.com/xiaozhoulee/xiaozhou-examples/tree/master/01-网页重构/第04节：CSS选择器和常用属性/demo02.html)
+> px是CSS中的单位，用来表示像素长度，1px就是一像素。CSS中的其他单位将在后续章节介绍。 [示例代码](https://github.com/xiaozhoulee/xiaozhou-examples/tree/master/01-网页重构/第04节：CSS选择器和常用属性/demo02.html)
 
 ``` css
 /* class选择器，找到class值为box的元素 */

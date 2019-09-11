@@ -23,7 +23,7 @@ element{
 }
 ```
 
-元素就变成了一个绝对定位元素，实例代码如下所示[示例代码](https://github.com/xiaozhoulee/xiaozhou-examples/tree/master/01-网页重构/第09节：CSS定位/demo01.html)
+元素就变成了一个绝对定位元素，实例代码如下所示。[示例代码](https://github.com/xiaozhoulee/xiaozhou-examples/tree/master/01-网页重构/第09节：CSS定位/demo01.html)
 
 ``` html
 <!DOCTYPE html>
@@ -69,7 +69,7 @@ element{
 }
 ```
 
-元素就变成了一个相对定位元素，实例代码如下所示[示例代码](https://github.com/xiaozhoulee/xiaozhou-examples/tree/master/01-网页重构/第09节：CSS定位/demo02.html)
+元素就变成了一个相对定位元素，实例代码如下所示。[示例代码](https://github.com/xiaozhoulee/xiaozhou-examples/tree/master/01-网页重构/第09节：CSS定位/demo02.html)
 
 ``` html
 <!DOCTYPE html>
@@ -115,7 +115,7 @@ element{
 }
 ```
 
-元素就变成了一个固定定位元素，实例代码如下所示[示例代码](https://github.com/xiaozhoulee/xiaozhou-examples/tree/master/01-网页重构/第09节：CSS定位/demo03.html)
+元素就变成了一个固定定位元素，实例代码如下所示。[示例代码](https://github.com/xiaozhoulee/xiaozhou-examples/tree/master/01-网页重构/第09节：CSS定位/demo03.html)
 
 ``` html
 <!DOCTYPE html>
@@ -160,7 +160,7 @@ element{
 
 理解了上面三种定位方法，我们再来考虑开始提到的那个问题，如果我们希望将一个数字列表压在一张图片之上。居中显示在网页之上，我们将数字列表设置定位之后，坐标应该设置成多少呢？因为居中的图片与浏览器窗口的左边距是不固定的，所以没有办法设置成一个固定值，这个时候，我们就需要给定位元素设置参照物。
 
-将父级元素设置position:relative;如果不指定top和left值，它的样式与非定位元素是一样的，然后在其内部设置一个绝对定位元素，该绝对定位元素的参照物就是其父级元素。代码如下所示[示例代码](https://github.com/xiaozhoulee/xiaozhou-examples/tree/master/01-网页重构/第09节：CSS定位/demo04.html)
+将父级元素设置position:relative;如果不指定top和left值，它的样式与非定位元素是一样的，然后在其内部设置一个绝对定位元素，该绝对定位元素的参照物就是其父级元素。代码如下所示。[示例代码](https://github.com/xiaozhoulee/xiaozhou-examples/tree/master/01-网页重构/第09节：CSS定位/demo04.html)
 ``` html
 <!DOCTYPE html>
 <html lang="en">

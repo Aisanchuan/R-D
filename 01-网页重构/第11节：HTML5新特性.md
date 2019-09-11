@@ -8,7 +8,7 @@ html5是超文本标记语言（html）的第五次重大修改，可以简单�
 
 ### 二、html5布局标签
 
-在之前学习的html中，主要使用div布局，代码如下所示[示例代码](https://github.com/xiaozhoulee/xiaozhou-examples/tree/master/01-网页重构/第11节：HTML5新特性/demo01.html)
+在之前学习的html中，主要使用div布局，代码如下所示。[示例代码](https://github.com/xiaozhoulee/xiaozhou-examples/tree/master/01-网页重构/第11节：HTML5新特性/demo01.html)
 
 ``` html
 <!DOCTYPE html>
