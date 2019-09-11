@@ -16,7 +16,8 @@ npm i element-ui -S
 ```
 
 ### 三、elementUI 的组件示例
-
+[案例链接](https://github.com/xiaozhoulee/xiaozhou-examples/tree/master/07-基于Vue的web项目开发/第05节%EF%BC%9Aelement/组件示例
+)  
 首先在项目的 main.js 中配置以下内容（main.js 文件在项目的根目录）：
 
 ```js
@@ -37,7 +38,7 @@ new Vue({
 
  [Element 组件链接链](https://element.eleme.cn/#/zh-CN/component/icon)
 
-![img](../../0705_style.png)
+![style_img](../../images/0705_style.png)
 
 在 Element 官方组件里找到想要的样式，拷贝进自己的项目组件中
 ```html
@@ -81,8 +82,9 @@ new Vue({
 ```
 
 第三步:展示完成效果
-![Image text](../../0705_icon.png)
+![Image text](../../images/0705_icon.png)
 
 ### 四、学生列表
 下面是vue+elementUI写的一个学生列表，可以当作一个参考
-[案例网址]()
+[案例参考](https://github.com/xiaozhoulee/xiaozhou-examples/tree/master/07-基于Vue的web项目开发/第05节%EF%BC%9Aelement/学生列表
+)
