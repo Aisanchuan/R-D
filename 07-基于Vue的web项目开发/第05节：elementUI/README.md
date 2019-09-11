@@ -85,6 +85,6 @@ new Vue({
 ![Image text](../../images/0705_icon.png)
 
 ### 四、学生列表
-下面是vue+elementUI写的一个学生列表，可以当作一个参考
+下面是vue+elementUI写的一个学生列表，可以当作一个参考  
 [案例参考](https://github.com/xiaozhoulee/xiaozhou-examples/tree/master/07-基于Vue的web项目开发/第05节%EF%BC%9Aelement/学生列表
 )
