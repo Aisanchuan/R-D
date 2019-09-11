@@ -2,7 +2,7 @@
 
 ### 一、HTML语法
 
-我们通过上一节的一个例子来说说HTML的语法，代码如下所示：
+我们通过上一节的一个例子来说说HTML的语法，代码如下所示：[示例代码](https://github.com/xiaozhoulee/xiaozhou-examples/tree/master/01-网页重构/第02节：HTML常用元素/demo01.html)
 
 ``` html
 <!DOCTYPE html>              <!-- 文档声明 -->
@@ -41,7 +41,7 @@
 
 #### 标题标签
 
-在网页中我们经常会看到一篇文章的标题，或是文章中某一段落的标题。像这样的标题，我们使用标题标签h*（*代表着1-6六个数字）示例代码如下所示。
+在网页中我们经常会看到一篇文章的标题，或是文章中某一段落的标题。像这样的标题，我们使用标题标签h*（*代表着1-6六个数字）示例代码如下所示。[示例代码](https://github.com/xiaozhoulee/xiaozhou-examples/tree/master/01-网页重构/第02节：HTML常用元素/demo02.html)
 
 ``` html
 <h1>一级标题标签</h1>
@@ -56,7 +56,7 @@
 
 #### 段落标签
 
-在网页中，一篇文章会有很多段落型的文字，这些段落我们使用p标签表示，代码如下所示。
+在网页中，一篇文章会有很多段落型的文字，这些段落我们使用p标签表示，代码如下所示。[示例代码](https://github.com/xiaozhoulee/xiaozhou-examples/tree/master/01-网页重构/第02节：HTML常用元素/demo03.html)
 
 ``` html
 <h3>前端开发学习心得</h3>
@@ -68,7 +68,7 @@
 
 #### 列表标签
 
-网页中的列表是非常常见的，HTML中的列表包括有序列表，无序列表，描述列表，这里我们只例举无需列表，在后续的开发中，我们也几乎都是在使用无需列表。
+网页中的列表是非常常见的，HTML中的列表包括有序列表，无序列表，描述列表，这里我们只例举无需列表，在后续的开发中，我们也几乎都是在使用无需列表。[示例代码](https://github.com/xiaozhoulee/xiaozhou-examples/tree/master/01-网页重构/第02节：HTML常用元素/demo04.html)
 
 ``` html
 <h3>你喜欢的水果是什么？</h3>
@@ -86,7 +86,7 @@ ul标签可以表示无序列表，列表中的元素用li标签表示，这里�
 
 #### 超链接标签
 
-网页中的超链接用a标签表示，代码如下所示：
+网页中的超链接用a标签表示，代码如下所示：[示例代码](https://github.com/xiaozhoulee/xiaozhou-examples/tree/master/01-网页重构/第02节：HTML常用元素/demo05.html)
 
 ``` html
 <a href="http://baidu.com">跳转到百度</a>
@@ -102,7 +102,7 @@ ul标签可以表示无序列表，列表中的元素用li标签表示，这里�
 2. 跳转到当前网站(或本机文件),可以直接填写相对路径或绝对路径。
 3. 可以通过设置锚点的方式，让网页跳转到当前页面的指定位置。
 
-在实际开发中，我们经常会将超链接放在列表中，代码如下:
+在实际开发中，我们经常会将超链接放在列表中，代码如下:[示例代码](https://github.com/xiaozhoulee/xiaozhou-examples/tree/master/01-网页重构/第02节：HTML常用元素/demo06.html)
 
 ``` html
 <ul>
@@ -114,7 +114,7 @@ ul标签可以表示无序列表，列表中的元素用li标签表示，这里�
 
 #### 图片标签
 
-网页中的图片可以使用img标签表示，代码如下所示：
+网页中的图片可以使用img标签表示，代码如下所示：[示例代码](https://github.com/xiaozhoulee/xiaozhou-examples/tree/master/01-网页重构/第02节：HTML常用元素/demo07.html)
 
 ``` html
 <img src="images/logo.png" alt="文件无法显示">
@@ -148,7 +148,7 @@ span标签与div标签类似，同样是一个【无语义标签】，通常用�
 
 ### 三、常用的属性
 
-在上面的内容中，我们已经说过a标签的href属性和img标签的src属性和alt属性，接下来我们再说两个常用的属性。
+在上面的内容中，我们已经说过a标签的href属性和img标签的src属性和alt属性，接下来我们再说两个常用的属性。[示例代码](https://github.com/xiaozhoulee/xiaozhou-examples/tree/master/01-网页重构/第02节：HTML常用元素/demo08.html)
 
 ``` html
 <div id="top">id属性就是标签的身份证</div>
@@ -160,6 +160,4 @@ span标签与div标签类似，同样是一个【无语义标签】，通常用�
 id属性就像标签的身份证一样，不能重复，例如我们已经编写了一个id为top的属性，那么后续的标签中就不能再有id为top的标签。我们可以通过id找到HTML文档中的唯一元素，并设置其样式（第04节我们讲解如何使用css选择器找到指定元素）。
 
 class属性可以将HTML标签分类，我们可以通过box属性找到所有class值为box的HTML标签。
-
-[示例代码](https://github.com/xiaozhoulee/xiaozhou-examples/tree/master/01-网页重构/第02节：HTML常用元素)
 

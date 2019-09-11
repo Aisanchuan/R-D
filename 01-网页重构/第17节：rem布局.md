@@ -14,7 +14,7 @@ rem是CSS3中新增的单位，我们现在回顾和对比一下css中的常用�
 * em
 * rem
 
-px是我们此前最常用的单位，这里不做特殊讲解，我们接下来用两个例子说一下em和rem的区别，实例代码如下所示（demo01.html）。
+px是我们此前最常用的单位，这里不做特殊讲解，我们接下来用两个例子说一下em和rem的区别，实例代码如下所示[示例代码](https://github.com/xiaozhoulee/xiaozhou-examples/tree/master/01-网页重构/第17节：rem布局/demo01.html)
 
 ``` html
 <!DOCTYPE html>
@@ -48,7 +48,7 @@ px是我们此前最常用的单位，这里不做特殊讲解，我们接下来
 
 在上面的代码中，p元素的父级是div元素，我们将p元素的字体设置成1em和0.5em，当div元素的font-size值发生变化的时候，就会影响两个p元素的字体大小，说明**em是一个相对单位，它参照的是父级元素的font-size值**。
 
-我们在来看rem的例子，实例代码如下所示（demo02.html）
+我们在来看rem的例子，实例代码如下所示[示例代码](https://github.com/xiaozhoulee/xiaozhou-examples/tree/master/01-网页重构/第17节：rem布局/demo02.html)
 
 ``` html
 <!DOCTYPE html>
@@ -154,7 +154,7 @@ docEl.style.fontSize = 100 * (clientWidth / 720) + 'px';
 
 通过上述的方法，就可以很容易制作出按百分比排列的页面布局了，这就是rem布局的优势。
 
-[示例代码](https://github.com/xiaozhoulee/xiaozhou-examples/tree/master/01-网页重构/第17节：rem布局)
+
 
  
 
