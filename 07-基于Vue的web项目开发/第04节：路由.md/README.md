@@ -54,13 +54,13 @@ npm run serve
 * 成绩管理
 * 用户管理
 
-[示例代码链接](https://github.com/xiaozhoulee/xiaozhou-examples/tree/master/07-基于Vue的web项目开发/第04节%EF%BC%9A路由/router)
+[代码链接](https://github.com/xiaozhoulee/xiaozhou-examples/tree/master/07-基于Vue的web项目开发/第04节%EF%BC%9A路由/router)
 
 ### 三、路由传参
 
 从上面的案例中，我们了解到，通过设置路由，我们可以实现点击不同的菜单，跳转不同组件的功能。接下来我们让不同的菜单携带不同的参数，并将这些参数传递给组件（这在实际开发中是非常实用的）。
 
-[示例代码链接]()
+[代码链接]()
 
 我们会在第八章最后通过路由传参实现一个微型的【博客系统】。
 
@@ -79,7 +79,7 @@ router.beforeEach((to, from, next) => {
 
 在第十章，我们会完成一个用户登录的功能，示例代码如下所示：
 
-[示例代码链接]()
+[代码链接]()
 
 ### 五、总结
 

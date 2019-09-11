@@ -37,14 +37,14 @@ npm install -g http-server
 
 我们不必去打开这个目录去浏览下载的文件，只要知道如何使用NPM包的命令即可。
 
-例如我们使用钢材下载的http-server包开启一个静态文件目录服务器，步骤如下：
+例如我们使用刚才下载的http-server包开启一个静态文件目录服务器，步骤如下：
 
 1. 选择开启服务器的目录，这里选择D:/test/server目录。
 2. 在这个目录中执行http-server命令，默认端口为8080。
 3. 在server目录中创建一个index.html文件。
-4. 打开浏览器，访问http://127.0.0.1:8080，可以看到index.html文件的内容。
+4. 打开浏览器，访问http://127.0.0.1:8080/index.html，可以看到index.html文件的内容。
 
-以上展示了全局安装http-server包，并通过http-server命令开启一个静态文件目录服务器。后续我们会安装贡多的npm全局命令。
+以上展示了全局安装http-server包，并通过http-server命令开启一个静态文件目录服务器。后续我们会安装更多的npm全局命令。
 
 ### 二、项目初始化
 
@@ -53,9 +53,19 @@ npm install -g http-server
 ``` bash
 npm init
 ```
+在node开发中使用npm init会生成一个pakeage.json文件，这个文件主要是用来记录这个项目的详细信息的，它会将我们在项目开发中所要用到的包，以及项目的详细信息等记录在这个项目中。方便在以后的版本迭代和项目移植的时候会更加的方便。也是防止在后期的项目维护中误删除了一个包导致的项目不能够正常运行。使用npm init初始化项目还有一个好处就是在进行项目传递的时候不需要将项目依赖包一起发送给对方，对方在接受到你的项目之后再执行npm install就可以将项目依赖全部下载到项目里。
 
 #### package.josn文件
 
-* 创建项目npm init
 * 文件说明
-* 根据文件中的依赖关系安装依赖包
+```
+package name:                   你的项目名字叫啥  
+version:                        版本号  
+description:                    对项目的描述  
+entry point:                    项目的入口文件（一般你要用那个js文件作为node服务，就填写那个文件）  
+test command:                   项目启动的时候要用什么命令来执行脚本文件（默认为node app.js）  
+git repository:                 如果你要将项目上传到git中的话，那么就需要填写git的仓库地址（可以不写）  
+keywirds：                      项目关键字（可以不写）  
+author:                         作者  
+license:                        发行项目需要的证书（可以不写）  
+```
