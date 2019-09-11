@@ -1,4 +1,4 @@
-## 第08节：返回顶部（实践课）
+## 第08节：返回顶部
 
 ### 一、案例目标
 
@@ -16,83 +16,5 @@
 
 ### 三、开发过程
 
-* 首先要完成布局和样式，代码如下所示。[index.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/03-jQuery/%E7%AC%AC08%E8%8A%82%EF%BC%9A%E8%BF%94%E5%9B%9E%E9%A1%B6%E9%83%A8/index.html)
+* 首先要完成布局和样式，然后要完成页面滚轮滚动事件和返回顶部按钮的点击事件。案例代码地址。[index.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/03-jQuery/%E7%AC%AC08%E8%8A%82%EF%BC%9A%E8%BF%94%E5%9B%9E%E9%A1%B6%E9%83%A8/index.html)
 
-``` html
-<div class="header">
-    <h1>网页头部</h1>
-</div>
-<div class="banner">
-    <h1>网页banner</h1>
-</div>
-<div class="container">
-    <h1>网页内容</h1>
-</div>
-<div class="footer">
-    <h1>网页底部</h1>
-</div>
-```
-
-``` css
-*{
-    margin:0px;
-    padding:0px;
-}
-.header{
-    width:1000px;
-    height:300px;
-    background-color:#aaa;
-    margin:0 auto;
-}
-.banner{
-    width:1000px;
-    height:500px;
-    background-color:#eee;
-    margin:0 auto;
-}
-.container{
-    width:1000px;
-    height:800px;
-    background-color:#bbb;
-    margin:0 auto;
-}
-.footer{
-    width:1000px;
-    height:200px;
-    background-color:#777;
-    margin:0 auto;
-}
-/* 按钮的默认样式 */
-.to-top{
-    position: fixed;
-    width:80px;
-    height:80px;
-    bottom:20px;
-    right:20px;
-    display: none;
-}
-/* 显示按钮 */
-.to-top-show{
-    display: inline-block;
-}
-```
-
-*  页面滚动和按钮事件如下所示：
-
-``` js
-// 绑定网页滚轮滚动事件
-$(window).scroll(function(){
-    // 如果网页滚轮滚动，显示返回顶部
-    if($(this).scrollTop() > 0){
-        $(".to-top").addClass("to-top-show");
-    }else{
-        $(".to-top").removeClass("to-top-show");
-    }
-})
-// 点击返回顶部按钮时，页面动态滚动到页面最上方。
-$(".to-top").click(function(){
-    $("html,body").animate({
-        scrollTop:0
-    },500)
-})
-```

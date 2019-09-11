@@ -8,7 +8,7 @@ html5是超文本标记语言（html）的第五次重大修改，可以简单�
 
 ### 二、html5布局标签
 
-在之前学习的html中，主要使用div布局，代码如下所示（demo01.html）
+在之前学习的html中，主要使用div布局，代码如下所示。[示例代码](https://github.com/xiaozhoulee/xiaozhou-examples/tree/master/01-网页重构/第11节：HTML5新特性/demo01.html)
 
 ``` html
 <!DOCTYPE html>
@@ -66,7 +66,7 @@ html5是超文本标记语言（html）的第五次重大修改，可以简单�
 * section
 * footer
 
-我们使用header和nav标签来做一个简单的例子，代码如下所示（demo02.html）
+我们使用header和nav标签来做一个简单的例子，代码如下所示。
 
 ``` html
 <!DOCTYPE html>
@@ -157,7 +157,7 @@ html5是超文本标记语言（html）的第五次重大修改，可以简单�
 
 #### 视频标签
 
-掌握了音频标签，再来看视频标签（video）就十分简单了，我们可以在网页中添加video标签来为网页嵌入视频。代码如下所示（demo05.html）
+掌握了音频标签，再来看视频标签（video）就十分简单了，我们可以在网页中添加video标签来为网页嵌入视频。代码如下所示。
 
 ``` html
 <video src="media/video.mp4" controls autoplay></video>
@@ -189,4 +189,3 @@ html5是超文本标记语言（html）的第五次重大修改，可以简单�
 
 HTML5涵盖的内容非常多，本章只对新增的标签做了简单的讲解，在后续的学习过程中，或接触到更多的HTML5相关内容。
 
-[示例代码](https://github.com/xiaozhoulee/xiaozhou-examples/tree/master/01-网页重构/第11节：HTML5新特性)

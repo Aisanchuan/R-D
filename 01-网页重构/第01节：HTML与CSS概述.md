@@ -8,7 +8,7 @@
 
 ### 二、HTML概述
 
-HTML的全称是【超文本标记语言】，这个名字不重要，重要的是要知道，这门语言并不是编程语言，而是一个标记语言，也就是说他的代码是由一个个标签组成的，如下所示：
+HTML的全称是【超文本标记语言】，这个名字不重要，重要的是要知道，这门语言并不是编程语言，而是一个标记语言，也就是说他的代码是由一个个标签组成的，如下所示：[示例代码](https://github.com/xiaozhoulee/xiaozhou-examples/tree/master/01-网页重构/第01节：HTML与CSS概述/demo01.html)
 
 ``` html
 <!-- demo01.html -->
@@ -33,7 +33,7 @@ HTML主要控制网页的内容，例如可以在网页中设置文本，图片�
 ### 三、CSS概述
 
 CSS全称【层叠样式表】。刚才我们了解了，使用HTML可以设置网页中的内容，那么使用CSS就可以进一步装饰这些内容，录入设置文本的字体颜色，或是改变图片的尺寸等等。如下面的代码所示，CSS的代码实在style标签内部编写的。
-
+[示例代码](https://github.com/xiaozhoulee/xiaozhou-examples/tree/master/01-网页重构/第01节：HTML与CSS概述/demo02.html)
 ``` html
 <!-- demo02.html -->
 <!DOCTYPE html>
@@ -70,4 +70,4 @@ CSS全称【层叠样式表】。刚才我们了解了，使用HTML可以设置�
 
 通过上面的六步，我们就可以访问我们自己的第一个网页了。
 
-[示例代码](https://github.com/xiaozhoulee/xiaozhou-examples/tree/master/01-网页重构/第01节：HTML与CSS概述)
+
