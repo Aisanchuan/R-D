@@ -133,7 +133,7 @@ var fruits = ["香蕉","苹果","鸭梨"];
 在上一节的例子中，我们讲解了：
 
 * 如何将数组中的元素在列表中显示
-* 如何获取元素的所以
+* 如何获取元素的索引
 
 接下来我们要做一个例子，仍然是显示一个普通的水果列表，当我们点击水果列表中的元素时，可以在控制台输出这个元素的索引[demo09](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/05-Vue入门/第01章%EF%BC%9Avue的基本概念%EF%BC%88一%EF%BC%89/demo09.html
 )
