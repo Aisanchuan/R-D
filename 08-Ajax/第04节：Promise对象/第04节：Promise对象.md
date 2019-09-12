@@ -55,6 +55,12 @@ Promise也有一些缺点。首先，无法取消Promise，一旦新建它就会
         document.querySelector("button").onclick = function() {
             var p = myajax("get","hello.txt");
             p.then(function(data){
+                //then方法提供一个供自定义的回调函数，若传入非函数，则会忽略当前then方法。
+                //回调函数中会把上一个then中返回的值当做参数值供当前then方法调用。
+                //then方法执行完毕后需要返回一个新的值给下一个then调用（没有返回值默认使用undefined）。
+                //每个then只可能使用前一个then的返回值。
+                
+            
                 alert(data);
             })
         }
