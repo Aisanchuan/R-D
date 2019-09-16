@@ -22,7 +22,7 @@ ORM提供了实现持久化层的另一种模式，它采用映射元数据来�
 **安装egg-sequelize**
 
 ```js
-# 下载依赖，安装egg-sequelize和mysql2
+# 下载依赖，安装egg-sequelize和mysql27
 npm install --save egg-sequelize mysql2
 ```
 
@@ -50,7 +50,7 @@ exports.sequelize = {
 ```
 
 ```js
-// 根目录 app.js
+// 根目录 app.js，没有创建一个app.js
 module.exports = app => {
     app.beforeStart(async function () {
         // await app.model.sync({ force: true }); // 开发环境使用，会删除数据表
@@ -63,18 +63,19 @@ module.exports = app => {
 
 **数据模型**
 
+这种模式可以通过控制器和服务进行访问app.model.Clazz或者ctx.model.Clazz，比如我们写app/controller/Clazz.js：
 ```js
 // app/model/clazz.js
 module.exports = app => {
     const {
         STRING
-    } = app.Sequelize;
+    } = app.Sequelize;//数据库字段类型，一对多
 
     const Clazz = app.model.define('clazz', {  //sequelize会自动创建主键
-        name: STRING,
+        name: STRING,//数据库字段名称与字段类型
     })
 
-    return Clazz;
+    return Clazz; //返回班级
 }
 ```
 
@@ -91,8 +92,8 @@ module.exports = app => {
 
     Students.associate = function () {
         app.model.Students.belongsTo(app.model.Clazz, {  //设置外键
-            foreignKey: 'clazz_id',
-            as: 'clazz'
+            foreignKey: 'clazz_id',//关联的外键
+            as: 'clazz'//将关联的数据显示到该字段上
         })
     }
 
@@ -113,7 +114,7 @@ const Controller = require('egg').Controller;
 class ClazzController extends Controller {
     //查询班级列表
     async index() {  
-        const clazzList = await this.app.model.Clazz.findAll();
+        const clazzList = await this.app.model.Clazz.findAll();//查询数据库中Clazz.
         await this.ctx.render('clazz_list', {
             clazzList: clazzList
         })
@@ -130,8 +131,8 @@ class ClazzController extends Controller {
         const clazz = {
             name:body.name
         }
-        await this.app.model.Clazz.create(clazz);
-        this.ctx.redirect("/clazz")
+        await this.app.model.Clazz.create(clazz);//把添加得班级存入到数据库中。
+        this.ctx.redirect("/clazz")//重镜像，添加数据之后自动跳转/Clazz页面
     }
 
     //通过id在数据库中删除班级
