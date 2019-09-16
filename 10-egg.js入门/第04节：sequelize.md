@@ -193,7 +193,9 @@ class StudentsController extends Controller {
     // 通过id删除学生信息
     async destroy(){
         const id = this.ctx.request.body.student_id;
+        //findOne指的是查找指定表的单条数据，返回一个对象
         const student = await this.app.model.Students.findOne({
+            //where()条件查询
             where:{
                 id:id
             }
