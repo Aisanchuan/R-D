@@ -18,7 +18,7 @@
 [图解](https://github.com/ding139725/R-D/blob/master/10-egg.js%E5%85%A5%E9%97%A8/10-07%E6%A1%88%E4%BE%8B.md)
 [案例](https://github.com/ding139725/R-D/tree/master/10-egg.js%E5%85%A5%E9%97%A8/egg-cookie)
 
-#### 基于cookie实现记录用户登录状态
+<!-- #### 基于cookie实现记录用户登录状态 -->
 
 
 
@@ -28,9 +28,4 @@
 不同的是 Cookie 保存在客户端浏览器中，而session 保存在服
 务器上，相对于cookie，session更安全。
 
-#### 基于session实现记录用户登录状态
-
-
-
-
-[更多详情请看](https://eggjs.org/zh-cn/core/cookie-and-session.html)
+<!-- #### 基于session实现记录用户登录状态 -->
