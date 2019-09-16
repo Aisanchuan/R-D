@@ -16,7 +16,7 @@
 
 具体看：
 [图解](https://github.com/ding139725/R-D/blob/master/10-egg.js%E5%85%A5%E9%97%A8/10-07%E6%A1%88%E4%BE%8B.md)
-[案例](https://github.com/ding139725/R-D/tree/master/10-egg.js%E5%85%A5%E9%97%A8/egg-cookie)
+[案例](https://github.com/ding139725/R-D/tree/master/script/egg-cookie)
 
 <!-- #### 基于cookie实现记录用户登录状态 -->
 
