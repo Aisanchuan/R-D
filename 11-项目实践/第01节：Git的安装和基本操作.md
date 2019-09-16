@@ -1,15 +1,23 @@
-# 第01节：Git的基本操作
+# 第01节：Git的安装和基本操作
 
-### 同步远程仓库
+
+### git安装
+ 
+ 在Windows上使用Git，可以从[Git官网](https://git-scm.com/download/win)直接下载安装程序，然后按默认选项安装即可。
+
+安装完成后，在开始菜单里找到“Git”->“Git Bash”，蹦出一个类似命令行窗口的东西，就说明Git安装成功！
+
+### 同步远程仓库的基本命令
 1. 创建一个空的远程仓库：登录github =》 new repository
 2. 初始化本地仓库
 3. 编辑文件
-4. 编辑区添加到暂存区：git add .
-5. 暂存区提交到分支：git commit -m "备注"
-6. 创建远程主机名：git remote
+4. 初始化git本地仓库：git init  
+5. 编辑区添加到暂存区：git add .
+6. 暂存区提交到分支：git commit -m "备注"
 7. 同步远程仓库：git push -u origin master
-8. 克隆项目：git clone url
-9. 拉取项目代码: git pull
+8. 创建远程主机名：git remote
+9. 克隆项目：git clone url(你要克隆项目的链接)
+10. 拉取项目代码: git pull
 
 ### 团队协作
 
@@ -36,7 +44,7 @@
 ### markdown常用格式
 
 ``` js
-// 标题：井号的个数表示不同级别的标题
+// 标题：井号（###）的个数表示不同级别的标题
 // 段落：直接写文字
 // 列表：*：无需列表，数字：有序列表
 // 链接：[title](url)
