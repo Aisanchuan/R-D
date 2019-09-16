@@ -2,7 +2,15 @@
 
 ### 一、模板字符串
 之前我们也可以使用JavaScript输出模版字符串，通常是下面这样的：
+``` html
+<h1 id="result"></h1>
+<script src="jqery.js"></script>
+```
 ``` js
+    let person = {
+        name:"name",
+        age:"age"
+    }
     $("#result").append(
     "He is <b>"+person.name+"</b>"+"and we wish to know his"+person.age+".That is all" 
     );
