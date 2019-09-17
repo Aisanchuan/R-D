@@ -116,7 +116,8 @@ class ClazzController extends Controller {
     async index() {  
         const clazzList = await this.app.model.Clazz.findAll();//查询数据库中Clazz.
         await this.ctx.render('clazz_list', {
-            clazzList: clazzList
+            clazzList: clazzList//将记录标题'Hello World'插入'posts'表
+            //查询条件和结果自定义
         })
     }
 
