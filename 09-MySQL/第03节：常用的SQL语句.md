@@ -74,70 +74,89 @@ create table student(id int(6),name varchar(20));
 ```
 
 - 显示数据库所有表:
+
 ```sql
 show tables;
 ```
 
-* 查看表数据
+- 查看表数据
+
 ```sql
 select * from 表名;
 select * from student;
 ```
 
 - 增加字段:
+
 ```sql
 alter table 表名 add 字段名 字段类型
 alter table book add count int;
 ```
 
-- 修改字段:
+- 修改字段名称:
+
 ```sql
-alter table 表明名 modify 字段名称 字符类型
-alter table book modifu price int;
+alter table <表名> change <字段名> <字段新名称> <字段的类型>。
+alter table li change name wang varchar(25);
 ```
 
 - 删除字段:
+
 ```sql
 alter table 表名 drop 字段名
 alter table book drop count;
 ```
 
 - 向表中插入数据
+
 ```sql
 insert into 表名(想插入的字段名称,...) values(想插入的字段的值)
-insert into 表明 values(表中所有字段的值)
+insert into 表名 values(表中所有字段的值)
 ```
 
-* 删除指定的某一行
+- 删除指定的某一行
+
 ```sql
 delete from 表名 where 条件表达式;
 delete from student where id=1;
 ```
 
-* 修改表中记录
+- 修改表中记录
+
 ```sql
 update 表名 set 字段名=新的字段值 where 条件表达式
 update student set name=小李 where id=1;
 ```
 
+- 修改表名
+```sql
+RENAME TABLE <旧表名> TO <新表名>;
+rename table jiu to xin
+```
+
 - 删除表：
+
 ```sql
 drop table 表名;
 drop table table_name;
 ```
 
 - 查看表结构：
+
 ```sql
 desc 表名
 desc table_name;
 ```
-* 清空表
+
+- 清空表
+
 ```sql
 delete from 表名;
 delete from student;
 ```
+
 以上是一些常用的 SQL 语句和函数的示例代码：
-更多的SQL语句在右方示例代码内
+更多的 SQL 语句在右方示例代码内
 →
 [示例代码](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/09-MySQL/%E7%AC%AC%E4%B9%9D%E7%AB%A0%E7%AC%AC3%E8%8A%82MySQL%E5%85%B7%E4%BD%93%E8%AF%AD%E5%8F%A5.md)
 
@@ -216,3 +235,35 @@ alter view user_view as select name,age from user;
 --删除视图
 drop view user_view if exists user_view;
 ```
+
+### 八、MySQL约束
+
+#### 唯一约束
+* unique(写在你要加的字段里面)
+```sql
+ create table stu(num int unique);
+```
+* null 任何一个null都不等于另一个null
+#### 非空约束
+* not null
+```sql
+ create table stu(num int unique not null);
+```
+同一个字段可以加上多个约束不需要用逗号隔开
+非空约束和唯一约束的一个组合我们称为组件约束
+#### 主键约束
+非空约束和唯一约束的一个组合我们称之为主键约束
+* prmary key
+#### mysql的自动增长策略
+* auto_increment
+```sql
+ create table stu(num int primary auto_increment)
+ ```
+#### 外键约束
+* foreign key（外键约束关键字
+* 下面为外键约束实际操作
+```sql  
+create table stu(num int primary key auto_increment , name varchar(11), clazznum int,foreign key(clazznum) references clazz(num) );
+```
+
+* 在msqyl中外键必须得是另一张表的主键
