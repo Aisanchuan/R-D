@@ -69,8 +69,15 @@ drop database db_name;
 - 创建表：
 
 ```sql
-create table 表名(字段名称 int(6),字段名称 varchar(20)......);
-create table student(id int(6),name varchar(20));
+create table 表名(
+    字段名称 int(6),
+    字段名称 varchar(20)
+    );
+
+create table student(
+    id int(6),
+    name varchar(20)
+    );
 ```
 
 - 显示数据库所有表:
@@ -129,6 +136,7 @@ update student set name=小李 where id=1;
 ```
 
 - 修改表名
+
 ```sql
 RENAME TABLE <旧表名> TO <新表名>;
 rename table jiu to xin
@@ -186,13 +194,30 @@ show create table user; --查看user表当前使用的存储引擎。
 - 持久性(D)：是事务的保证，事务终结的标志(内存的数据持久到硬盘文件中)
 
 ```sql
+* 关于事务的一些术语
 开启事务：Start Transaction
 事务结束：End Transaction
 提交事务：Commit Transaction
 回滚事务：Rollback Transaction
 ```
+```sql
+* 和事务相关的两条重要的SQL语句(TCL)
+commit:提交
+rollback：回滚
+```
+* 开启标志：
+```sql
+- 任何一条DML语句(insert、update、delete)执行，标志事务的开启
+```
+* 结束标志(提交或者回滚)：
+```sql
+ 提交：成功的结束，将所有的DML语句操作历史记录和底层硬盘数据来一次同步
+```
+```sql
+ 回滚：失败的结束，将所有的DML语句操作历史记录全部清空
+```
 
-事务的隔离级别
+事务的四个隔离级别
 
 - 读未提交：read uncommitted
 - 读已提交：read committed
@@ -222,7 +247,7 @@ drop index name_index on user;
 
 ### 七、视图
 
-视图就是一个查询结果，可以隐藏表中的细节。
+* 视图就是一个查询结果，可以隐藏表中的细节。
 
 ```sql
 --创建视图
@@ -236,34 +261,117 @@ alter view user_view as select name,age from user;
 drop view user_view if exists user_view;
 ```
 
-### 八、MySQL约束
+### 八、MySQL 约束
+
+- 概念：对表中的数据进行限定，保证数据的正确性、有效性和完整性
 
 #### 唯一约束
-* unique(写在你要加的字段里面)
+
+- unique，某一列的值不能重复(写在你要加的字段里面)
+
 ```sql
- create table stu(num int unique);
-```
-* null 任何一个null都不等于另一个null
-#### 非空约束
-* not null
-```sql
- create table stu(num int unique not null);
-```
-同一个字段可以加上多个约束不需要用逗号隔开
-非空约束和唯一约束的一个组合我们称为组件约束
-#### 主键约束
-非空约束和唯一约束的一个组合我们称之为主键约束
-* prmary key
-#### mysql的自动增长策略
-* auto_increment
-```sql
- create table stu(num int primary auto_increment)
- ```
-#### 外键约束
-* foreign key（外键约束关键字
-* 下面为外键约束实际操作
-```sql  
-create table stu(num int primary key auto_increment , name varchar(11), clazznum int,foreign key(clazznum) references clazz(num) );
+ 1. 注意：
+        * 唯一约束可以有NULL值，但是只能有一条记录为null
+    2. 在创建表时，添加唯一约束
+        CREATE TABLE stu(
+            id INT,
+            phone_number VARCHAR(20) UNIQUE -- 手机号
+        );
+    3. 删除唯一约束
+        ALTER TABLE stu DROP INDEX phone_number;
+    4. 在表创建完后，添加唯一约束
+        ALTER TABLE stu MODIFY phone_number VARCHAR(20) UNIQUE;
 ```
 
-* 在msqyl中外键必须得是另一张表的主键
+#### 非空约束
+
+- not null
+
+```sql
+  1. 创建表时添加约束
+        CREATE TABLE stu(
+            id INT,
+            NAME VARCHAR(20) NOT NULL -- name为非空
+        );
+    2. 创建表完后，添加非空约束
+        ALTER TABLE stu MODIFY NAME VARCHAR(20) NOT NULL;
+
+    3. 删除name的非空约束
+        ALTER TABLE stu MODIFY NAME VARCHAR(20);
+```
+
+同一个字段可以加上多个约束不需要用逗号隔开
+
+#### 主键约束
+
+- 非空约束和唯一约束的一个组合我们称之为主键约束
+```sql
+primary key
+```
+```sql
+  1. 注意：
+        1. 含义：非空且唯一
+        2. 一张表只能有一个字段为主键
+        3. 主键就是表中记录的唯一标识
+
+    2. 在创建表时，添加主键约束
+        create table stu(
+            id int primary key,-- 给id添加主键约束
+            name varchar(20)
+        );
+
+    3. 删除主键
+        -- 错误 alter table stu modify id int ;
+        ALTER TABLE stu DROP PRIMARY KEY;
+
+    4. 创建完表后，添加主键
+        ALTER TABLE stu MODIFY id INT PRIMARY KEY;
+
+    5. 自动增长：
+        1.  概念：如果某一列是数值类型的，使用 auto_increment 可以来完成值得自动增长
+
+        2. 在创建表时，添加主键约束，并且完成主键自增长
+        create table stu(
+            id int primary key auto_increment,-- 给id添加主键约束
+            name varchar(20)
+        );
+
+
+        3. 删除自动增长
+        ALTER TABLE stu MODIFY id INT;
+        4. 添加自动增长
+        ALTER TABLE stu MODIFY id INT AUTO_INCREMENT;
+
+```
+
+#### 外键约束
+
+- foreign key,让表于表产生关系，从而保证数据的正确性
+- 下面为外键约束实际操作
+
+```sql
+ 1. 在创建表时，可以添加外键
+        * 语法：
+            create table 表名(
+                ....
+                外键列
+                constraint 外键名称 foreign key (外键列名称) references 主表名称(主表列名称)
+            );
+
+    2. 删除外键
+        ALTER TABLE 表名 DROP FOREIGN KEY 外键名称;
+
+    3. 创建表之后，添加外键
+        ALTER TABLE 表名 ADD CONSTRAINT 外键名称 FOREIGN KEY (外键字段名称) REFERENCES 主表名称(主表列名称);
+
+
+    4. 级联操作
+        1. 添加级联操作
+            语法：ALTER TABLE 表名 ADD CONSTRAINT 外键名称 
+                    FOREIGN KEY (外键字段名称) REFERENCES 主表名称(主表列名称) ON UPDATE CASCADE ON DELETE CASCADE  ;
+        2. 分类：
+            1. 级联更新：ON UPDATE CASCADE 
+            2. 级联删除：ON DELETE CASCADE 
+```
+
+- 在 msqyl 中外键必须得是另一张表的主键
