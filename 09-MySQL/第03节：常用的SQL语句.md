@@ -273,13 +273,22 @@ drop view user_view if exists user_view;
  1. 注意：
         * 唯一约束可以有NULL值，但是只能有一条记录为null
     2. 在创建表时，添加唯一约束
+    语法：
+    create table 表名(
+        字段名 数据类型,
+        字段名 数据类型 unique
+    )
         CREATE TABLE stu(
             id INT,
-            phone_number VARCHAR(20) UNIQUE -- 手机号
+            phone_number VARCHAR(20) UNIQUE 
         );
+        
     3. 删除唯一约束
+    语法:alter table 表名 drop index 字段名
         ALTER TABLE stu DROP INDEX phone_number;
+
     4. 在表创建完后，添加唯一约束
+    语法:alter table 表名 modify 字段名 数据类型 unique
         ALTER TABLE stu MODIFY phone_number VARCHAR(20) UNIQUE;
 ```
 
@@ -294,9 +303,11 @@ drop view user_view if exists user_view;
             NAME VARCHAR(20) NOT NULL -- name为非空
         );
     2. 创建表完后，添加非空约束
+    语法:alter table 表名 modify 字段名 数据类型 not null
         ALTER TABLE stu MODIFY NAME VARCHAR(20) NOT NULL;
 
     3. 删除name的非空约束
+    语法:alter table 表名 modify 字段名 数据类型
         ALTER TABLE stu MODIFY NAME VARCHAR(20);
 ```
 
@@ -322,9 +333,11 @@ primary key
 
     3. 删除主键
         -- 错误 alter table stu modify id int ;
+    语法：alter table 表名 drop primary key;
         ALTER TABLE stu DROP PRIMARY KEY;
 
     4. 创建完表后，添加主键
+    语法:alter table 表名 modify 字段名 数据类型 primary key; 
         ALTER TABLE stu MODIFY id INT PRIMARY KEY;
 
     5. 自动增长：
@@ -338,8 +351,10 @@ primary key
 
 
         3. 删除自动增长
+    语法:alter table 表名 modify 字段名 数据类型;
         ALTER TABLE stu MODIFY id INT;
         4. 添加自动增长
+    语法:alter table 表名 modify 字段名 数据类型 auto_increment;
         ALTER TABLE stu MODIFY id INT AUTO_INCREMENT;
 
 ```
