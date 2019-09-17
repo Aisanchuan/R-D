@@ -379,14 +379,6 @@ primary key
     3. 创建表之后，添加外键
         ALTER TABLE 表名 ADD CONSTRAINT 外键名称 FOREIGN KEY (外键字段名称) REFERENCES 主表名称(主表列名称);
 
-
-    4. 级联操作
-        1. 添加级联操作
-            语法：ALTER TABLE 表名 ADD CONSTRAINT 外键名称 
-                    FOREIGN KEY (外键字段名称) REFERENCES 主表名称(主表列名称) ON UPDATE CASCADE ON DELETE CASCADE  ;
-        2. 分类：
-            1. 级联更新：ON UPDATE CASCADE 
-            2. 级联删除：ON DELETE CASCADE 
 ```
 
 - 在 msqyl 中外键必须得是另一张表的主键
