@@ -38,7 +38,7 @@ new Vue({
 
  [Element 组件链接链](https://element.eleme.cn/#/zh-CN/component/icon)
 
-![style_img](../../images/0705_style.png)
+![style_img](../images/0705_style.png)
 
 在 Element 官方组件里找到想要的样式，拷贝进自己的项目组件中
 ```html
@@ -82,7 +82,7 @@ new Vue({
 ```
 
 第三步:展示完成效果
-![Image text](../../images/0705_icon.png)
+![Image text](../images/0705_icon.png)
 
 ### 四、学生列表
 下面是vue+elementUI写的一个学生列表，可以当作一个参考  
