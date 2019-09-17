@@ -31,7 +31,7 @@ npm run serve
 ### 二、项目目录结构说明
 
 创建的项目目录结构如下所示：
-
+```
 ├─hello-world
 │    ├─node_modules
 │    ├─public
@@ -47,6 +47,7 @@ npm run serve
 │    ├─babel.config.js
 │    ├─package.json
 │    ├─README.md
+```
 #### 重要文件
 * node_modules：存放项目依赖包
 * public：存放静态文件(例如图片等)
