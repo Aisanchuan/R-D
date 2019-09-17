@@ -88,7 +88,7 @@ mysql -u root -p
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '新密码';
 ```
 * 修改密码，注意命令尾的；一定要有，这是mysql的语法
-![示例代码](../images/9-1-1-7.png)
+![示例图片](../images/9-1-1-7.png)
 
 
 
