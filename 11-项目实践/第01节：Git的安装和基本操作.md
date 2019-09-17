@@ -11,13 +11,14 @@
 1. 创建一个空的远程仓库：登录github =》 new repository
 2. 初始化本地仓库
 3. 编辑文件
-4. 初始化git本地仓库：git init  
-5. 编辑区添加到暂存区：git add .
-6. 暂存区提交到分支：git commit -m "备注"
-7. 同步远程仓库：git push -u origin master
-8. 创建远程主机名：git remote
-9. 克隆项目：git clone url(你要克隆项目的链接)
-10. 拉取项目代码: git pull
+4. 鼠标右键打开Git Bash
+5. 初始化git本地仓库：git init  
+6. 编辑区添加到暂存区：git add .
+7. 暂存区提交到分支：git commit -m "备注"
+8. 同步远程仓库：git push -u origin master
+9. 创建远程主机名：git remote
+10. 克隆项目：git clone url(你要克隆项目的链接)
+11. 拉取项目代码: git pull
 
 ### 团队协作
 
@@ -41,7 +42,7 @@
 2. 恢复版本：git reset --hard <版本号>，版本号写前几位就可以
 3. 查看命令记录：git reflog
 
-### markdown常用格式
+### Markdown常用格式
 
 ``` js
 // 标题：井号（###）的个数表示不同级别的标题
