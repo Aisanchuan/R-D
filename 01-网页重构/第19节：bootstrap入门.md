@@ -22,12 +22,6 @@ style - Bootstrap 的未压缩 CSS 文件的路径
 #### 包含的内容
 
 Bootstrap 提供了两种形式的压缩包，在下载下来的压缩包内可以看到以下目录和文件，这些文件按照类别放到了不同的目录内，并且提供了压缩与未压缩两种版本。
-#### 安装 Grunt
-
-安装 Grunt 前，你需要首先下载并安装 node.js （npm 已经包含在内）。npm 是 node packaged modules 的简称，它的作用是基于 node.js 管理扩展包之间的依赖关系。
-然后在命令行中输入以下命令：
-在全局环境中安装 grunt-cli ：npm install -g grunt-cli 。
-进入 /bootstrap/ 根目录，然后执行 npm install 命令。npm 将读取 package.json 文件并自动安装此文件中列出的所有被依赖的扩展包，之后就可以使用UI组件了。
 ### 三、重用的UI组件
 
 #### 下拉菜单
