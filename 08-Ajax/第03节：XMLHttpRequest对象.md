@@ -2,7 +2,7 @@
 
 ### 一、Ajax原理
 
-Ajax 的全称是Asynchronous JavaScript and XML（异步的JavaScript 和 XML），其中，Asynchronous 是 异步 的意思，它有别于传统web开发中采用的同步的方式。
+Ajax 的全称是Asynchronous JavaScript and XML（异步的JavaScript 和 XML），其中，Asynchronous 是 异步 的意思，它不同于传统web开发中采用同步方式请求数据。
 
 上一节我们使用jQuery实现了异步交互数据，本节我们不依赖任何库和框架来实现异步数据交互。
 
