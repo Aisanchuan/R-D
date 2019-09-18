@@ -14,8 +14,29 @@
 
 设置 Cookie 其实是通过在 HTTP 响应中设置 set-cookie 头完成的，每一个 set-cookie 都会让浏览器在 Cookie 中存一个键值对。在设置 Cookie 值的同时，协议还支持许多参数来配置这个 Cookie 的传输、存储和权限。
 
-具体看：
-[图解](../script/10-07案例.md)
+案例解析
+
+1. 可以看到下图中home与router都是最初始的原代码
+![10-07-01a](../images/10-07-01a.png)
+![10-07-01b](../images/10-07-01b.png)
+
+2. 然后启动服务器，打开浏览器，按F12找到Network,然后找到Cookie,接着图2可以发现Name中只有Request与Response。
+
+![10-07-02a](../images/10-07-02a.png)
+![10-07-02b](../images/10-07-02b.png)
+
+3. 开始使用Cookie,
+如图中index方法中的代码写的就是cookie，
+
+![10-07-03a](../images/10-07-03a.png)
+
+4. 实现功能
+如图,每次访问一次他就会记录一次，
+
+![10-07-04a](../images/10-07-04a.jpg)
+![10-07-04b](../images/10-07-04b.jpg)
+
+
 [案例](https://github.com/ding139725/R-D/tree/master/script/egg-cookie)
 
 <!-- #### 基于cookie实现记录用户登录状态 -->
