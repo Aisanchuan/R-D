@@ -1,36 +1,6 @@
 # 第05节：async
 
-
-### 一、async方法
-
-async基础用法
-
-``` js
-function fn(){
-    return new Promise((resolve)=>{
-        setTimeout(()=>{
-            resolve('hi')
-        },1000)
-    })
-}
-
-(async function(){
-    let res1 =await fn();
-    console.log('第一步')
-
-    let res2 = await fn();
-    console.log(res2+'第二步')
-
-    let res3 = await fn();
-    console.log(res3+'第三步')
-})()
-//正如我们所见，自执行函数里面的代码会一行一行地执行，很优雅地解决了异步操作的问题。
-```
-
-async的语法
-
-
-### 二、异步的终极解决方案-async函数
+### 一、异步的终极解决方案-async函数
 
 异步操作是 JavaScript 编程的麻烦事，麻烦到一直有人提出各种各样的方案，试图解决这个问题。
 
@@ -40,11 +10,33 @@ async的语法
 
 async 函数就是隧道尽头的亮光，很多人认为它是异步操作的终极解决方案。
 
+### 二、async方法
+
+async基础用法
+
+``` js
+function fn(){
+    return new Promise((resolve)=>{
+        setTimeout(()=>{
+            resolve('hi')
+        },1000)//模拟真实项目延迟
+    })
+}
+
+function fnAsy(){
+            //用同步的写法，实现异步的效果
+            let result1 = await fn("abc");//await，字面意思等待向fn传输数据后再执行下面的指令
+            let result2 = await fn("def");//向fn传输参数def
+            console.log(result1);//输出
+            console.log(result2);
+        }
+
+        fnAsy();//最后调用这个函数
+//正如我们所见，自执行函数里面的代码会一行一行地执行，很优雅地解决了异步操作的问题。
+```
 
 
-#### 一句话，async是Generator的语法糖
 
 
-### 三、如何使用async函数
 
 

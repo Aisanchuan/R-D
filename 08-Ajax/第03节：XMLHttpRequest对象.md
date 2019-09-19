@@ -56,7 +56,7 @@ Ajax 的全称是Asynchronous JavaScript and XML（异步的JavaScript 和 XML�
     }
 </script>
 ```
-案例中的4是readyState的一种状态readyState一共有五种状态
+案例中的(xhr.readystate === 4)是readyState的一种状态readyState一共有五种状态
 
 0：请求未初始化，还没有调用 open()。
 

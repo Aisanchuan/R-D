@@ -13,21 +13,45 @@
 * 自动转换JSON数据
 * 客户端支持防止CSRF/XSRF攻击
 
-#### 为什么使用axios不使用Ajax？
-
-1. axios：
-    从 node.js 创建 http 请求
-    支持 Promise API
-    客户端支持防止CSRF攻击
-    提供了一些并发请求的接口（重要，方便了很多的操作）
-2. jQuery ajax：
-    本身是针对MVC的编程,不符合现在前端MVVM
-    基于原生的XHR开发，XHR本身的架构不清晰，已经有了fetch的替代方案
-    JQuery整个项目太大，单纯使用ajax要引入整个JQuery，非常的不合理（采取个性化打包的方案又不能享受CDN服务）
 
 ### 二、axios的常用方法
 
-git 请求
+
+axuis返回的是promise对象
+
+```js
+//返回对象的形式 
+{
+  data:{},
+  status:200,
+  //从服务器返回的http状态文本
+  statusText:'OK',
+  //响应头信息
+  headers: {},
+  //`config`是在请求的时候的一些配置信息
+  config: {}
+}
+```
+
+如果要调用以上数据的话
+
+``` js
+axios.get('/user/12345')
+  .then(function(res){
+    console.log(res.data);//输出data
+    console.log(res.status);//输出请求状态
+    console.log(res.statusText);
+    console.log(res.headers);
+    console.log(res.config);
+  })
+```
+
+
+
+
+#### 实际应用
+
+get 请求
 
 ``` js
 //1.get请求(无参数)
