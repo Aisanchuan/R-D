@@ -8,7 +8,7 @@
 
 下载完成之后，双击安装包，然后一直【下一步】就可以了。
 
-![Node安装示意图](/images/node.png)
+![Node安装示意图](../images/0601_node.png)
 
 ### 二、测试Node
 
@@ -20,7 +20,7 @@ node -v
 
 如果可以显示Node的版本号，说明Node已经安装成功，效果如下所示：
 
-![Node安装示意图](/images/node_test.png)
+![Node安装示意图](../images/0601_nodetest.png)
 
 ### 三、测试NPM概述
 
@@ -30,7 +30,7 @@ node -v
 npm -v
 ```
 
-![NPM安装示意图](/images/npm_test.png)
+![NPM安装示意图](../images/0601_npmtest.png)
 
 ### 四、总结
 
