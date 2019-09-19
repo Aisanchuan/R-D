@@ -47,3 +47,5 @@
 |deletes|http://127.0.0.1:7001/destroy/${index}|del|123|删除|
 
 #### 学生
+
+类型：sting
