@@ -110,7 +110,7 @@ ul.appendChild(li);
     }
 </script>
 ```
-通过上面的代码可以知道，删除一个元素需要知道他的父级元素，然后通过父级元素的removeChild方法删除子集元素，那么如果不确定删除的元素的父级是哪有个元素，我们该如何获取元素的父级元素呢，可以使用parentNode方法，我们之前爱来改写上面的代码
+通过上面的代码可以知道，删除一个元素需要知道他的父级元素，然后通过父级元素的removeChild方法删除子级元素，那么如果不确定删除的元素的父级是哪有个元素，我们该如何获取元素的父级元素呢，可以使用parentNode方法，我们直接来改写上面的代码
 [示例连接](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/02-JavaScript%E5%85%A5%E9%97%A8/%E7%AC%AC11%E8%8A%82%EF%BC%9ADOM%E6%93%8D%E4%BD%9C/demo08.html)
 
 ``` html
