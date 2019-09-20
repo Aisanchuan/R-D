@@ -33,7 +33,7 @@
 
 |方法|请求参数|返回参数|说明
 |---|------------|----|----|
-|post|name|123|账号|
+|post|name|login|账号|
 |post|password|123|密码|
 
 #### 班级
@@ -42,10 +42,16 @@
 
 |方法|uri|请求参数|返回参数|说明
 |---|------------|----|----|---|
-|get|http://127.0.0.1:7001/index||123|查询|
-|post|http://127.0.0.1:7001/create|name|123|添加|
-|deletes|http://127.0.0.1:7001/destroy/${index}|del|123|删除|
+|get|http://127.0.0.1:7001/index||clazzList|查询|
+|post|http://127.0.0.1:7001/create|name|clazzList|添加|
+|deletes|http://127.0.0.1:7001/destroy/${index}|del|clazzList|删除|
 
 #### 学生
 
 类型：sting
+|方法|uri|请求参数|返回参数|说明
+|---|------------|----|----|---|
+|get|http://127.0.0.1:7001/index||studentList|查询|
+|post|http://127.0.0.1:7001/create|name|studentList|添加|
+|deletes|http://127.0.0.1:7001/destroy/${index}|del|studentList|删除|
+|deletes|http://127.0.0.1:7001/destroy/${index}|del|studentList|修改|

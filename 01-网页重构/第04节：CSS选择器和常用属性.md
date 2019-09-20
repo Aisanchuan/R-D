@@ -75,7 +75,19 @@ img{
     height:100px;
 }
 ```
-
+``` html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1>这是一个标题标签</h1>
+    <img src="" alt="">
+</body>
+</html>
+```
 #### 类选择器
 
 类选择器是通过html元素的class属性找到元素。选择器的语法是在class属性名前添加一个【.】。如下面的案例所示。此案例将所有class值为info的元素背景色设置为蓝色。
@@ -85,7 +97,18 @@ img{
     background-color:blue;
 }
 ```
-
+``` html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div class="info"></div>
+</body>
+</html>
+```
 #### id选择器
 
 id选择器是通过html元素的id属性找到元素。选择器的语法是在id属性名前面添加一个【#】。如下面的案例所示。此案例将所有id值为info的元素背景色设置为蓝色。
@@ -97,7 +120,18 @@ id选择器是通过html元素的id属性找到元素。选择器的语法是在
     background-color:blue;
 }
 ```
-
+``` html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div id="info"></div>
+</body>
+</html>
+```
 #### 通配符选择器
 
 通配符选择器可以找到html元素中的所有元素，代码如下所示，此案例可以将所有元素的外边距和内边距都设置为0px。关于margin和padding两个属性，我们会在【第06节：盒子模型】中继续讲解。
@@ -108,7 +142,7 @@ id选择器是通过html元素的id属性找到元素。选择器的语法是在
     padding:0px;
 }
 ```
-
+通配符选择器和其他的选择器不一样，它不需要特定的html标签它可以找到所有的标签。
 **在实际工作中，通配符选择器因为性能问题，并不经常使用，一般只用来清除所有元素的内边距和外边距。**
 
 ### 三、CSS常用属性
