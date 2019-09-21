@@ -10,14 +10,54 @@
 
 ### 二、下载bootstrap
 
-* 通过 npm 进行安装: $ npm install bootstrap@3
+* bootstrap中js插件依赖于jquery，所以在这之前必须安装jquery。
+在package.json中添加一行代码：“jquery”: “^2.2.3”
+```
+"dependencies": {
+   "element-ui": "^2.0.5",
+   "vue": "^2.5.2",
+   "vue-router": "^3.0.1",
+   "jquery": "^2.2.3"
+ }
+```
+* 在build文件webpack.base.conf.js中添加一行数据：
+```
+//注：...代表省略自有的，
+//必定事先声明webpack，不然下面会不识别webpack
+const webpack = require('webpack')
+...
+module.exports = {
+    resolve: {
+        ...
+        alias: {
+          ...
+          'jquery': 'jquery' 
+        }
+    },
+    plugins: [
+        new webpack.ProvidePlugin({
+          $: "jquery",
+          jQuery: "jquery",
+          "windows.jQuery": "jquery"
+        })
+    ],
+    ...
+}
+```
+* 在main.js中加入：import $ from ‘jquery’
+使用npm install jquery@2.2.3 –save-dev这样jquery就安装完成了。
 
-* require('bootstrap') 代码的作用是加载 Bootstrap 的所有 jQuery 插件。其中，bootstrap 模块自身并不导出任何内容。你可以通过加载安装包顶级目录下的 /js/*.js 文件的方式手动加载单个的 Bootstrap 插件。
+* 通过 npm 进行安装: npm install bootstrap@3.3.0 –save-dev
 
-* Bootstrap 的 package.json 文件包含了一些额外的元数据：
 
-* less - Bootstrap 源码的入口 Less 文件的路径
-style - Bootstrap 的未压缩 CSS 文件的路径
+* 在需要的页面引入
+
+mport 'bootstrap/dist/css/bootstrap.min.css'
+
+import 'bootstrap/dist/js/bootstrap.min.js'
+
+最后npm run dev启动项目，就ok啦。
+
 
 #### 包含的内容
 
