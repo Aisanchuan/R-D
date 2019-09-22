@@ -96,6 +96,57 @@ axios({
             })
 
 ```
-### 三、封装request方法
 
 ### 三、在vue项目中使用axios
+
+首先安装axios：
+
+
+``` js
+1)：npm install
+
+2)：npm install vue-axios --save
+
+3)：npm install qs.js --save　　//它的作用是能把json格式的直接转成data所需的格式
+```
+安装成功后，在main.js页面引用：
+
+``` js
+import Vue from 'vue'
+import axios from 'axios'
+import qs from 'qs'
+
+
+Vue.prototype.$axios = axios    //全局注册，使用方法为:this.$axios
+Vue.prototype.qs = qs           //全局注册，使用方法为:this.qs
+```
+
+
+最后开始使用请求：
+
+``` html
+<script>
+    export default{
+        data(){
+            return{
+                userId:666,
+　　　　　　　　　 token:'',
+            }
+        },
+        created(){
+            this.$axios({
+                method:'post',
+                url:'api',
+                data:this.qs.stringify({    //这里是发送给后台的数据
+                      userId:this.userId,
+                      token:this.token,
+                })
+            }).then((response) =>{          //这里使用了ES6的语法
+                console.log(response)       //请求成功返回的数据
+            }).catch((error) =>{
+                console.log(error)       //请求失败返回的数据
+            })
+        }
+    }
+</script>
+```
