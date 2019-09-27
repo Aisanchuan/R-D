@@ -21,4 +21,97 @@ Token是服务器签发的一串加密字符串，是为了给客户端重复访
    
 ![示例图片](../images/jwt.png)
 
-<b>关于jwt的具体案例如下[index.html](https://github.com/xiaozhoulee/xiaozhou-examples/blob/master/03-jQuery/%E7%AC%AC10%E8%8A%82%EF%BC%9A%E8%BD%AE%E6%92%AD%E5%9B%BE/index.html)</b>
+
+### 四、主要知识点
+
+* 利用[egg-jwt](https://www.npmjs.com/package/egg-jwt)生成Token 
+* localstorage本地存储Token
+* [导航守卫](https://router.vuejs.org/zh/guide/advanced/navigation-guards.html#%E8%B7%AF%E7%94%B1%E7%8B%AC%E4%BA%AB%E7%9A%84%E5%AE%88%E5%8D%AB)验证有无token
+* 携带token发送请求
+* egg后台中间件（Middleware）的使用 <b>详情参考[中间件](https://eggjs.org/zh-cn/basics/middleware.html#mobileAside)</b>
+* 注销登录状态
+
+### 五、具体开发流程如下 
+具体案例地址[jwt](https://github.com/xiaozhoulee/xiaozhou-examples/tree/master/%E9%99%84%E5%BD%95/jwt)
+
+* 利用egg-jwt生成Token,示例代码如下所示：
+  
+  ```js
+    const token = app.jwt.sign({
+    
+     username: data.username, //需要存储的 token 数据
+     //......
+     
+    }, app.config.jwt.secret);
+
+    ```
+
+* localstorage本地存储Token,示例代码如下所示：
+  
+  ```js
+
+    localStorage.setItem('存储的名字'，'存储的值')
+
+    localStorage.setItem('token',res.code.token)
+
+  ```
+
+* 导航守卫
+  
+    导航表示前端的路由正在发生改变，vue-router 提供的导航守卫主要用来通过跳转或取消的方式守卫导航。
+    我们可以使用 router.beforeEach 注册一个全局前置守卫,每个守卫方法接收三个参数
+    to: Route: 即将要进入的目标 路由对象
+
+    from: Route: 当前导航正要离开的路由
+
+    next: Function: 一定要调用该方法来 resolve 这个钩子。执行效果依赖 next 方法的调用参数。
+    当前端跳转时，需要验证有无token，我们就是利用导航守卫来实现这个效果的，示例代码如下所示：
+  ```js
+  router.beforeEach((to, from, next) => {
+    let token = localStorage.getItem("token");
+    console.log(token)
+    <!-- 路由"/"为登录页 -->
+    if (token || to.path === "/") {
+        next();
+    } else {
+        next({
+            path:"/"
+        });
+    }
+  })  
+  ```
+* 携带token发送请求
+  要想实现携带token发送请求，就需要把token封装到request header里,示例代码如下所示：
+  ```js
+  config.headers.token = localStorage.getItem('token');
+  ```
+* egg后台中间件的使用
+  egg后台的中间件(middware)用来验证token，示例代码如下所示：
+  ```js
+  module.exports = () => {
+    return async function (ctx, next) {
+        if (ctx.request.header['token']) {
+            await next();
+        } else {
+            ctx.status = 401;
+            ctx.body = {
+                message: '没有token'
+            }
+            return;
+        }
+    }
+  };
+
+  ```
+
+* 注销登录状态
+  
+    注销登录状态的原理就是将前端localstorage
+    本地存储的Token变成空，再刷新页面，这样导航守卫
+    就找不到Token自动返回到登录页,示例代码如下所示：
+
+  ```js
+          localStorage.setItem("token","");
+          <!-- 刷新页面 -->
+              location.reload();
+  ```
