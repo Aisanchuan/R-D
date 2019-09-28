@@ -30,7 +30,7 @@ github是一个基于git的代码托管平台，付费用户可以建私人仓�
 
 ### 四、上传文件
 我们的远程存储库已经建立好了，按照下面的步骤就可以上传文件到这个存储库了。
-先在你想要上传的文件中，右键打开Git Bush Here。如果没有，说明你没有安装Git 关于Git的安装教程在这里：[Git的使用教程]()
+先在你想要上传的文件中，右键打开Git Bush Here。如果没有，说明你没有安装Git 关于Git的安装教程在这里：[Git的安装](https://github.com/ding139725/R-D/blob/master/%E9%99%84%E5%BD%95/Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B.md)
 
 ![注册按钮](../images/12_githubCreate.png)
 
@@ -38,7 +38,7 @@ github是一个基于git的代码托管平台，付费用户可以建私人仓�
 
 ![注册按钮](../images/12_githubCreatenewrepository.png)
 
-关于更多Git的使用教程在这里：[Git的使用]()
+关于更多Git的使用教程在这里：[Git的使用教程](https://github.com/ding139725/R-D/blob/master/%E9%99%84%E5%BD%95/Git%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B.md)
 
 ### 五、添加合作者
 当我们利用Github来存储团队项目时，会出现多人使用一个存储库的情况，那么如何添加合作者呢，下面就介绍如何添加合作者。
