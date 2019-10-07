@@ -32,7 +32,7 @@ HTML主要控制网页的内容，通过在文本文件中添加标记符，可�
 
 ### 三、CSS概述
 
-CSS全称【层叠样式表(英文全称：Cascading Style Sheets)】。刚才我们了解了，使用HTML可以设置网页中的内容（标准通用标记语言的一个应用）等文件样式的计算机语言，那么使用CSS就可以进一步装饰这些内容，录入设置文本的字体颜色，或是改变图片的尺寸等等。如下面的代码所示，CSS的代码实在style标签内部编写的。
+CSS全称【层叠样式表(英文全称：Cascading Style Sheets)】。刚才我们了解了，使用HTML可以设置网页中的内容（标准通用标记语言的一个应用）等文件样式的计算机语言，那么使用CSS就可以进一步装饰这些内容，录入设置文本的字体颜色，或是改变图片的尺寸等等。如下面的代码所示，CSS的代码是在style标签内部编写的。
 [示例代码](https://github.com/xiaozhoulee/xiaozhou-examples/tree/master/01-网页重构/第01节：HTML与CSS概述/demo02.html)
 ``` html
 <!-- demo02.html -->

@@ -52,7 +52,9 @@
 
 这一步直接点击Next即可。
 
-这一步之后会有一个设置密码的环节，自己写入密码之后点击check，密码允许后，点击Next即可。
+这一步之后是一个设置密码的环，密码允许后，点击Next即可。
+
+![Mysql安装](../images/0902_MysqlPassword.png)
 
 ![Mysql安装](../images/0902_Mysql12.png)
 
