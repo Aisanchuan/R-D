@@ -82,10 +82,12 @@ Token是服务器签发的一串加密字符串，是为了给客户端重复访
   ```
 * 携带token发送请求
   要想实现携带token发送请求，就需要把token封装到request header里,示例代码如下所示：
+
   ```js
   config.headers.token = localStorage.getItem('token');
   ```
 * egg后台中间件的使用
+
   egg后台的中间件(middware)用来验证token，示例代码如下所示：
   ```js
   module.exports = () => {
@@ -107,11 +109,11 @@ Token是服务器签发的一串加密字符串，是为了给客户端重复访
 * 注销登录状态
   
     注销登录状态的原理就是将前端localstorage
-    本地存储的Token变成空，再刷新页面，这样导航守卫
+    本地存储的Token删除，再刷新页面，这样导航守卫
     就找不到Token自动返回到登录页,示例代码如下所示：
 
   ```js
-          localStorage.setItem("token","");
+          localStorage.removeItem('token')
           <!-- 刷新页面 -->
               location.reload();
   ```
