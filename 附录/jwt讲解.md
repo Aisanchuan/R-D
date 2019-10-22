@@ -36,7 +36,7 @@ Token是服务器签发的一串加密字符串，是为了给客户端重复访
 
 * 利用egg-jwt生成Token,示例代码如下所示：
   
-  ```js
+  ``` js
     const token = app.jwt.sign({
     
      username: data.username, //需要存储的 token 数据
@@ -48,7 +48,7 @@ Token是服务器签发的一串加密字符串，是为了给客户端重复访
 
 * localstorage本地存储Token,示例代码如下所示：
   
-  ```js
+  ``` js
 
     localStorage.setItem('存储的名字'，'存储的值')
 
@@ -66,7 +66,7 @@ Token是服务器签发的一串加密字符串，是为了给客户端重复访
 
     next: Function: 一定要调用该方法来 resolve 这个钩子。执行效果依赖 next 方法的调用参数。
     当前端跳转时，需要验证有无token，我们就是利用导航守卫来实现这个效果的，示例代码如下所示：
-  ```js
+  ``` js
   router.beforeEach((to, from, next) => {
     let token = localStorage.getItem("token");
     console.log(token)
@@ -83,13 +83,13 @@ Token是服务器签发的一串加密字符串，是为了给客户端重复访
 * 携带token发送请求
   要想实现携带token发送请求，就需要把token封装到request header里,示例代码如下所示：
 
-  ```js
+  ``` js
   config.headers.token = localStorage.getItem('token');
   ```
 * egg后台中间件的使用
 
   egg后台的中间件(middware)用来验证token，示例代码如下所示：
-  ```js
+  ``` js
   module.exports = () => {
     return async function (ctx, next) {
         if (ctx.request.header['token']) {
